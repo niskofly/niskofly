@@ -1,6 +1,7 @@
 ![header](https://github.com/niskofly/niskofly/blob/main/assets/front.png)
 
-## I am a front-end developer and I am engaged in the creation of commercial sites and the implementation of web designs in functional code
+## About me
+I am a front-end developer and I am engaged in the creation of commercial sites and the implementation of web designs in functional code
 
 ## Skills 
 ![HTML](https://img.shields.io/badge/-HTML-f61621?style=for-the-badge&logo=HTML5&logoColor=fff)
