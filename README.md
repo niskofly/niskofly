@@ -14,7 +14,7 @@
 ![Figma](https://img.shields.io/badge/-Figma-purple?style=for-the-badge&logo=Figma&logoColor=fff)
 ![Adobe Photoshop](https://img.shields.io/badge/-Adobe_Photoshop-blue?style=for-the-badge&logo=adobephotoshop&logoColor=fff)
 
-##Upwork profile 
+## Upwork profile 
 [![Upwork](https://img.shields.io/badge/-Contact_mee-fff?style=for-the-badge&logo=Upwork&logoColor=green)](https://www.upwork.com/freelancers/~016c0558ee6e3e0b9c)
 
 
