@@ -1,0 +1,319 @@
+.home
+
+	&-section
+		margin-top: 100px
+
+		&--grey
+			background-color: $grey
+			padding: 100px 0 130px
+
+		+max-screen(970px)
+			margin-top: 60px
+
+			&--grey
+				padding: 30px 0 50px
+
+	&-title
+		margin-bottom: 40px
+
+		+max-screen(767px)
+			.link
+				display: none
+
+	&__slider
+		position: relative
+
+	&-categories
+		display: flex
+		flex-wrap: wrap
+		margin-left: -5px
+
+	&-category
+		padding: 40px
+		border-radius: 10px
+		border: 1px solid $greyl
+		margin-left: 5px
+		margin-bottom: 5px
+		width: calc( 100% / 3 - 5px )
+		min-height: 350px
+		position: relative
+
+		&__title
+			font-family: $ffm
+			font-size: 25px
+			margin-bottom: 40px
+			text-decoration: none
+			color: $brown
+
+		&__links
+			display: flex
+			flex-direction: column
+			margin-bottom: 40px
+
+		&__link
+			display: flex
+			align-items: center
+			text-decoration: none
+			margin-bottom: 20px
+
+			&:last-child
+				margin-bottom: 0
+
+			&:hover
+				.home-category__link-text
+					color: $yellow
+
+			&-icon
+				margin-right: 15px
+				display: flex
+
+				.icon
+					font-size: 15px
+					color: $greyl
+
+			&-text
+				font-size: 18px
+				color: $brown
+				transition: color ease .3s
+
+		&__img
+			position: absolute
+			right: 30px
+			bottom: 30px
+			z-index: -1
+
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+
+		+max-screen(1024px)
+			width: calc( 100% / 2 - 5px )
+			padding: 40px 20px
+
+		+max-screen(700px)
+			width: calc( 100% / 1 - 5px )
+			min-height: 100%
+
+			&__img
+				right: 10px
+				max-width: 200px
+
+	&-blog
+		display: flex
+		flex-wrap: wrap
+		margin-left: -20px
+
+		+max-screen(700px)
+			margin-left: 0
+
+
+
+.hero
+
+	&-sliders
+		display: flex
+		max-height: 470px
+
+	&-slider
+
+		.swiper-container
+			height: 100%
+
+		&--promo
+			width: 74%
+
+			.swiper-slide
+				height: max-content
+
+		&--daily
+			width: 26%
+
+	&-developers__slider
+		margin-top: 20px
+
+	+max-screen(1450px)
+		&-sliders
+			margin: 0 -25px
+
+	+max-screen(1023px)
+		&-sliders
+			flex-direction: column
+			max-height: 100%
+
+		&-slider
+
+			&--promo,
+			&--daily
+				width: 100%
+
+	+max-screen(767px)
+		&-sliders
+			margin: 0 -10px
+
+		&-slider--promo
+			.swiper-pagination
+				bottom: 0
+
+
+
+.promo-wrapper
+	display: flex
+	position: relative
+	width: 100%
+	height: 100%
+
+	&--grey
+
+	&__title
+		position: absolute
+		top: 0
+		left: 0
+		margin-top: 140px
+		margin-left: 120px
+		font-family: $ffb
+		font-size: 60px
+		max-width: 455px
+
+	&__img
+
+		img
+			display: block
+			object-fit: contain
+			width: 100%
+			height: 100%
+
+	+max-screen(767px)
+
+		&__title
+			font-size: 20px
+			margin-top: 70px
+			margin-left: 20px
+
+
+
+.daily-card
+	padding: 20px 30px 30px
+	background-color: $white
+	min-height: 100%
+	display: flex
+	flex-direction: column
+
+	&__title
+		font-family: $ffm
+		font-size: 22px
+		margin-bottom: 15px
+
+	&__timer
+		display: flex
+		flex-direction: column
+
+		&-text
+			font-family: $ffm
+			font-size: 13px
+			margin-bottom: 5px
+
+		&-time
+			font-size: 25px
+			line-height: 1
+
+	&__img
+		width: 100%
+		height: 200px
+		margin-bottom: 20px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__body
+		margin-bottom: 10px
+
+	&__name
+		font-size: 16px
+		font-family: $ffm
+		color: $brown
+		text-decoration: none
+
+	&__footer
+		margin-top: auto
+
+	&__links
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 5px
+
+	&__group
+		display: flex
+		align-items: center
+
+		&-icon
+			+reset-btn()
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-left: 10px
+
+			.icon
+				font-size: 25px
+				color: $greyd
+				transition: color ease .3s
+
+			&:hover
+				.icon
+					color: $green
+
+	&__manufacturer
+		color: $greyd
+		font-size: 15px
+
+	&__prices
+		display: flex
+		align-items: center
+
+	&__price
+		font-family: $ffb
+		font-size: 22px
+		margin-right: 15px
+
+	&__oldprice
+		text-decoration: line-through
+		color: $greyd
+		font-size: 15px
+
+	&__stock
+		padding: 15px 8px
+		position: absolute
+		top: 20px
+		right: 30px
+		font-family: $ffb
+		font-size: 25px
+		color: $white
+		background-color: $red
+		border-radius: 20px
+		border-top-right-radius: 0
+
+	&__loader
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		width: 100%
+		height: 6px
+		background-color: $greyl
+
+		&::after
+			content: ''
+			position: absolute
+			left: 0
+			top: 0
+			bottom: 0
+			right: 100%
+			height: 6px
+			background-color: $green
+
+		&--active::after
+			right: 0
+			transition: right linear 3s

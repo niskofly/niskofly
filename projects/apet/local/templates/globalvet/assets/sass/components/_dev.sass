@@ -1,0 +1,425 @@
+/*****************************************
+	* Рассортировать, когда будет "конечная"
+	****************************************  */
+
+.tooltip
+	position: relative
+
+	&__text
+		position: absolute
+		bottom: calc(100% + 6px)
+		left: 0
+		width: 190px
+		padding: 16px
+		box-shadow: 0px 0px 34px rgba(0, 92, 124, 0.15)
+		border-radius: 15px
+		background-color: #FFFFFF
+		transform: translateY(16px)
+		opacity: 0
+		transition: opacity .3s, transform .3s
+
+	&__icon
+		cursor: pointer
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 20px
+		max-width: 20px
+		height: 20px
+		background-color: #E7F3F8
+		border-radius: 50px
+
+		.icon
+			font-size: 12px
+			color: #FF1955
+
+		&:hover + .tooltip__text
+			opacity: 1
+			transform: translateY(0)
+
+
+.faq-list
+	max-width: 860px
+	width: 100%
+
+	.faq
+		margin-bottom: 10px
+
+	&--help
+		margin-bottom: 50px
+
+
+.user-menu
+	display: flex
+	align-items: flex-start
+
+	&__button
+		position: relative
+		display: flex
+		flex-direction: column
+		align-items: center
+		text-decoration: none
+		padding: 10px
+
+		.icon
+			min-width: 22px
+			max-width: 22px
+			height: 22px
+			color: #608488
+			transition: color .3s
+
+		&--added .icon
+			color: #FF1955
+
+		&--active .icon,
+		&:hover .icon
+			color: #00A6DC
+
+		span
+			font-family: $ffm
+			font-size: 15px
+			line-height: 19px
+			color: #4A4A4A
+
+			&.user-menu__button-amount
+				color: #ffffff
+
+		&-amount
+			position: absolute
+			top: 10px
+			right: 5px
+			display: flex
+			align-items: center
+			justify-content: center
+			min-width: 25px
+			max-width: 25px
+			height: 25px
+			background-color: #00A6DC
+			border-radius: 50px
+			transform: scale(1)
+			transition: transform .3s
+
+			&:empty
+				transform: scale(0)
+				pointer-events: none
+
+
+.section-header
+	display: flex
+	align-items: baseline
+	justify-content: space-between
+	margin-bottom: 40px
+
+	&__link
+		font-family: $ffm
+		color: #4A4A4A
+
+	&--subsection
+		justify-content: flex-start
+		margin-bottom: 30px
+
+		.title
+			font-size: 25px
+			line-height: 32px
+
+		.section-header__link
+			margin-left: 20px
+			color: #00A6DC
+
+
+.tabs
+	padding: 45px 40px 80px
+	background-color: #ffffff
+	border-radius: 15px
+	margin-bottom: 100px
+
+	&__buttons
+		display: flex
+		margin: 0 -25px 35px
+
+	&__button
+		font-family: $ffm
+		font-size: 25px
+		color: #4A4A4A
+		padding: 15px 25px
+		transition: color .3s
+
+		&.active,
+		&:hover
+			color: #00A6DC
+
+	&__tab
+		display: none
+
+		&.active
+			display: block
+
+		&-wrapper
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			max-width: 1270px
+			width: 100%
+
+		&-content
+			max-width: 780px
+			width: 100%
+
+			&--faq
+				max-width: 865px
+
+		&-sidebar
+			position: relative
+			display: flex
+			flex-direction: column
+			align-items: center
+			max-width: 340px
+			width: 100%
+			padding: 30px
+			border-radius: 15px
+			box-shadow: 0px 0px 34px rgba(0, 92, 124, 0.15)
+
+			&--image
+				margin-top: 150px
+
+				.tabs__tab
+
+					&-title
+						margin-bottom: 5px
+
+					&-text
+						font-family: $ffm
+						font-size: 16px
+						line-height: 21px
+						color: #608488
+						margin-bottom: 20px
+
+					&-image
+						position: absolute
+						bottom: calc(100% - 24px)
+
+		&-icon
+			margin-bottom: 5px
+			max-width: 60px
+			width: 100%
+			object-fit: contain
+
+		&-title
+			font-family: $ffm
+			font-size: 20px
+			line-height: 26px
+			color: #4A4A4A
+			margin-bottom: 20px
+
+		&-review:not(:last-child)
+			margin-bottom: 40px
+
+		&-faq:not(:last-child)
+			margin-bottom: 10px
+
+		&-button
+			padding: 0 26px
+
+
+.nav-subsection
+	display: flex
+	margin-bottom: 30px
+
+	&__btn
+		padding-left: 20px
+		padding-right: 20px
+		margin-right: 10px
+
+	&--blog
+		margin-bottom: 40px
+
+		.nav-subsection__btn
+			border: 1px solid #608488
+			font-size: 15px
+			text-transform: uppercase
+			color: #608488
+
+			&.active,
+			&:hover
+				border: 1px solid #00A6DC
+				color: #00A6DC
+
+
+.review
+	display: flex
+	align-items: flex-start
+
+	&__image
+		min-width: 60px
+		max-width: 60px
+		height: 60px
+		border-radius: 100%
+		object-fit: contain
+		margin-right: 20px
+
+	&__header
+		display: flex
+		align-items: baseline
+		margin-bottom: 10px
+
+	&__name,
+	&__date
+		font-family: $ffm
+		margin-right: 20px
+
+	&__name
+		font-size: 20px
+		color: #4a4a4a
+
+	&__date
+		font-size: 16px
+		color: #608488
+
+
+.help-choice
+	padding: 80px 0
+	background-color: #FFFFFF
+
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__image
+		max-width: 625px
+		width: 100%
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__content
+		max-width: 720px
+		width: 100%
+
+	&__header
+		display: flex
+		align-items: flex-start
+		margin-bottom: 20px
+
+	&__title
+		max-width: 420px
+		line-height: 1
+		margin-right: 20px
+
+	&__tabs
+		display: flex
+
+	&__tab
+		display: flex
+		font-family: $ffm
+		font-size: 30px
+		color: #4A4A4A
+		transition: all .3s
+		border-bottom: 3px dashed transparent
+		margin-right: 20px
+
+		&--active
+			font-family: $ffb
+			border-bottom: 3px dashed #00A6DC
+
+		&--active,
+		&:hover
+			color: #00A6DC
+
+		&:last-child
+			margin-right: 0
+
+	&__text
+		font-size: 20px
+		color: #4A4A4A
+		max-width: 340px
+		margin-bottom: 40px
+
+	&--catalog
+		padding: 60px 40px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		max-width: 700px
+		width: 100%
+		height: 495px
+		margin: 0 10px 20px
+		background-repeat: no-repeat
+		background-size: auto 335px
+		background-position-x: calc(100% - 20px)
+		background-position-y: calc(100% - 20px)
+
+		.help-choice
+
+			&__header
+				flex-direction: column
+
+			&__tabs
+				margin-top: 10px
+				margin-bottom: 10px
+
+			&__text
+				margin-bottom: 20px
+
+	&--result
+		background-color: transparent
+		padding: 0 0 60px
+
+	&--modal
+		padding: 0 80px 95px
+
+
+.faq
+	background-color: #ffffff
+	border: 1px solid #E7F3F8
+	border-radius: 15px
+
+	&__button
+		width: 100%
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-family: $ffm
+		font-size: 18px
+		line-height: 23px
+		color: #4A4A4A
+		padding: 20px
+
+		&-question
+			max-width: 740px
+			text-align: left
+
+		&-icon
+			min-width: 50px
+			max-width: 50px
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			background-color: #F4FAFC
+			border-radius: 100%
+
+			.icon
+				font-size: 10px
+				color: #00A6DC
+
+			.icon--active
+				font-size: 2px
+				display: none
+
+		&.active .faq__button-icon
+
+			.icon
+				display: none
+
+			.icon--active
+				display: block
+
+	&__text
+		position: relative
+		top: -20px
+		display: none
+		max-width: 740px
+		padding: 10px 20px 18px

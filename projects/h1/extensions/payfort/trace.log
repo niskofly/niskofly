@@ -1,0 +1,285 @@
+========================================================
+
+Fort Host2Host Response Parameters 
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 00047
+    [signature] => c3c2c70206eea8b4ca0cec96901393358bf951d098164132ca5c3a7603d7c116
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [language] => en
+    [eci] => RECURRING
+    [command] => PURCHASE
+    [response_message] => Order already processed
+    [merchant_reference] => 18
+    [customer_email] => test2@test.ru
+    [currency] => AED
+    [status] => 00
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 14000
+    [card_number] => 400555******0001
+    [signature] => 45b70162e63cdec03e1ef32c031944fecfe1549b02fe63b71a5795b138749c5d
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [payment_option] => VISA
+    [expiry_date] => 2408
+    [language] => en
+    [eci] => RECURRING
+    [fort_id] => 157010370300088246
+    [command] => PURCHASE
+    [response_message] => Success
+    [merchant_reference] => 19
+    [authorization_code] => 387602
+    [customer_email] => test2@test.ru
+    [token_name] => ezj-rkw_W5W0GzGS7slBAeON5ltNFbJ2
+    [currency] => AED
+    [status] => 14
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [amount] => 12500
+    [response_code] => 14000
+    [card_number] => 400555******0001
+    [signature] => 145fe3e63da92a36a39e760449cdda40de5edc6431f323211818cfbdea4d8931
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [payment_option] => VISA
+    [expiry_date] => 2105
+    [language] => en
+    [eci] => RECURRING
+    [fort_id] => 157010539900088398
+    [command] => PURCHASE
+    [response_message] => Success
+    [merchant_reference] => 20
+    [authorization_code] => 213622
+    [customer_email] => test2@test.ru
+    [token_name] => ezj-rkw_W5W0GzGS7slBAeON5ltNFbJ2
+    [currency] => AED
+    [status] => 14
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [token_status] => ACTIVE
+    [response_code] => 58000
+    [card_number] => 400555******0001
+    [signature] => 8793231f3814025a0a3a9de9c9f3c5937426fba52167241b91fd4158b1cdebc7
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [expiry_date] => 2105
+    [language] => en
+    [response_message] => Success
+    [service_command] => UPDATE_TOKEN
+    [merchant_reference] => RukV3DDjDDtEOFXH1u6R1i_fYWUerDMP
+    [card_brand] => VISA
+    [token_name] => QGhIOjqa1I2ceCGQvUca55ltwXNS8HoR
+    [currency] => USD
+    [status] => 58
+    [card_bin] => 400555
+)
+
+
+========================================================
+
+Fort Host2Host Response Parameters 
+Array
+(
+    [token_status] => INACTIVE
+    [response_code] => 58000
+    [card_number] => 400555******0001
+    [signature] => 84dbc35d1e794aba710d6e7c4b92d97f6398711bd6fbb7998d801616dbb8d8c3
+    [merchant_identifier] => KilbMYMO
+    [access_code] => mTKKJMfHQIR1H7Nira7k
+    [expiry_date] => 2105
+    [language] => en
+    [response_message] => Success
+    [service_command] => UPDATE_TOKEN
+    [merchant_reference] => AmoN3wRhS4YOqzsnMGBfKYYJ6N-ph_fj
+    [card_brand] => VISA
+    [token_name] => 0ZxXnAtlP8fmi9kvEqkVLdBDuNsXoxcO
+    [currency] => USD
+    [status] => 58
+    [card_bin] => 400555
+)
+
+

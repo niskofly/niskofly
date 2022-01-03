@@ -1,0 +1,35 @@
+User-agent: *
+Disallow: /login/
+Disallow: /admin/
+Disallow: /*my-list
+Disallow: /emails/
+Disallow: /export/
+Disallow: /*search?query=
+Disallow: /catalog/series-sks
+Disallow: /*?field_product_type_value=
+Disallow: /*?type=
+
+User-Agent: Yandex
+Disallow: /login/
+Disallow: /admin/
+Disallow: /*my-list
+Disallow: /*basket
+Disallow: /emails/
+Disallow: /export/
+Disallow: /*search?query=
+Disallow: /catalog/series-sks
+Disallow: /*?field_product_type_value=
+Disallow: /*?type=
+Host: https://www.laundrypro.ru
+
+User-Agent: Googlebot
+Disallow: /login/
+Disallow: /admin/
+Disallow: /*my-list
+Disallow: /emails/
+Disallow: /export/
+Disallow: /*search?query=
+Disallow: /catalog/series-sks
+Disallow: /*?field_product_type_value=
+Disallow: /*?type=
+Sitemap: https://www.laundrypro.ru/sitemap.xml

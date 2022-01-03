@@ -1,0 +1,431 @@
+.catalog-links
+	display: flex
+	align-items: center
+	flex-wrap: wrap
+	width: calc(100% + 20px)
+	margin-bottom: 60px
+	margin-left: -20px
+
+	+max-screen(767px)
+		width: 100%
+		margin-left: 0
+
+
+.catalog-link
+	width: calc(100% / 4 - 20px)
+	margin-left: 20px
+	margin-bottom: 20px
+
+	+max-screen(1279px)
+		width: calc(100% / 3 - 20px)
+
+	+max-screen(767px)
+		margin-left: 0
+		margin-bottom: 10px
+		width: 100%
+
+
+
+.catalog-categories
+	display: flex
+	flex-direction: column
+
+
+
+.catalog-category
+	padding: 50px 40px
+	border: 1px solid	#C5C5C5
+	border-radius: 10px
+	max-height: 520px
+	min-height: 320px
+	height: 100%
+	position: relative
+	margin-bottom: 20px
+	overflow: hidden
+
+	&__text
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+
+	&__title
+		margin-right: 30px
+
+	&-links
+		display: grid
+		align-content: flex-start
+		max-height: 350px
+		grid-gap: 10px
+
+		&__item
+			display: inline-block
+			align-self: flex-start
+			text-decoration: none
+			color: $brown
+			font-size: 15px
+			transition: color ease .3s
+
+			&:hover
+				color: $green
+
+	&__img
+		position: absolute
+		bottom: 0
+		right: 0
+		max-height: 100%
+
+		img
+			display: block
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	+max-screen(767px)
+		padding: 40px 20px 20px
+		min-height: 100%
+
+		&__img,
+		&__link
+			display: none
+
+
+
+.catalog-sides
+	display: flex
+	align-items: flex-start
+
+
+.catalog-content
+	max-width: 1060px
+	width: calc(100% - 360px)
+	margin-left: 20px
+
+	&-links
+		display: flex
+		flex-wrap: wrap
+		margin-left: -5px
+		margin-bottom: 40px
+
+		&__item
+			width: calc( 100% / 4 - 5px)
+			margin-left: 5px
+			margin-bottom: 5px
+
+		&-wrapper
+			overflow: auto
+
+			&::-webkit-scrollbar
+				display: none
+
+	+max-screen(1200px)
+		&-links
+
+			&__item
+				width: calc( 100% / 3 - 5px)
+
+	+max-screen(1023px)
+		width: 100%
+		margin-left: 0
+
+	+max-screen(767px)
+		&-links
+			flex-wrap: nowrap
+
+			&-wrapper
+				margin-right: -10px
+
+			&__item
+				width: calc( 100% / 2 - 5px)
+
+
+.manufacturers-slider
+	display: flex
+	align-items: center
+	margin-bottom: 40px
+
+	.swiper-container
+		display: flex
+		align-items: center
+		width: calc( 100% - 100px )
+
+	.swiper-slide
+		display: flex
+		align-items: center
+		justify-content: center
+		user-select: none
+		max-height: 80px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	.swiper-button-prev-unique,
+	.swiper-button-next-unique
+		+reset_btn()
+		position: relative
+		z-index: 2
+		min-width: 50px
+		min-height: 50px
+		background-color: $tr
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		outline: none
+		cursor: pointer
+		transition: background-color ease .3s
+
+		.icon
+			color: $black
+			font-size: 12px
+			transition: color ease .3s
+
+		&:hover
+			background-color: $green
+
+			.icon
+				color: $white
+
+
+	.swiper-button-disabled
+		background-color: $tr
+		cursor: not-allowed
+
+		.icon
+			color: $greyl
+
+		&:hover
+			background-color: $tr
+
+			.icon
+				color: $greyl
+
+
+
+.letters-select
+	display: flex
+	align-items: center
+	padding: 13px 20px
+	border: 1px solid $greyl
+	border-radius: 10px
+	margin-bottom: 30px
+
+
+
+.letters-switch
+	display: flex
+	align-items: center
+	margin-right: 20px
+
+	&__btn
+		cursor: pointer
+		display: flex
+		margin-right: 10px
+
+		input
+			display: none
+
+			&:checked + .letters-switch__btn-view
+				background-color: $green
+				border-color: $green
+				color: $white
+
+		&-view
+			text-transform: uppercase
+			padding: 11px 20px
+
+			border: 1px solid $greyd
+			border-radius: 10px
+			color: $greyd
+			font-size: 15px
+			line-height: 1
+			transition: background-color ease .3s, color ease .3s, border-color ease .3s
+
+			&:hover
+				background-color: $green
+				border-color: $green
+				color: $white
+
+		&:last-child
+			margin-right: 0
+
+		&--active .letters-switch__btn-view
+			background-color: $green
+			border-color: $green
+			color: $white
+
+.letters-list
+	display: flex
+	align-items: center
+	flex: 1
+	justify-content: space-between
+
+	&__item
+		+reset-btn()
+		color: $greyd
+		transition: color ease .3s
+
+		&:hover
+			color: $green
+
+		&--active
+			color: $green
+
+	+max-screen(1023px)
+		flex-wrap: wrap
+		justify-content: flex-start
+
+		&__item
+			font-size: 14px
+
+
+.catalog-options
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 20px
+
+
+
+.catalog-tabs
+
+	&__item
+		+reset-btn()
+		padding: 11px 20px
+		border-radius: 10px
+		border: 1px solid $greyl
+		color: $brown
+		font-family: $ffm
+		text-transform: uppercase
+		margin-right: 10px
+		font-size: 13px
+		transition: color ease .3s, background-color ease .3s, border-color ease .3s
+
+		&:hover
+			color: $white
+			background-color: $green
+			border-color: $green
+
+		&:last-child
+			margin-right: 0
+
+		&--active
+			color: $white
+			background-color: $green
+			border-color: $green
+
+
+
+.catalog-sorting
+	.dropdown .custom-select__body
+		left: unset
+		transform: unset
+		right: 0
+
+
+
+.catalog-list
+	display: flex
+	flex-wrap: wrap
+	margin-left: -20px
+	margin-bottom: 180px
+
+	&__item
+		margin-left: 20px
+		width: calc( 100% / 3 - 20px )
+		margin-bottom: 20px
+
+		&--offer
+			background-color: rgba(245, 179, 116, 0.3)
+			width: calc( (100% / 3) * 2 - 20px )
+			display: flex
+			flex-direction: column
+			align-items: center
+			justify-content: center
+			border-radius: 10px
+			padding: 0 80px
+			+bgi()
+			background-image: url('/img/offer.jpg')
+
+		&-title
+			font-family: $ffb
+			font-size: 30px
+			color: $brown
+			text-align: center
+			margin-bottom: 25px
+
+		&-subtitle
+			text-align: center
+			max-width: 305px
+			font-family: $ffm
+			margin-bottom: 35px
+
+		&-btn
+			.btn
+				background-color: $yellow
+				border-color: $yellow
+
+				&:hover
+					background-color: #FAA554
+					border-color: #FAA554
+
+	+max-screen(1250px)
+
+		&__item
+			width: calc( 100% / 2 - 20px)
+
+	+max-screen(767px)
+
+		&__item
+			width: calc( 100% / 1 - 20px)
+
+
+
+
+.animal-banner
+	margin-bottom: 40px
+
+	.swiper-slide
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	.swiper-pagination-bullet
+		background-color: $green
+
+
+
+.animal-categories
+	display: flex
+	flex-direction: column
+	margin-bottom: 60px
+
+
+
+.animal-category
+	margin-bottom: 50px
+
+	&__slider
+		position: relative
+
+.category__head
+	margin-bottom: 30px
+	display: flex
+	justify-content: space-between
+	align-items: center
+
+
+
+.animal-cards
+	display: flex
+	flex-wrap: wrap
+	margin-left: -20px
+
+
+
+.animal-card
+	width: calc( 100% / 4 - 20px )
+	margin-left: 20px
+	margin-bottom: 20px

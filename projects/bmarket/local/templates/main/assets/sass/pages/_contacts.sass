@@ -1,0 +1,178 @@
+.page--contacts
+	padding: 0 30px 60px
+
+	+max-screen(768px)
+		padding: 0 20px 60px
+
+	+max-screen(425px)
+		padding: 0 10px 60px
+
+
+
+.section-addresses
+
+	&__title
+		margin-bottom: 18px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		align-items: stretch
+		margin: 0 -15px
+
+	&__card
+		display: flex
+		flex-direction: column
+		align-items: stretch
+		margin: 0 15px 30px
+		width: 100%
+		max-width: calc(100% / 2 - 30px)
+		overflow: hidden
+		border-radius: 10px
+
+		&-details
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			padding: 36px
+			background-color: #fff
+			min-height: 140px
+
+		&-point
+			display: flex
+			align-items: flex-start
+			max-width: 300px
+			width: 100%
+			color: #563494
+			font-family: $ffb
+			font-size: 18px
+			line-height: 22px
+
+			.icon
+				min-width: 18px
+				max-width: 18px
+				height: 18px
+				margin-right: 16px
+
+		&-time
+			max-width: 145px
+			width: 100%
+			font-family: $ff
+			font-size: 16px
+			line-height: 22px
+			color: #563494
+
+		&-map
+			width: 100%
+			height: 320px
+
+	+max-screen(1190px)
+
+		&__card
+
+			&-time
+				margin: 10px 0 0 34px
+
+	+max-screen(800px)
+
+		&__card
+			max-width: calc(100% / 1 - 30px)
+
+	+screen(800px, 1190px)
+
+		&__card
+			&-details
+				flex-direction: column
+				min-height: 200px
+
+	+max-screen(500px)
+
+		&__card
+			&-details
+				flex-direction: column
+				min-height: 200px
+
+
+.section-contacts
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	padding: 40px 50px 32px
+	border-radius: 10px
+	background-color: #fff
+	margin-bottom: 30px
+
+	&:last-child
+		margin-bottom: 0
+
+	&__title
+		font-family: $ffb
+		margin-bottom: 8px
+
+	&__person
+		display: flex
+		flex-direction: column
+		max-width: 380px
+		width: 100%
+		margin-right: 10px
+
+		&-name,
+		&-info
+			margin-bottom: 8px
+
+		&-info li
+			line-height: 24px
+
+	&__point
+		max-width: 280px
+		width: 100%
+		margin-right: 10px
+
+		&-text
+			line-height: 24px
+
+	&__feedbacks
+		display: flex
+		align-items: stretch
+
+	&__feedback
+		margin-right: 55px
+
+		&:last-child
+			margin-right: 0
+
+		&-content
+			display: flex
+			align-items: center
+
+			& > *
+				margin-right: 20px
+
+				&:last-child
+					margin-right: 0
+
+		&-contact
+			color: #563494
+			text-decoration: none
+
+		.social-links__link-icon
+			max-width: 20px
+
+	+max-screen(1400px)
+
+		&__feedbacks
+			flex-direction: column
+
+		&__feedback
+			margin: 0 0 10px
+
+			&:last-child
+				margin: 0
+
+	+max-screen(800px)
+		flex-direction: column
+
+		&__person,
+		&__point
+			margin: 0 0 20px
+

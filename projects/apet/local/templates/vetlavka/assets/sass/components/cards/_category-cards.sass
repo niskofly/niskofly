@@ -1,0 +1,42 @@
+.category-card
+	max-width: 340px
+	width: 100%
+	min-height: 280px
+	height: 100%
+	background-color: $white
+	padding: 30px
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	text-decoration: none
+	border-radius: 10px
+
+	&:hover
+		.category-card__title
+			color: $green
+
+	&__img
+		width: 100%
+		height: 150px
+		margin-bottom: 20px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__title
+		font-family: $ffb
+		font-size: 18px
+		color: $greyd
+		text-decoration: none
+		transition: color ease .3s
+		text-align: center
+
+	&--small
+		border: 1px solid $greyl
+		transition: border-color ease .3s
+
+		&:hover
+			border-color: #bdbdbd

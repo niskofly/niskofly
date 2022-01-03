@@ -1,0 +1,152 @@
+.custom-select
+	max-width: 100%
+	position: relative
+
+	&--open
+
+		.custom-select
+
+			&__arrow
+
+				.icon
+					transform: rotate(180deg)
+
+			&__header
+				border-bottom-left-radius: 0
+				border-bottom-right-radius: 0
+				border-bottom: unset
+				border-color: #BDBDBD
+
+			&__body
+				transform: translateY(0px)
+				opacity: 1
+				pointer-events: auto
+				background-color: $grey
+				border-color: #BDBDBD
+
+	&--white
+
+		.custom-select
+
+			&__header
+				background: $white
+
+			&__body
+				background: $white
+
+			&__label
+				background: $white
+
+				&:hover
+					background: $grey
+
+	&__header
+		background: $grey
+		border: none
+		cursor: pointer
+		outline: none
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding: 20px
+		min-height: 60px
+		width: 100%
+		transition: border-color ease .3s, border-radius ease .2s
+		border: 1px solid $greyl
+		border-radius: 10px
+
+		&:hover
+			border-color: #BDBDBD
+
+	&__body
+		position: absolute
+		top: 60px
+		left: 0
+		right: 0
+		background: $grey
+		transition: transform ease .3s, opacity ease .3s
+		z-index: 10
+		max-height: 260px
+		transform: translateY(10px)
+		opacity: 0
+		pointer-events: none
+		overflow: hidden
+		overflow-y: auto
+		border: 1px solid $greyl
+		border-top: unset
+		border-bottom-right-radius: 10px
+		border-bottom-left-radius: 10px
+
+	&__selected
+		line-height: 1
+		font-size: 15px
+		color: $brown
+		text-align: left
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+	&__arrow
+		color: $green
+		margin-left: 27px
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+	.icon
+		font-size: 11px !important
+		transition: transform ease .3s
+
+	&__label
+		padding: 20px
+		font-size: 15px
+		line-height: 16px
+		color: $greyd
+		background: $grey
+		transition: background ease .3s
+		cursor: pointer
+		display: block
+		user-select: none
+
+		&:hover
+			background: $white
+			color: $brown
+
+	[type="checkbox"],
+	[type="radio"]
+		display: none
+
+		&:checked
+			~
+				.custom-select__label
+					background: $white
+					color: $brown
+
+
+.dropdown
+	display: flex
+	align-items: center
+
+	&__description
+		margin-right: 10px
+		color: $greyd
+		font-size: 15px
+
+	.custom-select
+
+		&__header
+			padding: 0
+			min-height: unset
+			background-color: $tr
+			border: none
+
+		&__arrow
+			margin-left: 12px
+
+		&__body
+			top: 30px
+			min-width: 200px
+			border: 1px solid $greyl
+			border-radius: 10px
+			left: 50%
+			transform: translateX(-50%)

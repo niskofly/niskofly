@@ -1,0 +1,34 @@
+.breadcrumb
+	position: relative
+	margin-top: 20px
+	margin-bottom: 40px
+	z-index: 1
+
+	&__list
+		position: relative
+		width: 100%
+		display: inline-flex
+		align-items: center
+		overflow-y: hidden
+		overflow-x: auto
+		white-space: nowrap
+
+	&__item
+		font-size: 16px
+		line-height: 22px
+		color: #B7A9D0
+		margin-right: 8px
+
+		&:last-child
+			margin-right: 0
+
+	a
+		color: inherit
+		text-decoration: none
+
+		&:hover
+			text-decoration: underline
+
+	+max-screen(710px)
+		margin-bottom: 10px
+

@@ -1,0 +1,179 @@
+.table-my-list
+	margin-top: 30px
+	&__row
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+		margin-top: -1px
+		.table-cell
+			box-sizing: border-box
+			border: 1px solid #B8BAC2
+			border-right: 0
+			margin-right: -1px
+			&:last-child
+				border-right: 1px solid #B8BAC2
+		.table-cell:not(.table-my-list__photo)
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: center
+	&__photo
+		flex-basis: 125px
+		padding-top: 15px
+		padding-bottom: 15px
+		border-right: none !important
+		.photo-container
+			height: 70px
+			background-repeat: no-repeat
+			background-position: center center
+			background-size: contain
+	&__name
+		flex-basis: 302px
+		color: #434E66
+		font-size: 12pt
+		font-family: exo2medium
+		border-left: none !important
+		text-decoration: none
+		&:hover
+			text-decoration: underline
+	&__price
+		flex-basis: 241px
+		padding-left: 25px
+		font-family: exo2medium
+		font-size: 11pt
+		color: #0BACDB
+	&__creator
+		flex-basis: 137px
+		padding-left: 25px
+		color: #333
+		font-size: 11pt
+	&__stok
+		flex-basis: 146px
+		padding-left: 25px
+		font-size: 11pt
+		.icon
+			font-size: 7px
+	&__delete
+		flex-basis: 90px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: center
+		.icon	
+			color: #F99
+			font-size: 12px
+
+	&__delete-btn
+		padding: 5px
+		cursor: pointer
+		border: none
+		background: none
+
+.table-my-list__header
+	margin-bottom: 16px
+	.table-cell
+		color: #666
+		font-size: 10pt
+		display: block
+		border: none !important
+	.table-my-list__photo 
+		height: auto
+	.table-my-list__name
+		text-decoration: none
+
+.table-my-list__footer
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	margin-top: 20px
+	margin-bottom: 20px
+	.print-this
+		border: none
+
+		background: none
+		cursor: pointer
+		font-size: 10pt
+		color: #333
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		display: none
+		.icon
+			color: #525F7A
+			font-size: 14px
+			margin-right: 10px
+
+// конец стилей списка  товаров
+
+.b-application-for-equipment
+	background-color: #DFE2E8
+	padding-left: 30px
+	padding-top: 20px
+	padding-bottom: 30px
+	padding-right: 30px
+	.title_bold
+		font-size: 16pt
+
+	.privacy-policy-prompt
+		text-align: right
+.form-application-for-equipment
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+	justify-content: space-between
+	margin-top: 25px
+	.input
+	    font-size: 12pt
+	    border: none
+	    box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.1)
+	    padding-left: 20px
+	.wrap-inputs
+		flex-basis: 256px
+		padding-right: 16px
+		box-sizing: border-box
+		.input
+			width: 100%
+			&:first-child
+				margin-bottom: 10px
+	.wrap-textarea
+		flex-basis: 532px
+		align-self: stretch
+		padding-right: 16px
+		box-sizing: border-box
+		.textarea
+			height: 100%
+			width: 100%
+			padding-top: 15px
+			
+	.wrap-submit
+		flex-basis: 161px
+		.submit
+			height: 50px
+			background-color: #0E93C8
+			color: #fff
+			font-family: exo2medium
+			padding-left: 40px
+			padding-right: 40px
+			box-sizing: border-box
+			border: none
+			cursor: pointer
+
+	

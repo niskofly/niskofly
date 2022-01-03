@@ -1,0 +1,560 @@
+.page--catalog
+	padding: 0 30px 95px
+
+	+max-screen(768px)
+		padding: 0 20px 95px
+
+	+max-screen(425px)
+		padding: 0 10px 70px
+
+
+
+.price
+	font-family: $ffb
+	font-size: 32px
+	line-height: 36px
+	color: #563494
+
+	&--discount
+		color: #D118A3
+
+	+max-screen(430px)
+		font-size: 16px
+		line-height: 30px
+
+.price-old
+	font-size: 18px
+	line-height: 24px
+	color: #563494
+	text-decoration: line-through
+	margin-top: 4px
+
+	.rubl
+		font-size: 17px
+
+	+max-screen(430px)
+		font-size: 14px
+
+.discount
+	display: inline-flex
+	padding: 3px 6px
+	background-color: #D118A3
+	border-radius: 4px
+	font-size: 18px
+	line-height: 24px
+	color: #ffffff
+
+	+max-screen(430px)
+		font-size: 14px
+
+.prices
+	display: flex
+	align-items: center
+
+	&__price-old
+		margin-right: 10px
+
+	&__discount
+		margin-left: 10px
+
+	+max-screen(430px)
+
+		&__price-old
+			margin-right: 6px
+
+		&__discount
+			margin-left: 6px
+
+
+
+.user-points
+	display: inline-flex
+	padding: 5px
+	background-color: #AD8BD7
+	border-radius: 5px
+	font-family: $ffb
+	font-size: 14px
+	line-height: 22px
+	color: #fff
+
+
+.product-amount
+	display: flex
+
+	&__btn
+		min-width: 36px
+		max-width: 36px
+		height: 36px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 100%
+		background-color: transparent
+		transition: background-color .3s
+
+		.icon
+			font-size: 12px
+			color: #B7A9D0
+			transition: color .3s
+
+		&:hover
+			background-color: #E8F1FA
+
+			.icon
+				color: #D118A3
+
+	&__input
+		font-family: $ffb
+		font-size: 18px
+		line-height: 22px
+		color: #563494
+		width: 20px
+		text-align: center
+		background-color: transparent
+		margin: 0 5px
+
+
+.catalog
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+	position: relative
+
+	&__sidebar
+		max-width: 330px
+		width: 100%
+		border-radius: 10px
+		background-color: #FFF
+		position: absolute
+		top: 0
+		left: 0
+
+		.form--filter
+			padding: 30px
+
+	&__main
+		width: 100%
+		padding-left: 360px
+
+		&-filter
+			display: flex
+			align-items: flex-start
+			margin-bottom: 5px
+
+		.custom-select--sorting
+			margin-left: auto
+			margin-bottom: 10px
+
+	&__more
+		width: 100%
+
+	&__back-btn
+		display: none
+		cursor: pointer
+
+	+max-screen(1220px)
+
+		&__sidebar
+			max-width: 250px
+
+		&__main
+			padding-left: 280px
+
+	+max-screen(1023px)
+		position: initial
+
+		&__more.btn
+			padding: 12px 20px
+
+		&__back-btn
+			display: flex
+			font-size: 16px
+			line-height: 22px
+			width: 100%
+			height: 46px
+			background: #F7F4FD
+			padding: 10px
+
+			.icon
+				font-size: 10px
+				color: #563494
+				margin-right: 10px
+
+		&__sidebar
+			left: -1000px
+			transition: left .3s
+
+			.form--filter
+				padding: 10px 25px
+
+			&.active
+				position: fixed
+				top: 0
+				left: 0
+				margin: 0
+				border-radius: 0
+				z-index: 1000
+				height: 100vh
+				max-width: 100%
+				overflow: hidden
+
+		&__main
+			padding: 0
+
+			&-filter
+				flex-direction: column
+
+
+.product-status
+	display: flex
+	align-items: center
+
+	&__dot
+		min-width: 5px
+		max-width: 5px
+		height: 5px
+		border-radius: 100%
+		margin-right: 10px
+		background-color: #00D04C
+
+	&__text
+		font-size: 16px
+		line-height: 22px
+		color: #00D04C
+
+	&--unavailable .product-status
+
+		&__dot
+			background-color: #ff8585
+
+		&__text
+			color: #ff8585
+
+	&--proccess .product-status
+
+		&__dot
+			background-color: #F78500
+
+		&__text
+			color: #E27A00
+
+	&--done .product-status
+
+		&__dot
+			background-color: #B7A9D0
+
+		&__text
+			color: #B7A9D0
+
+
+.product-gallery
+	display: flex
+	align-items: stretch
+	justify-content: space-between
+
+	&__preview
+		max-width: 545px
+		width: 100%
+		margin: 0
+
+	&__thumbs
+		max-width: 90px
+		width: 100%
+		margin-right: 30px
+
+		.swiper-container
+			height: 100%
+
+	&__thumb
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		cursor: pointer
+		border: 1px solid transparent
+		transition: border .3s
+
+		&.swiper-slide-thumb-active,
+		&:hover
+			border: 1px solid #563494
+
+	&__slide
+		display: flex
+		align-items: stretch
+
+	&__image
+		width: 100%
+
+		img
+			cursor: zoom-in
+			width: 100%
+			height: 100%
+			object-fit: cover
+			transform: scale(1)
+			transition: transform .5s
+
+		&:hover img
+			transform: scale(1.1)
+
+	+max-screen(425px)
+		flex-direction: column-reverse
+
+		&__thumbs
+			width: 100%
+			max-width: 100%
+			height: 90px
+			margin: 5px 0 0 0
+
+
+
+.product-detail
+	position: relative
+	background-color: #FFF
+	padding: 0 10px 65px 10px
+	margin: 0 -30px 65px
+
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		top: -100%
+		width: 100%
+		height: 100%
+		background-color: #fff
+		pointer-events: none
+
+	&__container
+		display: flex
+		align-items: flex-start
+
+	&__gallery
+		max-width: 50%
+		width: 100%
+		margin-right: 55px
+
+	&__info
+		width: 100%
+
+	&__header
+		margin-bottom: 24px
+
+	&__title
+		line-height: 42px
+		margin-bottom: 12px
+
+	&__product-status
+		margin-bottom: 16px
+
+	&__order
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		margin-bottom: 36px
+
+		.prices
+			margin-bottom: 20px
+
+		.user-points
+			margin-bottom: 20px
+
+	&__controls
+		display: flex
+		align-items: center
+
+		.product-amount
+			margin-right: 12px
+
+	+max-screen(1110px)
+		&__gallery
+			max-width: 40%
+			margin-right: 35px
+
+	+max-screen(768px)
+		margin: 0 -20px 65px
+
+		&__gallery
+			margin: 0 0 20px
+			max-width: 100%
+			justify-content: center
+
+		&__container
+			flex-direction: column
+
+		&__info
+			padding: 0 10px
+
+		&__title
+			font-size: 32px
+			line-height: 1.2
+
+	+max-screen(425px)
+		margin: 0 -10px 65px
+
+
+
+.product-props
+	display: flex
+	flex-direction: column
+
+	&__prop
+		display: flex
+		align-items: baseline
+		margin-bottom: 6px
+
+		&-name,
+		&-value
+			font-family: $ff
+			font-size: 16px
+			line-height: 22px
+			color: #563494
+
+		&-value
+			min-width: 60%
+
+		&-space
+			flex: 1
+			border-bottom: 1px dotted #563494
+			margin: 0 5px
+
+
+
+.catalog-wrapper
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -15px
+
+
+
+.section-catalog
+	display: flex
+	flex-direction: column
+	background: #FFF
+	border-radius: 10px
+	width: calc(100% / 4 - 30px)
+	height: max-content
+	margin: 15px
+
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-left: 30px
+		min-height: 80px
+		text-decoration: none
+		color: #563494
+
+		img
+			max-width: 60px
+			min-width: 60px
+			object-fit: cover
+
+		&:hover .section-catalog__title
+			color: #D118A3
+
+	&__title
+		font-family: $ffb
+		width: 210px
+		transition: color ease .3s
+
+	&__body
+		padding: 20px 0 25px
+		margin: 0 30px
+		border-top: 1px solid #DFD1F3
+
+		&-links
+			display: flex
+			flex-direction: column
+			overflow: hidden
+
+		&-link
+			cursor: pointer
+			text-decoration: none
+			color: #563494
+			transition: color ease .3s
+
+			&:hover
+				color: #D118A3
+
+			&:not(:first-child)
+				margin-top: 15px
+
+		&-btn
+			font-family: $ffb
+			color: #D118A3
+			width: max-content
+			border-bottom: 1px dashed #D118A3
+			cursor: pointer
+			margin-top: 15px
+
+	+max-screen(1220px)
+		width: calc(100% / 3 - 30px)
+
+	+max-screen(1020px)
+		width: calc(100% / 2 - 30px)
+
+	+max-screen(660px)
+		width: calc(100% / 1 - 30px)
+
+
+.catalog-child-categories
+	display: flex
+	align-items: stretch
+	justify-content: flex-start
+	flex-wrap: wrap
+
+	+max-screen(1023px)
+		flex-wrap: initial
+		width: 100%
+		overflow: auto
+		margin-bottom: 10px
+
+
+
+.catalog-child-category
+	font-family: $ffb
+	font-size: 16px
+	line-height: 1.1
+	padding: 12px 20px
+	background: #FFFFFF
+	border-radius: 10px
+	color: #7149B7
+	margin: 0 15px 10px 0
+	display: block
+	text-decoration: none
+	transition: color ease .3s, background ease .3s
+
+	&:last-child
+		margin-right: 0
+
+	&:hover
+		color: #fff
+		background: #AD8BD7
+
+	&--active
+		color: #fff
+		background: #AD8BD7
+
+	+max-screen(1023px)
+		font-size: 14px
+		line-height: 22px
+		min-width: max-content
+
+
+
+.catalog-filter
+	display: flex
+	margin: 0 0 0 auto
+
+	&__filter-btn
+		display: none
+
+	+max-screen(1023px)
+		width: 100%
+		justify-content: space-between
+		margin-bottom: 20px
+
+		&__filter-btn
+			display: block
+			cursor: pointer
+
+		.custom-select
+			margin: 0

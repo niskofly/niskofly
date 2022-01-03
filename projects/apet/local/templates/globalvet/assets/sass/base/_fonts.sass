@@ -1,0 +1,31 @@
+@mixin fontFace($fontName)
+	@font-face
+		font-family: quote($fontName)
+		src: url("../fonts/"+ $fontName +"/" + $fontName + ".eot?#iefix") format("embedded-opentype"), url("../fonts/"+ $fontName +"/" + ".woff") format("woff"), url("../fonts/"+ $fontName +"/" + $fontName + ".ttf") format("truetype"), url("../fonts/"+ $fontName +"/" + $fontName + ".svg##{$fontName}") format("svg")
+		font-weight: normal
+		font-style: normal
+
+@mixin fontFaceTtf($fontName)
+	@font-face
+		font-family: quote($fontName)
+		src:  url("../fonts/" + $fontName +"/" + $fontName + ".ttf") format("truetype")
+		font-weight: normal
+		font-style: normal
+		font-display: fallback
+
+@mixin font_face_otf($fontName)
+	@font-face
+		font-family: quote($fontName)
+		src:  url("../fonts/" + $fontName + ".otf")
+		font-weight: normal
+		font-style: normal
+		font-display: fallback
+
++fontFaceTtf($ff)
++fontFaceTtf($ffm)
++fontFaceTtf($ffb)
++font_face_otf($ffrub)
+
+.rubl
+	font-family: $ffrub
+	line-height: initial

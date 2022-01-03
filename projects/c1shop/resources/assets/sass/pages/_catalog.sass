@@ -1,0 +1,651 @@
+.page-catalog
+.page-catalog__header
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	width: 100%
+	.seo-header
+		margin-bottom: 40px
+	.catalog-header__link
+		margin-bottom: 40px
+
+.catalog-header__link
+	color: #666
+	font-size: 12pt
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-end
+	.catalog-header__link-item
+		text-decoration: none
+		color: #666
+		cursor: pointer
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		border: none
+		background: none
+		padding: 0
+		text-align: left
+	a
+		margin-right: 10px
+		margin-left: 15px
+	.icon
+		font-size: 37px
+		color: #B8BAC2
+		margin-right: 15px
+
+
+.b-select-equipment
+	background-image: url("/img/catalog-banner.png")
+	padding: 30px 45px 35px
+	background-repeat: no-repeat
+	background-size: cover
+	border: 1px solid #B8BAC2
+	margin-bottom: 40px
+
+	.title_light
+		max-width: 640px
+		font-size: 18pt
+		color: #333
+		
+	.privacy-policy-prompt
+		text-align: right
+
+
+.form-select-equipment
+	margin-top: 30px
+	width: 100%
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-end
+	button
+		white-space: nowrap
+		height: 50px
+		border: none
+		background-color: #0E93C8
+		color: #fff
+		font-size: 12pt
+		margin-top: 0
+		padding-left: 20px
+		padding-right: 20px
+	.input
+		height: 50px
+		font-size: 12pt
+		border: none
+		box-shadow: -3px 3px 10px 0px rgba(0,0,0,0.1)
+	.textarea
+		width: 100%
+		padding-top: 15px
+	.wrap-inputs
+		width: 100%
+		margin-right: 20px
+
+.line-input-two
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	margin-bottom: 10px
+	.input
+		width: 49%
+
+
+// блок фильтров каталога
+
+#catalog-filter
+	display: flex
+
+.b-catalog-filter	
+	margin-bottom: 15px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: stretch
+	justify-content: flex-start
+	flex-wrap: wrap
+
+.catalog-filter__item
+	margin-bottom: 25px
+	padding-right: 23px
+	padding-left: 23px
+	border-left: 1px solid #B8BAC2
+	border-right: 1px solid #B8BAC2
+	width: 25%
+	box-sizing: border-box
+	padding-bottom: 35px
+	margin-right: -1px
+	min-width: 258px
+	@media (max-width: 480px)
+		padding-bottom: 0
+		margin-bottom: 15px
+		border: 1px solid #B8BAC2
+		&.active
+				.filter-item__title .icon
+						transform: rotate(180deg)
+	&--full
+		width: 100%
+		.filter-item__selects
+			display: flex
+			flex-wrap: wrap
+			justify-content: flex-start
+			flex-direction: row !important
+
+		.filter-item__option
+			width: 25%
+			margin-bottom: 15px
+
+.filter-item__title
+	font-size: 12pt
+	color: #333
+	font-family: exo2medium
+	margin-bottom: 25px
+	display: flex
+	justify-content: space-between
+	align-items: center
+	@media (max-width: 480px)
+			padding-top: 8px
+			padding-bottom: 10px
+			margin-bottom: 0
+			&:hover
+					cursor: pointer
+	.icon
+		max-width: 12px
+		width: 12px
+		color: $color_grey
+		margin-left: 5px
+		@media (min-width: 481px)
+			display: none
+		@media (max-width: 480px)
+			display: block
+
+.filter-item__selects
+	&.two-column
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		.filter-item__option
+			min-width: 48.5%
+			flex-basis: 48.5%
+			.b-tooltip
+				right: 0
+		@media (max-width: 480px)
+			display: none
+			&.active
+					margin-top: 20px
+					margin-bottom: 10px
+					display: flex
+
+	&:not(.two-column)
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		.filter-item__option
+			min-width: 100%
+			flex-basis: 100%
+			.b-tooltip
+				right: 0
+		@media (max-width: 480px)
+			display: none
+			&.active
+				margin-top: 20px
+				margin-bottom: 10px
+				display: flex
+
+.filter-item__option
+	margin-bottom: 8px
+	position: relative
+	display: inline-block
+	&_disable
+		pointer-events: none
+		cursor: default
+		.checkbox-label
+			color: #b3b3b3 !important
+			cursor: default !important
+		.icon-wrap
+			border: 1px solid #b3b3b3 !important
+	.b-tooltip
+		right: 0
+// конец блока фильтров каталога
+
+
+.b-additional-function-catalog
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: flex-start
+	align-items: center
+	margin-bottom: 25px
+
+.b-sorting-content
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	margin-right: 55px
+	display: none
+	span
+		font-size: 12pt
+		color: #666
+		margin-right: 10px
+	.select-sorting-container
+
+.current-sorting
+	color: #0BACDB
+	font-size: 12pt
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	cursor: pointer
+	align-items: center
+	position: relative
+	.toggle-current-sorting
+		border: none
+		background: none
+	.icon
+		color: #0BACDB
+		font-size: 7px
+		position: absolute
+		transform: scale(0)
+		transition: transform ease .3s
+		cursor: pointer
+		top: 8px
+
+	.toggle-current-sorting:not(.status-off)
+		.visible-sorting
+			transform: scale(1)
+		.hidden-sorting
+			transform: scale(0)
+
+	.toggle-current-sorting.status-off
+		.hidden-sorting
+			transform: scale(1)
+		.visible-sorting
+			transform: scale(0)
+
+.sorting-options
+	position: absolute
+	background-color: #fff
+	display: none
+	z-index: 1
+	padding: 5px 10px
+
+	.sorting-option
+		cursor: pointer
+		margin-bottom: 6px
+		cursor: pointer
+
+	&.js-visible-list
+		display: block
+
+.b-show-stock
+	margin-bottom: -4px
+	.filter-item__option
+		margin-bottom: 0
+
+
+// конец блока дополнительных сортировок каталога
+
+.catalog-products
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	flex-wrap: wrap
+	width: 100%
+
+.product-card
+	margin-right: -1px
+	width: 24.99%
+	box-sizing: border-box
+	position: relative
+	height: 365px
+	&:hover
+		.product-card__hidden
+			height: auto
+			z-index: 1
+		.product-card__wraper
+			z-index: 2
+			box-shadow: -6px 4px 9px 1px rgba(205, 205, 210, 0.4)
+		&.sale
+			.product-card__sale
+				z-index: 3 
+
+	&.sale
+		.product-card__sale
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			z-index: 1
+
+	.product-card__sale
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		align-items: center
+		justify-content: center
+		position: absolute
+		top: 1px
+		left: 1px
+		height: 30px
+		width: 33px
+		background-color: #FFC300
+		display: none
+		cursor: pointer
+		.icon
+			color: #fff
+			font-size: 10px
+
+		&:hover
+			.sale-description
+				transform: scale(1) translateX(88%)
+
+.sale-description
+	color: #333
+	font-size: 10.5pt
+	font-family: exo2light
+	padding: 10px 15px
+	border: 1px solid #CCCCCC
+	box-shadow: -3px 1px 5px 0px #CACDD2
+	width: 260px
+	position: absolute
+	right: 0
+	bottom: 29px
+	background-color: #fff
+	-webkit-transform: translateX(50%) scale(0)
+	transform: translateX(50%) scale(0)
+	transition: -webkit-transform ease .3s
+	transition: transform ease .3s
+	transition: transform ease .3s, -webkit-transform ease .3s
+	z-index: 2
+
+
+.product-card__wraper
+	padding: 15px 20px
+	border: 1px solid #B8BAC2
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: flex-start
+	flex-wrap: wrap
+	align-items: center
+	position: absolute
+	background-color: #fff
+	min-height: 334px
+	transition: box-shadow ease .3s
+.rubber
+	min-height: unset
+
+.product-card__photo
+	height: 140px
+	width: 100%
+	background-size: contain
+	background-repeat: no-repeat
+	margin-bottom: 25px
+	background-position: center center
+	box-sizing: border-box
+	display: flex
+	justify-content: center
+	img
+		object-fit: contain
+		object-position: center
+		max-width: 100%
+
+.product-card__price
+	color: #0BACDB
+	font-size: 14pt
+	font-family: exo2medium
+	width: 47%
+	margin-right: 15px
+	box-sizing: border-box
+	&.non-price
+		font-size: 10pt
+		min-height: 21px
+		width: 49%
+
+.product-card__stok
+	width: 44%
+	color: #333
+	font-size: 10pt
+	box-sizing: border-box
+	display: flex
+	align-items: baseline
+	&.disabled
+		.icon
+			color: #999
+	.icon
+		font-size: 9px
+		width: 16px
+		min-width: 16px
+		color: #3C9
+		padding-right: 8px
+
+.product-page__info .product-card__stok
+.product-card__name
+	width: 100%
+	color: #434E66
+	font-size: 11pt
+	font-family: exo2medium
+	margin-bottom: 15px
+	margin-top: 25px
+	text-decoration: none
+	height: 35px
+	border-bottom: 1px solid transparent
+	//transition: border-bottom ease .3s
+	padding-bottom: 3px
+	&:hover
+		text-decoration: underline
+
+.product-card
+	&__downloading
+		width: 100%
+		color: #434E66
+		font-size: 11pt
+		font-family: exo2medium
+		text-decoration: none
+		border-bottom: 1px solid transparent
+		padding-top: 10px
+		padding-bottom: 5px
+
+
+.wrap-catalog-product-info
+	//min-height: 34px
+
+.product-card__info
+	width: 100%
+	color: #808080
+	font-size: 10pt
+	margin-bottom: 3px
+	span
+		color: #0BACDB
+		margin-left: 5px
+
+.product-card__hidden
+	height: 0
+	overflow: hidden
+
+.product-card__description
+	color: #808080
+	font-size: 10pt
+	margin-top: 15px
+	width: 100%
+
+.product-card__add
+	margin-top: 20px
+	background-color: #0E93C8
+	height: 40px
+	display: inline-block
+	padding-left: 13px
+	padding-right: 13px
+	border: none
+	font-size: 10pt
+	color: #fff
+	cursor: pointer
+	transition: background-color ease .3s
+	min-width: 143px
+	&:hover
+		background-color: #1179b5
+
+
+
+// конец блока списка  товаров в каталоге
+
+
+.b-catalog-text
+	margin-bottom: 40px
+	margin-top: 40px
+	.title_light
+		font-size: 16pt
+		color: #333
+		margin-bottom: 20px
+	p
+		font-family: exo2light
+		margin-top: 15px
+		margin-bottom: 15px
+		font-size: 12pt
+		color: #333
+		text-align: left
+	ul
+
+	li
+		color: #333333
+		font-family: exo2light
+		font-weight: normal
+
+.wrap-share-catalog-not-pagination
+	padding-top: 80px
+
+.b-additional-function-catalog
+	display: none
+
+.brochures
+	&__list
+		display: flex
+		justify-content: flex-start
+		align-items: flex-start
+		margin-top: 30px
+		margin-left: -2%
+		margin-right: -2%
+		flex-wrap: wrap
+	&__item
+		width: 21%
+		margin-right: 2%
+		margin-left: 2%
+		text-decoration: none !important
+		margin-bottom: 25px
+		&:hover
+				.brochures__name
+						color: #0bacdb
+						.icon
+								color: #0bacdb
+	&__photo
+		display: block
+		width: 100%
+		background-position: top left
+		-webkit-background-size: cover
+		background-size: cover
+		background-repeat: no-repeat
+		position: relative
+		&:after
+			content: ''
+			background-color: rgba(235,237,240,0.2)
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+	&__name
+		font-size: 12pt
+		margin-top: 20px
+		color: #666666
+		display: flex
+		justify-content: flex-start
+		align-items: center
+		.icon
+			font-size: 30px
+			color: #b8bac2
+			margin-right: 15px
+
+
+.js-add-list--some
+	transition: all ease .3s !important
+
+.product_added
+	background-color: #3C9 !important
+	*
+		color: #ffffff !important
+
+.catalog-products-available
+	display: flex
+	flex-wrap: wrap
+	margin-bottom: 40px
+
+.product-available
+	flex-basis: 16.65%
+	display: flex
+	@media screen and (max-width: 768px)
+		flex-basis: 50%
+	@media screen and (max-width: 480px)
+		flex-basis: 100%
+	&__link
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+		text-decoration: none
+		padding: 20px
+		border: 1px solid #b8bac2
+		position: relative
+		width: 100%
+		&:hover
+			z-index: 1
+			border-color: #0bacdb
+			box-shadow: 1px 0 0 #0bacdb, 0 1px 0 #0bacdb, -1px 0 0 #0bacdb, 0 -1px 0 #0bacdb
+	&__loading,
+	&__width-area
+		flex-basis: 100%
+		color: #333
+		line-height: 1.5
+		font-family: exo2medium, sans-serif
+	&__name
+		flex-basis: 100%
+		color: #0bacdb
+		line-height: 1.5
+
+.lSSlideOuter .product-card
+	&:hover
+		.product-card__hidden
+			height: 0

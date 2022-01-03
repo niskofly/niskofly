@@ -1,0 +1,29 @@
+.fixed-section
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+
+.title-search-result
+	z-index: 1
+
+.search-result
+	padding: 8px 0
+	background-color: #FFFFFF
+	transform: translateY(-1px)
+	box-shadow: 0 0 0 1px #BDBDBD
+	border-bottom-left-radius: 10px
+	border-bottom-right-radius: 10px
+
+	&__item
+		display: flex
+		font-size: 16px
+		line-height: 1
+		color: #92887B
+		padding: 8px 20px
+		transition: color .3s
+		text-decoration: none
+
+		&:hover
+			color: #46382C

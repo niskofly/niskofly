@@ -1,0 +1,66 @@
+.collapse
+	width: 100%
+	background-color: $white
+	border: 1px solid $grey
+	border-radius: 10px
+
+	&-header
+		+reset_btn()
+		width: 100%
+		padding: 20px
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		&__title
+			font-family: $ffm
+			font-size: 16px
+			text-align: left
+			color: $brown
+
+		&__icon
+			min-width: 50px
+			width: 50px
+			min-height: 50px
+			height: 50px
+			margin-left: 20px
+			border-radius: 50%
+			background-color: $grey
+			position: relative
+
+			&::before
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 10px
+				height: 2px
+				background-color: $green
+
+			&::after
+				content: ''
+				position: absolute
+				top: 50%
+				left: 50%
+				transform: translate(-50%, -50%)
+				width: 2px
+				height: 10px
+				background-color: $green
+				transition: transform ease .3s
+
+	&-body
+		padding: 0 60px 20px 20px
+		display: none
+
+		&__text
+			color: $brown
+			line-height: 1.4
+
+
+
+.toggle-element--open
+
+	.collapse-header__icon
+		&::after
+			transform: translate(-50%, -50%) rotate(90deg)

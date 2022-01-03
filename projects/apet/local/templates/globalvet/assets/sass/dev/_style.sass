@@ -1,0 +1,107 @@
+pre
+	background-color: #ecebeb
+	font-size: 15px
+	line-height: 1.5
+	padding: 20px
+	white-space: break-spaces
+
+.widget_list
+	display: flex
+	flex-wrap: wrap
+	padding-left: 0px
+
+.widget_wrap
+	position: fixed
+	top: 0
+	left: 0
+	z-index: 9999
+	padding: 10px 20px
+	width: 50%
+	background: #222
+	border-bottom-right-radius: 10px
+	-webkit-transition: all .3s ease
+	transition: all .3s ease
+	-webkit-transform: translate(-100%, 0)
+	-ms-transform: translate(-100%, 0)
+	transform: translate(-100%, 0)
+
+	&:hover
+		-webkit-transform: translate(0, 0)
+		-ms-transform: translate(0, 0)
+		transform: translate(0, 0)
+
+	.widget_item
+		width: calc(100% / 4)
+		padding: 0 0 10px
+		padding: 10px
+
+	.widget_link
+		color: #fff
+		text-decoration: none
+		font-size: 21px
+
+		&:hover
+			text-decoration: underline
+
+.widget_wrap:after
+	content: ""
+	position: absolute
+	top: 0
+	left: 100%
+	width: 24px
+	height: 24px
+	background: #222 url(data:image/pngbase64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAABGdBTUEAALGPC/xhBQAAAAxQTFRF////////AAAA////BQBkwgAAAAN0Uk5TxMMAjAd+zwAAACNJREFUCNdjqP///y/DfyBg+LVq1Xoo8W8/CkFYAmwA0Kg/AFcANT5fe7l4AAAAAElFTkSuQmCC) no-repeat 50% 50%
+	cursor: pointer
+
+
+.ui
+	margin-bottom: 50px
+
+	&-section
+		padding: 50px
+
+		td
+			padding: 10px
+
+		.input-group
+			max-width: 480px
+			margin-bottom: 20px
+
+	&-header
+		padding: 35px 50px
+		background: #F4F7FB
+		color: #5A6872
+		font-size: 54px
+
+	&-title
+		font-size: 24px
+		padding-bottom: 18px
+
+
+.ui-colors
+	display: flex
+	align-items: flex-start
+	margin-bottom: 45px
+	flex-wrap: wrap
+
+
+.ui-color
+	display: flex
+	flex-direction: column
+	justify-content: flex-start
+	align-items: flex-start
+	margin-right: 22px
+
+	&__bg
+		width: 80px
+		height: 50px
+		margin-bottom: 10px
+		border: 1px solid #EFF2F5
+
+	&__name
+		color: #5A6872
+		margin-bottom: 10px
+
+	&__code
+		color: #000
+		text-decoration: underline

@@ -1,0 +1,50 @@
+.search-form
+  display: flex
+  width: 100%
+
+.btn-action-search
+  display: block
+  width: 55px
+  height: 45px
+  padding-left: 0
+  padding-right: 0
+  color: #fff
+  background-color: #434E66
+  border: none
+  cursor: pointer
+  .icon
+    font-size: 14px
+
+.select-categort__current-name
+  white-space: nowrap
+  text-overflow: ellipsis
+  overflow: hidden
+
+.select-categort
+  position: relative
+  cursor: pointer
+
+.select-category__container
+  position: absolute
+  top: 45px
+  background-color: #ffffff
+  border: 1px solid #999
+  margin-top: -1px
+  //padding-top: 5px
+  //padding-bottom: 5px
+  display: none
+  z-index: 3
+
+.select-category__item
+  padding: 10px 14px
+  white-space: nowrap
+  cursor: pointer
+  transition:  background-color ease .3s
+  &:hover
+    background-color: #dfe2e8
+
+.select-category__item--active
+  background-color: #dfe2e8
+
+.catalog-products--search
+  margin-top: 45px

@@ -1,0 +1,54 @@
+RewriteEngine On
+RewriteCond %{SERVER_PORT} !^443$
+RewriteRule .* https://%{SERVER_NAME}%{REQUEST_URI} [R=301,L]
+
+Options -Indexes 
+ErrorDocument 404 /404.php
+
+<IfModule mod_php5.c>
+	php_flag allow_call_time_pass_reference 1
+	php_flag session.use_trans_sid off
+
+	#php_value display_errors 1
+
+	#php_value mbstring.internal_encoding UTF-8
+</IfModule>
+
+<IfModule mod_rewrite.c>
+	Options +FollowSymLinks
+	RewriteEngine On
+	
+	RewriteCond %{HTTP_HOST} ^www\.xn--80ajbtev1d0b\.net$ [NC]
+	RewriteRule ^(.*)$ https://xn--80ajbtev1d0b.net/$1 [R=301,L]
+
+	RewriteCond %{REQUEST_URI} ^(.*)//(.*)$
+	RewriteRule . %1/%2 [R,L]
+
+	# Редирект на страницу без многократных /.
+	RewriteCond %{THE_REQUEST} //
+	RewriteRule .* /$0 [R=301,L]
+
+	# 301 редирект с index.php на корень
+	RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.(php|html|htm)\ HTTP/ 
+	RewriteRule ^(.*)index\.(php|html|htm)$ https://xn--80ajbtev1d0b.net/$1 [R=301,L]
+	
+	RewriteCond %{REQUEST_FILENAME} !-f
+	RewriteCond %{REQUEST_FILENAME} !-l
+	RewriteCond %{REQUEST_FILENAME} !-d
+	RewriteCond %{REQUEST_FILENAME} !/bitrix/urlrewrite.php$
+	RewriteRule ^(.*)$ /bitrix/urlrewrite.php [L]
+	RewriteRule .* - [E=REMOTE_USER:%{HTTP:Authorization}]
+</IfModule>
+
+<IfModule mod_dir.c>
+	DirectoryIndex index.php index.html
+</IfModule>
+
+<IfModule mod_expires.c>
+	ExpiresActive on
+	ExpiresByType image/jpeg "access plus 3 day"
+	ExpiresByType image/gif "access plus 3 day"
+</IfModule>
+
+
+

@@ -1,0 +1,338 @@
+.logo
+	display: inline-flex
+	max-width: 202px
+	width: 100%
+
+	img
+		width: 100%
+		height: 100%
+		object-fit: contain
+
+.header
+	background: radial-gradient(50% 7771.97% at 50% 50%, #7149B7 20.31%, #563494 100%)
+
+	&__top
+		padding: 16px 0
+		border-bottom: 1px solid rgba(255, 255, 255, .15)
+
+	&__info
+		display: flex
+		align-items: center
+		margin: 0 -15px
+
+		&-item
+			display: inline-flex
+			font-size: 16px
+			line-height: 1.25
+			color: #B7A9D0
+			text-decoration: none
+			margin: 0 15px
+
+			img
+				max-width: 13px
+				min-width: 13px
+				margin-right: 6px
+
+	&__bottom
+		position: relative
+		padding: 9px 0
+
+		&-navigation
+			display: flex
+			align-items: center
+
+	&__container
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__logo
+		margin-right: 35px
+
+	&__btn-catalog,
+	&__btn-burger
+		margin-right: 10px
+
+		.icon
+			transform: scale(1)
+
+		.btn__icon-close.icon
+			transform: scale(0)
+			min-width: 0
+			max-width: 0
+			margin: 0
+
+		&.active
+
+			.btn__icon-close
+				min-width: 15px
+				max-width: 15px
+				margin-right: 8px
+				transform: scale(1)
+
+			.btn__icon-menu.icon
+				transform: scale(0)
+				min-width: 0
+				max-width: 0
+				margin: 0
+
+	&__form-search
+		min-width: 425px
+
+	&__mobile
+		display: none
+
+	+max-screen(1440px)
+
+		&__info
+			margin: 0
+
+			&-item
+				margin: 0 5px
+
+	+max-screen(1325px)
+
+		&__logo
+			margin-right: 5px
+
+		&__form-search
+			min-width: auto
+
+	+max-screen(1200px)
+
+		&__info-item
+			font-size: 14px
+
+		.btn,
+		.input
+			min-height: auto
+			font-size: 16px
+
+		&__logo
+			max-width: 140px
+
+	+max-screen(1023px)
+
+		&.active
+			position: fixed
+			width: 100%
+			height: 100vh
+			overflow-y: auto
+			z-index: 100
+
+		&__mobile
+			display: flex
+			padding: 10px
+
+			.header__container
+				.nav
+					display: flex
+
+		&__top
+			display: none
+
+		&__bottom
+			padding: 0
+
+			&-navigation
+				display: none
+
+				.header__logo
+					display: none
+
+		&__container
+			.nav
+				display: none
+
+		&__btn-burger.btn
+			border-radius: 0
+			background-color: #FF1AC6
+			align-items: center
+			padding: 10px
+			min-width: 38px
+			justify-content: center
+			border-radius: 10px
+			margin: 0
+
+			.icon
+				font-size: 18px
+				margin-right: 0
+
+
+			&.active
+				background-color: transparent
+
+	+max-screen(450px)
+
+		&__form-search.form-search
+			display: none
+
+		&__bottom
+			padding-top: 0
+
+		&__btn-catalog.btn
+			font-size: 20px
+			padding: 12px 20px
+
+		&__btn-catalog.btn,
+		&__bottom-navigation
+			width: 100%
+			margin: 0
+
+		&__mobile
+			.nav__link-title
+				display: none
+
+
+
+.header-collections,
+.header-catalog,
+.header-menu
+	position: absolute
+	top: 100%
+	left: 0
+	width: 100%
+	background-color: #F7F4FD
+	transform: translateY(-40px)
+	pointer-events: none
+	opacity: 0
+	transition: transform .3s, opacity .3s
+	z-index: $ziHeaderModal
+	box-shadow: 0px 24px 42px rgba(209, 24, 163, 0.1)
+	height: calc(100vh - 160px)
+
+	.header-catalog__container
+
+	&.active
+		transform: translateY(0px)
+		opacity: 1
+		pointer-events: initial
+		height: max-content
+
+
+
+.header-menu
+	padding: 0 10px
+
+	.header-catalog-mobile
+		display: none
+
+	&.active
+		z-index: 22
+
+		.header-catalog-mobile
+			display: block
+
+	.header__form-search.form-search
+		display: flex
+		margin-top: 10px
+		border: 1px solid #DFD1F3
+
+	.form-search
+		&__submit.btn,
+		&__input
+			font-size: 18px
+			padding: 12px 20px
+
+	.nav
+		flex-direction: column
+		align-items: flex-start
+		border-bottom: 1px solid #DFD1F3
+		padding-bottom: 12px
+
+		&__link,
+		&__link .icon
+			color: #563494
+			font-size: 18px
+
+	.header
+
+		&__info
+			flex-direction: column
+			padding: 10px 0
+
+			&-item
+				font-size: 16px
+				color: #563494
+
+		&__btn-catalog
+			width: 100%
+			margin: 0
+
+	+min-screen(1023px)
+		display: none
+
+
+
+
+.header-catalog
+
+	.nav
+		opacity: 0
+		transition: opacity .3s
+		overflow: auto
+
+	&.active .nav
+		opacity: 1
+
+	&__container
+		display: flex
+		align-items: stretch
+		justify-content: flex-end
+		height: max-content
+
+	&__subnavs
+		max-width: 890px
+		width: 100%
+		position: relative
+		padding: 30px 0 24px
+		background-color: #fff
+
+	+max-screen(1200px)
+
+		&__container
+			height: calc(100vh - 128px)
+
+	+max-screen(1023px)
+		display: none
+
+
+
+.header-collections
+	+max-screen(1023px)
+		background: #fff
+		padding: 0 10px
+
+		&.active
+			min-height: calc(100vh - 81px)
+
+		.btn-back
+			display: flex
+
+
+
+.header-catalog-wrapper
+	position: relative
+	width: 100%
+
+
+
+.header-menu-subcatalog
+	width: 0
+	transition: transform ease .3s
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	transform: translateX(100%)
+	margin-top: -10px
+
+	&.active
+		transform: translateX(0)
+		width: 100%
+		height: 100%
+		z-index: 23
+
+		.btn-back
+			display: flex

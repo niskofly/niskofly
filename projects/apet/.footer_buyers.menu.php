@@ -1,0 +1,66 @@
+<?
+$aMenuLinks = array(
+    array(
+        "Акции",
+        "/promotions/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Бренды",
+        "/brands/",
+        array(),
+        array(),
+        ""
+    ),
+    /*array(
+        "Как сделать заказ?",
+        "/creating-order/",
+        array(),
+        array(),
+        ""
+    ),*/
+    /*array(
+        "Инструкции",
+        "/instructions/",
+        array(),
+        array(),
+        ""
+    ),*/
+    array(
+        "Новости",
+        "/news/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Доставка и оплата",
+        "/delivery-and-payment/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Пункты выдачи",
+        "/points-of-delivery/",
+        array(),
+        array(),
+        ""
+    ),
+    array(
+        "Контакты",
+        "/contacts/",
+        array(),
+        array(),
+        ""
+    ),
+    /*array(
+        "Помощь",
+        "/help/",
+        array(),
+        array(),
+        ""
+    )*/
+);

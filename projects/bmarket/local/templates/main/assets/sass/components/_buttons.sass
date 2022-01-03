@@ -1,0 +1,126 @@
+a.btn
+	text-decoration: none
+
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	text-align: center
+	font-family: $ffb
+	font-size: 20px
+	line-height: 1
+	border-radius: 10px
+	padding: 18px 20px
+	background-color: #D118A3
+	color: #FFFFFF
+	min-width: max-content
+	transition: background-color .3s, border .3s, color .3s
+
+	.icon
+		font-size: 15px
+		margin-right: 8px
+
+	&:hover
+		background-color: #FF1AC6
+
+	&:active
+		background-color: #99297D
+
+	&:disabled,
+	&--disabled
+		background-color: #D5C4CF
+		pointer-events: none
+
+	&--transparent
+		background-color: transparent
+		color: #D118A3
+		border: 2px solid
+		border-color: #D118A3
+
+		&:hover
+			border-color: #FF1AC6
+			color: #FF1AC6
+			background-color: transparent
+
+		&:active
+			border-color: #99297D
+			color: #99297D
+
+		&:disabled,
+		&.btn--disabled
+			border-color: #D5C4CF
+			color: #D5C4CF
+			pointer-events: none
+			background-color: transparent
+
+	&--purple-text
+		font-family: $ff
+		font-size: 16px
+		line-height: 22px
+		color: #AD8BD7
+		background-color: transparent
+		padding: 0
+		border-radius: 0
+
+		.icon
+			min-width: 15px
+			max-width: 15px
+
+		&:hover
+			color: #7149B7
+			background-color: transparent
+
+
+.link
+	font-size: 16px
+	line-height: 22px
+	color: #D118A3
+	transition: color .3s
+
+	&:hover
+		color: #FF1AC6
+		text-decoration: none
+
+	&:visited
+		color: #93278F
+
+
+
+.link-icons
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	flex-direction: column
+
+.link-icon
+	display: flex
+	align-items: center
+	font-size: 18px
+	color: #563494
+	text-decoration: none
+	margin-top: 20px
+
+	&:first-child
+		margin-top: 0
+
+	&__image
+		margin-right: 10px
+
+	img
+		width: 20px
+
+	&:hover
+		text-decoration: underline
+
+
+.btn-back
+	display: none
+	align-items: center
+	padding: 12px 10px
+	cursor: pointer
+	background: #F7F4FD
+	margin: 0 -10px
+
+	.icon
+		font-size: 10px
+		margin-right: 10px

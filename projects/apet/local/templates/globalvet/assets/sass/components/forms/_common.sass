@@ -1,0 +1,84 @@
+.form
+
+	.input-group
+		margin-bottom: 10px
+
+		&--rating
+			margin-bottom: 20px
+
+	&__actions
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__term
+		max-width: 185px
+		align-items: baseline
+
+		.checkbox__view
+			margin-right: 10px
+
+		.checkbox__text
+			font-size: 15px
+			line-height: 19px
+
+		a
+			color: inherit
+
+	[type="submit"]
+		padding: 0 26px
+
+	&--modal-default
+
+		.form__textarea
+			min-height: 130px
+
+		.form__actions
+			padding-top: 10px
+
+	&--review
+		padding-top: 20px
+
+		.form__textarea
+			min-height: 130px
+
+		.form__actions
+			padding-top: 30px
+
+	&--product-notify
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+
+		.input-groups
+			flex: 1
+			margin-right: 10px
+
+		.input-group
+			margin-bottom: 20px
+
+	&--enter
+
+		.form__actions
+			align-items: flex-start
+
+	&--reg,
+	&--code
+
+		.input-group
+			margin-bottom: 20px
+
+		.form
+
+			&__code-repeat
+				font-family: $ff
+				font-size: 15px
+				color: #4A4A4A
+				text-decoration: underline
+				margin-bottom: 10px
+
+			&__actions
+				justify-content: flex-end
+
+	&--hide
+		display: none

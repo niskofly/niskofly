@@ -1,0 +1,108 @@
+.map
+
+	&-sections
+		display: flex
+
+	&-section
+		display: flex
+		flex-direction: column
+
+		&--selector
+			width: calc(40% - 20px)
+			margin-right: 20px
+
+		&--map
+			width: 60%
+
+	&__title
+		font-family: $ffm
+		font-size: 18px
+		margin-bottom: 15px
+
+	&__selector
+		margin-bottom: 20px
+
+	&-points
+		padding: 30px 20px
+		border-radius: 10px
+		border: 1px solid $greyl
+		flex: 1
+		max-height: calc(600px - 33px - 85px)
+		overflow-x: hidden
+		overflow-y: auto
+
+		&::-webkit-scrollbar
+			width: 7px
+
+		&::-webkit-scrollbar-track
+			background-color: #E7F3F8
+			border-radius: 10px
+
+		&::-webkit-scrollbar-thumb
+			background-color: $green
+			border-radius: 10px
+
+	&-point
+		border-bottom: 1px solid $grey
+		padding-bottom: 20px
+		margin-bottom: 15px
+
+		&:last-child
+			border-bottom: none
+			margin-bottom: 0
+			padding-bottom: 0
+
+		&__station
+			display: flex
+			align-items: center
+			margin-bottom: 10px
+			font-family: $ffm
+
+		&__color
+			width: 10px
+			height: 10px
+			background-color: $green
+			border-radius: 50%
+			margin-right: 5px
+
+		&__address
+			font-family: $ffm
+			font-size: 15px
+			margin-bottom: 10px
+
+		&__row
+			display: flex
+			align-items: center
+
+		&__info
+			font-family: $ffm
+			color: $greyd
+			font-size: 14px
+
+		&__dot
+			width: 5px
+			height: 5px
+			background-color: $green
+			border-radius: 50%
+			margin: 0 8px
+
+	&-cities
+		height: 600px
+		width: 100%
+		border-radius: 10px
+		overflow: hidden
+
+
+	+max-screen(950px)
+
+		&-sections
+			flex-direction: column
+
+		&-section
+
+			&--selector
+				margin: 0 0 20px
+
+			&--selector,
+			&--map
+				width: 100%

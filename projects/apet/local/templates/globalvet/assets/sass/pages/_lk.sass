@@ -1,0 +1,172 @@
+.page--lk
+	padding-bottom: 150px
+
+
+.lk-nav
+	display: flex
+	margin-bottom: 20px
+
+	&__link
+		padding: 0 20px
+		margin-right: 10px
+		border-radius: 20px
+
+		&--active
+			color: #FFF
+			background-color: #00A6DC
+
+
+.lk-profile-actions
+	max-width: 940px
+	width: 100%
+	position: relative
+
+.lk-profile__action
+	border-radius: 10px
+	padding: 5px 10px
+
+	&--add
+		position: absolute
+		left: calc(100% + 20px)
+
+	.btn__icon-round
+		min-width: 20px
+		max-width: 20px
+		height: 20px
+		font-size: 14px
+
+
+.lk-back
+	display: flex
+	align-items: center
+	text-decoration: none
+	color: #4A4A4A
+	margin-bottom: 30px
+
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 50px
+		max-width: 50px
+		height: 50px
+		border-radius: 50px
+		background-color: #E7F3F8
+		margin-right: 10px
+
+		.icon
+			font-size: 12px
+
+	&__text
+		font-family: $ffm
+		font-size: 18px
+		line-height: 23px
+
+
+.lk-section
+	width: 100%
+	padding: 40px 40px 60px
+	background-color: #FFFFFF
+	border-radius: 15px
+
+	&__header
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 40px
+
+		.title
+			font-family: $ffb
+
+		&-note
+			font-size: 18px
+			line-height: 1
+			color: #00A6DC
+			margin-top: 16px
+
+	&--cancel
+
+		.lk-section__header
+			max-width: 860px
+			border-bottom: 1px solid #E7F3F8
+
+	&--subscribe
+		padding: 40px 40px 150px
+
+		.lk-section__header
+			padding-bottom: 50px
+			border-bottom: 1px solid #E7F3F8
+
+	&--profile
+		max-width: 940px
+		margin-bottom: 20px
+
+
+.lk-orders
+
+	&--empty
+		display: flex
+		flex-direction: column
+		align-items: center
+		padding-bottom: 60px
+
+	&__text
+		font-family: $ffm
+		font-size: 25px
+		line-height: 32px
+		text-align: center
+		margin-bottom: 30px
+
+	&__link
+		padding: 0 20px
+
+	&__table
+		width: 100%
+
+		th
+			font-family: $ffm
+			font-size: 21px
+			font-weight: 500
+			padding: 18px 40px
+			background-color: #F4FAFC
+			text-align: left
+
+			&:first-child
+				border-top-left-radius: 15px
+
+			&:last-child
+				border-top-right-radius: 15px
+
+		tr:hover
+
+			td
+				background-color: #F4FAFC
+
+			.lk-orders__table-btn
+				color: #ffffff
+				background-color: #00A6DC
+
+		td
+			cursor: pointer
+			position: relative
+			font-family: $ff
+			font-size: 18px
+			line-height: 27px
+			vertical-align: top
+			padding: 30px 40px
+			background-color: transparent
+			transition: background-color .3s
+
+		&-btn
+			display: flex
+			align-items: center
+			justify-content: center
+			min-width: 50px
+			max-width: 50px
+			height: 50px
+			border-radius: 100%
+			background-color: #E7F3F8
+			transition: color .3s, background-color .3s
+
+			.icon
+				font-size: 12px

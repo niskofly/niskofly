@@ -1,0 +1,163 @@
+.input
+	height: 45px
+	padding-left: 13px
+	color: #333
+	font-size: 11pt
+	box-sizing: border-box
+	outline: none
+	border: 1px solid #999
+	font-family: exo2
+
+.input--border-focus
+	&:focus
+		border: 1px solid #1179B5
+
+input:invalid
+	box-shadow: none
+
+.input[type="email"]
+	background-image: url(/img/input-email.png)
+	background-repeat: no-repeat
+	background-position: 19px 
+	padding-left: 50px
+
+.input[type="tel"]
+	background-image: url(/img/input-tel.png)
+	background-repeat: no-repeat
+	background-position: 19px 
+	padding-left: 50px
+
+.input[name="name"]
+	background-image: url(/img/input-name.png)
+	background-repeat: no-repeat
+	background-position: 19px 
+	padding-left: 50px
+
+
+.textarea
+	font-size: 12pt
+	color: #333
+	padding-left: 13px
+	box-sizing: border-box
+	padding-top: 7px
+
+textarea
+	resize: none !important
+
+// CHECKBOX STYLE
+.wrap-checkbox
+	.icon-wrap
+		min-width: 14px
+		height: 14px
+		width: 14px
+		border: 1px solid #808080
+		background-color: #fff
+		border-radius: 1px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: center
+		margin-right: 8px
+		align-items: center
+		transition: background-color ease .3s
+
+		.icon
+			transform: scale(0)
+			transition: transform ease .3s
+			font-size: 6px
+			color: #fff
+	.checkbox-label
+		color: #333
+		transition: all ease .3s
+		display: flex
+		font-size: 11pt
+		cursor: pointer
+		padding-right: 5px
+
+	input
+		display: none
+		
+\::-webkit-input-placeholder
+	/* Chrome/Opera/Safari
+	color: #999
+
+\::-moz-placeholder
+	/* Firefox 19+
+	color: #999
+
+\:-ms-input-placeholder
+	/* IE 10+
+	color: #999
+
+\:-moz-placeholder
+	/* Firefox 18-
+	color: #999
+
+.checkbox:checked + .checkbox-label>.icon-wrap>.icon
+	transform: scale(1)
+
+.checkbox:checked + .checkbox-label>.icon-wrap
+	background-color: #66D4FF
+	border: 1px solid transparent
+	// height: 15px
+	// width: 15px
+
+.checkbox:checked + .checkbox-label
+	color: #808080
+
+.filter-item__option
+	.checkbox:checked + .checkbox-label
+		color: #333
+.full-input
+	width: 100%
+	margin-bottom: 10px
+
+
+.custom-select
+	position: relative
+	&__current
+		display: flex
+		align-items: center
+		width: 100%
+		height: 45px
+		justify-content: space-between
+		border: 1px solid #CCCCCC
+		padding: 0 13px
+		box-sizing: border-box
+		cursor: pointer
+		background-color: #ffffff
+		&.is_show
+			.custom-select__current-toggle
+				.icon
+					color: #0BACDB
+					transform: rotate(180deg)
+	&__current-value
+
+	&__current-toggle
+		.icon
+			font-size: 8px
+			color: #B3B3B3
+			transition: color ease .3s, transform ease .3s
+			transform: rotate(0deg)
+
+	&__values
+		display: none
+		position: absolute
+		top: 45px
+		background-color: #ffffff
+		border: 1px solid #CCCCCC
+		margin-top: -1px
+		z-index: 3
+		left: 0
+		right: 0
+	&__value
+		padding: 10px 14px
+		white-space: nowrap
+		cursor: pointer
+		transition: background-color ease .3s
+		&:hover
+			background-color: #dfe2e8
+		&.active
+			background-color: #dfe2e8

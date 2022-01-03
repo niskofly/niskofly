@@ -1,0 +1,77 @@
+.brands-letters
+	margin-bottom: 50px
+
+
+.letters-selects
+	margin-bottom: 30px
+	border: 1px solid #E0E0E0
+
+	&__row
+		border: 0
+		margin: 0
+		border-radius: 0
+		border-bottom: 1px solid #E0E0E0
+
+		&:last-child
+			border-bottom: 0
+
+
+.brands
+
+	&-row
+		display: flex
+		flex-direction: column
+		margin-bottom: 40px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__letter
+		font-family: $ffm
+		font-size: 30px
+		color: $brown
+		margin-bottom: 15px
+
+	&__list
+		display: flex
+		flex-wrap: wrap
+		margin-left: -20px
+
+
+
+.popular-brand
+	display: flex
+	flex-direction: column
+	align-items: center
+	width: calc( 100% / 6 - 20px )
+	margin-left: 20px
+	margin-bottom: 20px
+	padding: 20px
+	border: 1px solid $tr
+	border-radius: 10px
+
+	&:hover
+		border-color: $grey
+
+	&__logo
+		width: 100%
+		height: 70px
+		margin-bottom: 10px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__name
+		text-align: center
+		font-family: $ffm
+
+	+max-screen(1023px)
+		width: calc( 100% / 4 - 20px )
+
+	+max-screen(767px)
+		width: calc( 100% / 2 - 20px )

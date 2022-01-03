@@ -1,0 +1,35 @@
+.bread-crumbs
+  display: flex
+  align-items: center
+  justify-content: flex-start
+  padding: 40px 0 50px
+  flex-wrap: no-wrap
+  overflow: hidden
+  overflow-x: auto
+
+  +max-screen(767px)
+    padding: 20px 0
+
+
+.bread-crumb
+  color: $brown
+  font-size: 15px
+  text-decoration: none
+  font-family: $ff
+  line-height: 18px
+  white-space: nowrap
+
+  &:after
+    content: ">"
+    padding-left: 6px
+    padding-right: 6px
+    text-decoration: none !important
+
+  &:not(a)
+    color: #848E99
+
+    &:after
+      display: none
+
+  &:hover span
+    text-decoration: underline

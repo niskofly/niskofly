@@ -1,0 +1,182 @@
+.catalog-filters
+	max-width: 340px
+	width: 100%
+
+	+max-screen(1023px)
+		position: fixed
+		top: 0
+		right: 0
+		background: #fff
+		height: 100%
+		width: 100%
+		max-width: 100%
+		overflow: auto
+		transform: translateX(1000px)
+		transition: transform ease .3s
+		z-index: 10
+
+		&.active
+			transform: translateX(0)
+
+
+
+.filter-btn
+	padding: 20px
+	background: $grey
+	color: $brown
+	font-family: $ffm
+	font-size: 16px
+	line-height: 19px
+	text-transform: uppercase
+	margin-bottom: 20px
+	cursor: pointer
+
+	+min-screen(1023px)
+		display: none
+
+
+
+
+.filter-close
+	+reset_btn()
+	z-index: 1
+	padding: 15px
+
+	.icon
+		font-size: 15px
+		color: $greyd
+
+
+
+.clear-filters
+	display: flex
+	align-items: center
+	justify-content: space-between
+	padding: 20px
+	background-color: $grey
+	border-radius: 10px
+	margin-bottom: 50px
+	width: 100%
+
+	&__span
+		text-transform: uppercase
+		font-family: $ffm
+
+	&__btn
+		+reset-btn
+		padding: 15px 30px
+		border-color: $greyd
+		background-color: $tr
+		color: $greyd
+		border-radius: 10px
+		font-family: $ffm
+		border: 1px solid $greyd
+		transition: background-color ease .3s, color ease .3s
+		line-height: 1
+		margin: 0 30px 0 auto
+
+		&:hover
+			background-color: $greyd
+			color: $white
+
+	+max-screen(1023px)
+		border-radius: 0
+
+	+max-screen(767px)
+
+		&__btn
+			padding: 15px
+
+
+
+.filter-item
+	display: flex
+	flex-direction: column
+	border-bottom: 1px solid $greyl
+
+	&__heading
+		+reset_btn()
+		display: flex
+		align-items: center
+		padding: 30px 20px
+
+		.icon
+			font-size: 13px
+			color: $green
+			margin-right: 15px
+
+		&-description
+			font-family: $ffm
+			font-size: 16px
+			line-height: 1
+
+		&.active
+
+			.filter-item-toggle::before
+				transform: rotate(90deg)
+
+	&__body
+		display: none
+		padding: 0 20px 40px
+
+		.checkbox
+			display: flex
+			margin-bottom: 10px
+
+		&--price
+			display: block
+
+	&__expand
+		+reset_btn
+		display: flex
+		align-items: center
+		padding: 0 20px
+
+		&:hover
+			.filter-item__expand-span
+				color: $greend
+
+			.filter-item__expand-icon
+				.icon
+					color: $greend
+
+		&-span
+			font-size: 15px
+			color: $green
+			margin-right: 10px
+			margin-left: 30px
+			transition: color ease .3s
+
+		&-icon
+			.icon
+				color: $green
+				font-size: 11px
+				transition: color ease .3s
+
+
+.filter-item-toggle
+	width: 13px
+	height: 13px
+	position: relative
+	margin-right: 13px
+
+	&:before
+		content: ""
+		position: absolute
+		width: 3px
+		height: 100%
+		right: 5px
+		top: 0
+		background-color: $green
+		font-size: 28px
+		transition: transform ease .3s
+
+	&:after
+		content: ""
+		position: absolute
+		right: 0
+		top: 5px
+		height: 3px
+		width: 100%
+		background-color: $green
+

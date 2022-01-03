@@ -1,0 +1,45 @@
+.news
+
+	&-list
+		display: flex
+		flex-wrap: wrap
+		margin-left: -20px
+
+	&-suggestions
+		display: flex
+		flex-direction: column
+
+		.news-card
+			width: 100%
+			margin-left: 0
+			margin-bottom: 20px
+
+
+
+.blog
+
+	&-list
+		display: flex
+		flex-wrap: wrap
+		margin-left: -20px
+
+	&__tabs
+		display: flex
+		flex-wrap: wrap
+		margin: -5px -5px 15px
+
+		.tab-action
+			margin: 5px
+
+	&-suggestions
+		display: flex
+		flex-direction: column
+
+		.blog-card
+			width: 100%
+			margin-left: 0
+			margin-bottom: 20px
+
+	+max-screen(700px)
+		&-list
+			margin-left: 0

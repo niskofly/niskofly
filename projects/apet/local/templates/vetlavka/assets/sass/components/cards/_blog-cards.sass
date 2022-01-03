@@ -1,0 +1,161 @@
+.blog-card
+	display: flex
+	flex-direction: column
+	max-width: 460px
+	width: calc(100% / 3 - 20px)
+	min-height: 550px
+	border-radius: 10px
+	border: 1px solid $tr
+	transition: border-color ease .3s
+	padding-bottom: 30px
+	margin-left: 20px
+	margin-bottom: 20px
+
+	&:hover
+		border-color: $greyl
+
+	&-header
+		width: 100%
+		height: 310px
+		border-radius: 10px
+		overflow: hidden
+		margin-bottom: 20px
+		display: block
+
+		&__img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&-body
+		padding: 0 10px
+		margin-bottom: 30px
+
+		&__title
+			font-family: $ffm
+			font-size: 20px
+			color: $brown
+			margin-bottom: 10px
+			display: inline-block
+			text-decoration: none
+
+		&__description
+			line-height: 1.4
+
+	&-footer
+		padding: 0 10px
+		display: flex
+		align-items: center
+		margin-top: auto
+
+		&__tag
+			text-transform: uppercase
+			color: $green
+			border-radius: 10px
+			border: 1px solid $green
+			padding: 10px 20px
+			font-family: $ffm
+			font-size: 15px
+			margin-right: 20px
+
+		&__date
+			font-family: $ffm
+			font-size: 15px
+
+	+max-screen(1023px)
+		width: calc(100% / 2 - 20px)
+
+	+max-screen(700px)
+		max-width: 100%
+		width: 100%
+		margin-left: 0
+		min-height: 100%
+
+
+
+.stock-card
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+
+	&__img
+		height: 310px
+		border-radius: 10px
+		overflow: hidden
+		margin-bottom: 20px
+		display: block
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__time
+		border: 1px solid $green
+		border-radius: 10px
+		padding: 10px 20px
+		font-family: $ffm
+		font-size: 18px
+		color: $green
+		margin-bottom: 10px
+		display: flex
+
+	&__title
+		font-family: $ffm
+		font-size: 20px
+		color: $brown
+		text-decoration: none
+
+	&__wrapper
+		margin-left: 20px
+		margin-bottom: 50px
+		width: calc( 100% / 3 - 20px )
+
+
+
+.news-card
+	display: flex
+	flex-direction: column
+	align-items: flex-start
+	width: 100%
+	border: 1px solid $tr
+	border-radius: 10px
+	width: calc(100% / 3 - 20px)
+	margin-left: 20px
+	margin-bottom: 20px
+	padding-bottom: 25px
+
+	&:hover
+		border-color: $grey
+
+	&__img
+		width: 100%
+		height: 310px
+		border-radius: 10px
+		overflow: hidden
+		margin-bottom: 15px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__title
+		padding: 0 10px
+		font-family: $ffm
+		font-size: 20px
+		color: $brown
+		text-decoration: none
+		margin-bottom: 10px
+
+	&__date
+		padding: 0 10px
+		color: $green
+		font-family: $ffm
+		font-size: 18px
+
+	+max-screen(1023px)
+		width: calc(100% / 2 - 20px)
+
+	+max-screen(600px)
+		width: calc(100% / 1 - 20px)

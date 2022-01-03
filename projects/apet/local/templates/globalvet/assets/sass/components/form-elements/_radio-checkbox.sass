@@ -1,0 +1,79 @@
+.radiobutton,
+.checkbox
+	display: flex
+	align-items: center
+	cursor: pointer
+
+	input
+		display: none
+
+		&:checked + [class*="__view"]
+			border-color: #00A6DC
+			box-shadow: none
+
+			.icon,
+			.dot
+				opacity: 1
+
+		&[disabled] ~ span
+			cursor: initial
+			pointer-events: initial
+			color: #E0E0E0
+			border-color: #E0E0E0
+
+	&__view
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		transition: border .3s
+
+		.icon
+			position: relative
+			opacity: 0
+			pointer-events: none
+			user-select: none
+			transition: opacity .3s
+
+	&__text
+		font-family: $ff
+		font-size: 18px
+		line-height: 20px
+		pointer-events: none
+		user-select: none
+
+		a
+			pointer-events: initial
+			color: #2A5CAA
+
+
+.radiobutton
+
+	&__view
+		min-width: 18px
+		max-width: 18px
+		height: 18px
+		border-radius: 50px
+		margin-right: 10px
+		border: 2px solid #BDBDBD
+
+		.icon
+			width: 8px
+			height: 8px
+			border-radius: 50px
+			background-color: #00A6DC
+
+.checkbox
+
+	&__view
+		min-width: 20px
+		max-width: 20px
+		height: 20px
+		border-radius: 2px
+		box-shadow: 0 0 0 1px #E0E0E0
+		border: 2px solid transparent
+		margin-right: 15px
+
+		.icon
+			font-size: 7px
+			color: #00A6DC

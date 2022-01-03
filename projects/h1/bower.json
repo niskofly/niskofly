@@ -1,0 +1,15 @@
+{
+  "name": "headin",
+  "description": "headin.pro",
+  "main": "index.js",
+  "authors": [
+    "scriptosaur <scriptosaur@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "devDependencies": {
+    "raty": "~2.7.0"
+  }
+}

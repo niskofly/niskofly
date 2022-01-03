@@ -1,0 +1,12 @@
+@mixin font_face($file_name,$font_name:$file_name,$path:$font_path,$weight:normal,$style:normal) 
+	@font-face 
+		font-family: quote($font_name)
+		src: url($path + $file-name + ".eot")
+		src: url($path + $file-name + ".eot?#iefix") format("embedded-opentype"), url($path + $file-name + ".woff") format("woff"), url($path + $file-name + ".ttf") format("truetype"), url($path + $file-name + ".svg##{$font_name}") format("svg")
+		font-weight: $weight
+		font-style: $style
+
++font_face("exo2", "exo2", "../fonts/exo2/")
++font_face("exo2bold", "exo2bold", "../fonts/exo2bold/")
++font_face("exo2light", "exo2light", "../fonts/exo2light/")
++font_face("exo2medium", "exo2medium", "../fonts/exo2medium/")

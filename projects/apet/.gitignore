@@ -1,0 +1,34 @@
+/.idea
+/.vscode
+/.vagrant
+*.log
+log.txt
+pathLog.txt
+.DS_Store
+Thumbs.db
+/cgi-bin/
+# todo: testing.php удалить на релизе
+testing.php
+
+# игнорируем файлы nodejs
+node_modules
+
+# игнорируем папку битрикс
+/bitrix/*
+
+# игнорируем загруженные файлы и логи
+/upload/
+/logs/
+
+# игнорируем другие файлы
+google*.html
+yandex*.html
+cmsmagazine*.*
+.htaccess.zip
+
+# игнорируем файлы seo
+sitemap-*
+sitemap.xml
+sitemap.php
+robots.php
+robots.txt

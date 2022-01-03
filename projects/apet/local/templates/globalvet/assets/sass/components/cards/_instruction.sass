@@ -1,0 +1,39 @@
+.card-instructions
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -10px
+
+	&.hide
+		display: none
+
+
+.card-instruction
+	display: flex
+	align-items: center
+	background-color: #ffffff
+	border-radius: 15px
+	max-width: 460px
+	width: 100%
+	margin: 0 10px 20px
+	text-decoration: none
+
+	&__preview
+		max-width: 110px
+		width: 100%
+		height: 110px
+		padding: 10px
+		margin-right: 10px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__detail
+		padding: 10px 20px 10px 10px
+
+	&__title
+		line-height: 20px
+
+	&.hide
+		display: none

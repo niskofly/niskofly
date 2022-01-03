@@ -1,0 +1,56 @@
+.range
+	position: relative
+
+	&__input
+		position: absolute
+		z-index: 2
+		height: 4px
+		width: 100%
+
+		&--left
+			top: -100px
+
+		&--right
+			top: -50px
+
+	&-slider
+		position: relative
+		z-index: 1
+		height: 4px
+
+		&__track
+			position: absolute
+			z-index: 1
+			left: 0
+			right: 0
+			top: 0
+			bottom: 0
+			border-radius: 5px
+			background-color: #999
+
+		&__range
+			position: absolute
+			z-index: 2
+			left: 25%
+			right: 25%
+			top: 0
+			bottom: 0
+			background-color: green
+			border-radius: 5px
+
+		&__thumb
+			position: absolute
+			z-index: 3
+			width: 14px
+			height: 14px
+			border-radius: 50%
+			background-color: green
+
+
+			&--left
+				left: 25%
+				transform: translate(-7px, -5px)
+
+			&--right
+				right: 25%
+				transform: translate(7px, -5px)

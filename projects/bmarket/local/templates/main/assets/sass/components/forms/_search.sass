@@ -1,0 +1,36 @@
+.form-search
+	display: flex
+	align-items: stretch
+	overflow: hidden
+	border-radius: 10px
+	background-color: #fff
+	width: 100%
+
+	&__input
+		padding: 16px 20px
+		border: 0
+		border-radius: 0
+		color: #4A278A
+
+	&__submit.btn
+		border-radius: 0
+		background-color: transparent
+		color: #563494
+
+		&:hover
+			background-color: transparent
+
+	+screen(1024px, 1060px)
+		&__input
+			max-width: 150px
+
+
+
+.page--search
+	padding: 0 30px 80px
+
+	+max-screen(768px)
+		padding: 0 20px 80px
+
+	+max-screen(425px)
+		padding: 0 10px 80px

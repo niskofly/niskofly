@@ -1,0 +1,43 @@
+.tabs
+	background-color: #ffffff
+	border-radius: 15px
+
+	&__buttons
+		display: flex
+		align-items: stretch
+		border-bottom: 1px solid #DFD1F3
+
+	&__button
+		font-family: $ffb
+		font-size: 24px
+		line-height: 30px
+		color: #563494
+		padding-bottom: 20px
+		transition: color .3s
+		border-bottom: 4px solid transparent
+		margin-right: 64px
+
+		&:last-child
+			margin-right: 0
+
+		&.active,
+		&:hover
+			border-bottom: 4px solid #D118A3
+
+	&__tab
+		display: none
+		padding: 24px 0 0
+
+		&.active
+			display: block
+
+	+max-screen(1160px)
+		&__button
+			width: 100%
+			margin: 0
+			justify-content: space-between
+
+	+max-screen(540px)
+		&__button
+			font-size: 18px
+

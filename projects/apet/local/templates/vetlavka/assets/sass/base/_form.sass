@@ -1,0 +1,310 @@
+.input-group
+
+	&__error
+		color: $red
+		font-size: 12px
+
+	&--error
+
+		.input
+			border-color: $red
+			color: $red
+
+		.input-group__error
+			padding-top: 10px
+
+
+
+.input
+	&::-webkit-input-placeholder
+		color: rgba(140, 140, 140, 0.5)
+		transition: color ease .3s
+
+	&:-ms-input-placeholder
+		color: rgba(140, 140, 140, 0.5)
+		transition: color ease .3s
+
+	&::-moz-placeholder
+		color: rgba(140, 140, 140, 0.5)
+		transition: color ease .3s
+
+	&:-moz-placeholder
+		color: rgba(140, 140, 140, 0.5)
+		transition: color ease .3s
+
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active
+	-webkit-box-shadow: 0 0 0 32px #E7EAF4 inset !important
+	color: #8C8C8C
+
+
+
+.input
+	background: $grey
+	color: $brown
+	padding: 20px
+	min-height: 55px
+	border: 1px solid $grey
+	border-radius: 10px
+	box-shadow: none
+	outline: none
+	font-size: 15px
+	width: 100%
+	transition: border-color ease .3s
+
+	&:hover:not(:disabled)
+		border-color: $greyl
+
+		&::-webkit-input-placeholder
+			color: #8C8C8C
+
+		&:-ms-input-placeholder
+			color: #8C8C8C
+
+		&::-moz-placeholder
+			color: #8C8C8C
+
+		&:-moz-placeholder
+			color: #8C8C8C
+
+	&:focus:not(:disabled)
+		&::-webkit-input-placeholder
+			color: #8C8C8C
+
+		&:-ms-input-placeholder
+			color: #8C8C8C
+
+		&::-moz-placeholder
+			color: #8C8C8C
+
+		&:-moz-placeholder
+			color: #8C8C8C
+
+	&:disabled
+		cursor: not-allowed
+		background: #F6F7F9 !important
+		border: 1px solid rgba(0, 0, 0, 0.1)
+
+	&--white
+		background: $white
+		border-color: $greyl
+
+		&:hover:not(:disabled),
+		&:focus:not(:disabled)
+			border-color: #BDBDBD
+
+
+
+
+
+
+.checkbox
+	display: inline-flex
+	align-items: center
+	cursor: pointer
+
+	[type="checkbox"]
+		display: none
+
+		&:checked
+			~
+				.checkbox__indicator
+					background: $green
+
+					.icon
+						transform: scale(1)
+
+		&:disabled
+
+			~
+				.checkbox__indicator
+					cursor: not-allowed
+					background: #F6F7F9 !important
+					border: 1px solid rgba(0, 0, 0, 0.1)
+					border-radius: 3px
+
+				.checkbox__description
+					color: rgba(0, 0, 0, 0.6)
+					cursor: not-allowed
+
+	&__indicator
+		display: block
+		height: 20px
+		width: 20px
+		min-width: 20px
+		border: 1px solid $green
+		border-radius: 3px
+		display: flex
+		align-items: center
+		justify-content: center
+		box-sizing: border-box
+		overflow: hidden
+		transition: background ease .3s
+
+		.icon
+			transition: transform ease .3s
+			transform: scale(0)
+			color: $white !important
+			font-size: 8px
+
+	&__description
+		font-size: 15px
+		padding: 0 10px
+		flex: 1
+		user-select: none
+
+
+	&--outline
+		[type="checkbox"]
+			display: none
+
+			&:checked
+				~
+					.checkbox__indicator
+						background: $white
+						border: 2px solid $green
+
+					.checkbox__description
+						font-family: $ffb
+
+		.checkbox__indicator
+			border-color: $greyl
+
+			.icon
+				color: $green !important
+
+
+
+.radio
+	display: inline-flex
+	align-items: center
+	cursor: pointer
+
+	[type="radio"],
+	[type="checkbox"]
+		display: none
+
+		&:checked
+			~
+				.radio__indicator:after
+					top: 2px
+					bottom: 2px
+					left: 2px
+					right: 2px
+					background: $green
+
+		&:disabled
+			~
+				.radio__indicator
+					cursor: not-allowed
+					border: 1px solid rgba(0, 0, 0, 0.1) !important
+					background: rgba(0, 0, 0, 0.1)
+
+					&:after
+						background: #F6F7F9 !important
+
+				.radio__description
+					color: rgba(0, 0, 0, 0.6)
+					cursor: not-allowed
+
+	&__indicator
+		background: $white
+		display: flex
+		height: 15px
+		width: 15px
+		min-width: 15px
+		border: 1px solid $green
+		border-radius: 50%
+		overflow: hidden
+		position: relative
+		display: block
+
+		&:after
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			border-radius: 50%
+			content: ""
+			background: $white
+			display: block
+			position: absolute
+			transition: top ease .2s, bottom ease .2s, left ease .2s, right ease .2s,
+
+	&__description
+		font-size: 14px
+		padding: 0 10px
+		flex: 1
+		user-select: none
+
+
+
+.textarea
+	min-height: 110px
+	min-width: 100%
+	max-width: 100%
+	width: 100% !important
+
+
+
+.form-default
+
+	&__row
+		display: flex
+		margin: 0 -10px
+
+	&__column
+		width: calc(100% / 2 - 15px)
+		margin-left: 10px
+
+		&--three
+			width: calc( 100% / 3 - 13px )
+
+	.input-group
+		margin-bottom: 10px
+
+	&__send
+		margin-top: 35px
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+		button
+			margin-right: 50px
+
+			span
+				white-space: nowrap
+
+	&__consent
+		display: flex
+		align-items: center
+
+		a
+			color: #000000
+
+			&:hover
+				text-decoration: none
+
+	+max-screen(767px)
+		&__row
+			flex-direction: column
+
+		&__column
+			width: calc(100% - 15px)
+
+		&__send
+			flex-direction: column
+			align-items: flex-start
+			grid-gap: 20px
+
+			.btn
+				width: 100%
+
+
+
+[class*="modal-"] input[type='file']
+	display: none

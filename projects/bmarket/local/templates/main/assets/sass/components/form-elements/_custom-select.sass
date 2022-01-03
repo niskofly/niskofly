@@ -1,0 +1,132 @@
+.custom-select
+	max-width: 100%
+	position: relative
+
+	&--open
+
+		.custom-select
+
+			&__arrow
+
+				.icon
+					transform: rotate(180deg)
+
+			&__header
+				border-bottom-left-radius: 0
+				border-bottom-right-radius: 0
+
+			&__body
+				transform: translateY(0px)
+				opacity: 1
+				pointer-events: auto
+
+	&__header
+		background-color: #F3F3F3
+		border: none
+		cursor: pointer
+		outline: none
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		padding: 20px
+		min-height: 56px
+		width: 100%
+		border: 1px solid transparent
+		transition: border .3s, border-radius ease .2s
+		border-radius: 3px
+
+	&__body
+		position: absolute
+		top: 58px
+		left: 0
+		right: 0
+		padding: 21px 0
+		background-color: #fff
+		transition: transform ease .3s, opacity ease .3s
+		z-index: $ziBodyCustomSelect
+		transform: translateY(0px)
+		opacity: 0
+		pointer-events: none
+		overflow: hidden
+		overflow-y: auto
+		box-shadow: 0px 24px 42px rgba(86, 52, 148, 0.1)
+		border-radius: 10px
+
+	&__selected
+		font-family: $ffb
+		font-size: 16px
+		line-height: 18px
+		color: #563494
+		text-align: left
+		white-space: nowrap
+		overflow: hidden
+		text-overflow: ellipsis
+
+	&__arrow
+		margin-left: 6px
+		display: flex
+		align-items: center
+		justify-content: flex-end
+
+		.icon
+			font-size: 6px
+			color: #563494
+			transition: transform ease .3s
+
+	&__label
+		font-family: $ffb
+		font-size: 16px
+		line-height: 22px
+		color: #563494
+		width: 100%
+		padding: 9px 30px
+		background-color: #ffffff
+		transition: color ease .3s
+		cursor: pointer
+		display: block
+		user-select: none
+
+		&:hover
+			color: #FF1AC6
+
+	[type="checkbox"],
+	[type="radio"]
+		display: none
+
+		&:checked
+			~
+				.custom-select__label
+					color: #FF1AC6
+
+	&:hover .custom-select__header
+		border: 1px solid #848E99
+
+	&--sorting
+		max-width: 270px
+
+		.custom-select__header
+			padding: 0
+			justify-content: flex-end
+			background-color: transparent
+			min-height: max-content
+
+		.custom-select__body
+			top: 45px
+			width: 210px
+			transform: translate(60px, -15px)
+
+		&:hover .custom-select__header
+			border: 1px solid transparent
+
+
+	+max-screen(1650px)
+
+		&--sorting
+			.custom-select__body
+				transform: translate(-35px, -15px)
+
+	+max-screen(1023px)
+
+		&--sorting
+			.custom-select__body
+				transform: translate(60px, -15px)

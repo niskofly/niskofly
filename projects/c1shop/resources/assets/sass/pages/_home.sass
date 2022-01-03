@@ -1,0 +1,636 @@
+// карточки категорий на примере Key
+.category-list-home
+	margin-top: 50px
+	margin-bottom: 35px
+
+.category-list__container
+	margin-top: 50px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+
+.category-card
+	width: 24%
+	box-sizing: border-box
+	position: relative
+	height: 223px
+	//margin-bottom: 60px
+	&:hover
+		.wrap-category-card
+			border: 1px solid #D7DAE3
+			border-radius: 3px
+			z-index: 1
+			box-shadow: -6px 4px 9px 1px #E7E8F4
+		.category-card__menu
+			height: auto
+	.wrap-category-card
+		position: absolute
+		border: 1px solid transparent
+		left: 0
+		right: 0
+		background-color: #fff
+		padding: 35px 20px
+		box-sizing: border-box
+		transition: box-shadow ease .2s
+		cursor: pointer
+	&__photo
+		text-align: left
+		.icon
+			font-size: 75px
+			color: #0E93C8
+	&__section
+		a
+			color: #777f90
+			font-size: 16pt
+			font-family: exo2bold
+			line-height: 1.2
+			text-decoration: none
+		span
+			font-size: 10pt
+			color: #999
+			font-family: exo2
+			display: block
+			margin-top: 17px
+			margin-bottom: 8px
+	&__menu
+		height: 66px
+		overflow: hidden
+		transition: height ease .2s
+		display: none
+		a
+			font-size: 11pt
+			color: #0BACDB
+			text-decoration: none
+			line-height: 1.3
+			padding-bottom: 6px
+			display: inline-block
+			&:hover
+				text-decoration: underline
+			&:after
+				content: '-'
+				margin-right: 5px
+				margin-left: 5px
+			&:last-child
+				&:after
+					display: none
+	&__first-point
+		margin-top: 10px
+		margin-bottom: 25px
+// конец css sкарточки категорий на примере Key
+
+
+.equipment-directions
+	&__container
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: flex-start
+		margin-left: -14px
+		margin-right: -14px
+		margin-top: 50px
+		flex-wrap: wrap
+	&__col
+		width: 49.5%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: space-between
+		&.two
+			.equipment-directions__item.full
+				height: 358px
+		&.custom-h-c
+			flex-direction: column
+			.full
+				flex-basis: 214px
+	&__item
+		padding: 20px 20px
+		box-sizing: border-box
+		position: relative
+		cursor: pointer
+		width: calc((100% /3) - 28px)
+		margin-right: 14px
+		margin-left: 14px
+		min-height: 290px
+		position: relative
+		margin-bottom: 28px
+		&:after
+			position: absolute
+			top: 0
+			bottom: 0
+			left: 0
+			right: 0
+			content: ''
+			background-color: rgba(202, 207, 217, 0.8)
+			z-index: 1
+		.title_light
+			font-size: 18pt
+			color: #434E66
+			z-index: 2
+			position: relative
+			font-family: exo2
+		.circle-absol-link
+			z-index: 2
+			background-color: #1364a4
+			transition: background-color ease .3s
+		&.full
+			width: 100%
+		&.half
+			width: 49%
+			height: 214px
+		&.c-h
+			height: 214px
+			flex: 1
+		&:hover
+			.circle-absol-link
+				background-color: #0bacdb
+
+
+.circle-absol-link
+	position: absolute
+	bottom: 20px
+	right: 33px
+	display: block
+	background-color: #66D4FF
+	width: 35px
+	height: 35px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	transition: background-color ease .3s
+	.icon
+		color: #fff
+		font-size: 11px
+	&:hover
+		background-color: #1364A4
+
+.circle-absol-link--dark
+	background-color: #1364A4
+	&:hover
+		background-color: #0bacdb
+// конец стилей оборудование по направлениям
+
+
+.brands-slider-section
+	margin-top: 55px
+
+.b-slider_brands
+	margin-bottom: 55px
+	margin-top: 25px
+	.lSAction
+		display: none !important
+	.b-slider__content
+		padding-left: 1px !important
+		padding-right: 1px !important
+		padding-bottom: 1% !important
+	.b-slider__item
+		border-top: 1px solid #B8BAC2s
+		.b-slider__item-brand
+			display: block
+			height: 132px
+			//outline: 1px solid #B8BAC2
+			background-repeat: no-repeat
+			//padding-left: 1px
+			//border-right: 1px solid #B8BAC2
+			background-position: center center
+			//border-right: 1px solid #B8BAC2
+			cursor: default
+		&:first-child
+			.b-slider__item-brand
+				//border-left: 1px solid #B8BAC2
+		&-customers
+			width: 100%
+
+.brands-slider-section
+	.b-slider__item-customers
+		max-width: 110px
+		margin-left: auto
+		margin-right: auto
+		border: none !important
+		background-size: contain
+		padding: 0 !important
+
+	.b-slider__item
+		border: 1px solid #B8BAC2
+		border-right: none
+		//box-shadow: -1px 0px 0px 0.5px #B8BAC2
+		//box-shadow: -1px 0px 0px 0.5px #B8BAC2
+		box-sizing: border-box
+		position: relative
+		//border-bottom: none !important
+		&:after
+			position: absolute
+			top: -1px
+			bottom: -1px
+			content: ''
+			border-left: 1px solid #B8BAC2
+			right: 0
+			width: 2px
+			background: #fff
+
+// конец стилей слайдера с банерами
+
+.js-b-slider-content_promotions
+	padding-left: 1px !important
+	padding-right: 1px !important
+	padding-bottom: 1% !important
+	.b-slider__item
+		&:first-of-type
+			.wrap
+
+.b-slider_promotions--mobile
+	display: none !important
+
+.promotions-slider-section
+	margin-bottom: 60px
+	.b-slider__item
+		position: relative
+		cursor: default !important
+		border-top: 1px solid #B8BAC2
+		border: 1px solid #B8BAC2
+		position: relative
+		border-right: none
+		//box-shadow: -1px 0px 0px 0.5px #B8BAC2
+		box-sizing: border-box
+		.wrap
+			//border-right: 1px solid #B8BAC2
+			padding: 0 0 60px
+			box-sizing: border-box
+			height: 365px
+			&:before
+				content: ''
+				position: absolute
+				right: 0
+				top: 0
+				bottom: 0
+				width: 1px
+				z-index: 1
+			.card-img
+				height: 267px
+				margin: 5px 8px 0
+				width: calc(100% - 16px)
+				@media (max-width: 768px)
+						background-size: 100% 100%
+						padding: 0
+				.card-name
+				padding-left: 29px
+				padding-right: 23px
+		&:after
+			position: absolute
+			top: -1px
+			bottom: -1px
+			content: ''
+			border-left: 1px solid #B8BAC2
+			right: 0
+			width: 2px
+			background: #fff
+
+		&.article
+			background-image: url(/img/action-article.jpg)
+			.wrap
+				display: -webkit-flex
+				display: -moz-flex
+				display: -ms-flex
+				display: -o-flex
+				display: flex
+				flex-wrap: wrap
+				//border-right: 0
+				&:before
+					background-color: #B8BAC2
+					right: -1px
+			.card-status
+				width: 100%
+			.card-name
+				order: 2
+				margin-top: 40px
+				font-size: 24pt
+			.card-img
+				order: 3
+				height: 140px
+			.circle-absol-link
+				background-color: #fff
+				.icon
+					color: #999
+	.card-status
+		font-size: 12pt
+		font-family: exo2
+		color: #999
+		text-align: right
+
+	.card-img
+		background-position: center center
+		background-repeat: no-repeat
+		display: block
+		width: 100%
+		height: 248px
+		background-size: contain
+	.card-name
+		color: #333
+		font-size: 16pt
+		padding-top: 10px
+		padding-bottom: 10px
+		display: block
+		font-family: exo2light
+		text-align: left
+		text-decoration: none
+
+	.circle-absol-link
+		bottom: 20px
+		right: 15px
+
+	@media only screen and (max-width : 480px)
+
+		.b-slider__item
+
+			.card-name
+				display: none
+
+			.wrap
+				height: auto
+				padding-bottom: 0 !important
+			
+				.card-img
+					margin: 0 !important
+					width: 100%	!important
+					height: 100% !important
+
+			.circle-absol-link
+				display: none
+
+
+.wrap-slider-promotions
+	display: flex
+	max-width: 100%
+
+.b-slider_promotions
+	width: calc(100% - 340px)
+
+.promotion-static
+	flex-basis: 340px
+	margin-top: 39px
+	margin-left: 12px
+	.slide-promotion
+		background-size: contain
+		background-position: center
+	&--mobile
+		display: none
+
+.slide-promotion
+	position: relative
+	cursor: pointer !important
+	border-top: 1px solid #B8BAC2
+	border: 1px solid #B8BAC2
+	position: relative
+	border-right: none
+	box-sizing: border-box
+	background-repeat: no-repeat
+	-webkit-background-size: cover
+	background-size: cover
+	background-position: center
+	position: relative
+	&:after
+		position: absolute
+		top: -1px
+		bottom: -1px
+		content: ''
+		border-left: 1px solid #B8BAC2
+		right: 0
+		width: 2px
+		background: #fff
+	&__wrapper
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		height: 370px
+	&__content
+		box-sizing: border-box
+		margin: 55px 40px
+		background-color: rgba(215,214,219, 0.7)
+		height: 300px
+		padding: 25px 25px 25px  40px
+		display: flex
+		align-items: flex-start
+		width: 60%
+		flex-direction: column
+		justify-content: flex-start
+		&:before
+			content: ''
+			position: absolute
+			right: 0
+			top: 0
+			bottom: 0
+			width: 1px
+			z-index: 1
+		.card-img
+			height: 285px
+			margin: 5px 8px 0
+			width: calc(100% - 16px)
+		.card-name
+			padding-left: 29px
+			padding-right: 23px
+		&:after
+			position: absolute
+			top: -1px
+			bottom: -1px
+			content: ''
+			border-left: 1px solid #B8BAC2
+			right: 0
+			width: 2px
+			background: #fff
+	&__icon
+		margin-left: auto
+
+	&__name
+		color: #434d66
+		font-size: 24px
+		text-decoration: none
+		margin-bottom: 30px
+		max-width: 268px
+		position: relative
+		z-index: 2
+
+	.circle-absol-link
+		bottom: 20px
+		right: 15px
+
+
+// конец стилей блока акции и статьи
+
+.b-text-mit-btn
+	padding-left: 50px
+	padding-top: 85px
+	padding-bottom: 60px
+	padding-right: 50px
+	background-repeat: no-repeat
+	background-size: cover
+	.title_light
+	p
+		color: #333
+		font-size: 13pt
+		font-family: exo2light
+		line-height: 1.2
+		max-width: 490px
+		margin-top: 20px
+		margin-bottom: 25px
+	.submit-application
+
+
+
+.b-our-clients
+	background-image: url("/img/homepage-map.png")
+	background-repeat: no-repeat
+	background-position: center right
+	margin-top: 60px
+	margin-bottom: 60px
+	.title
+		color: #434E66
+		font-size: 36pt
+		font-family: exo2bold
+		margin-bottom: 30px
+		span
+			display: block
+			color: #0BACDB
+			font-size: 36pt
+			font-family: exo2bold
+	.b-our-clients__list
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+	ul
+		padding-left: 0
+		list-style-type: none
+		&:first-child
+			padding-right: 60px
+	li
+		color: #333
+		font-size: 12pt
+		font-family: exo2light
+		line-height: 1.5
+
+	.lint-to-map-page
+		margin-top: 30px
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		.icon
+			font-size: 11px
+			color: #0BACDB
+			margin-left: 5px
+		a
+			text-decoration: none
+			font-family: exo2medium
+			font-size: 16pt
+			color: #0BACDB
+
+// конец стилей наши работы
+
+.b-news-slide
+	margin-bottom: 60px
+	cursor: default !important
+
+.articles-widget__photo
+	position: relative
+	&:after
+		//content: ''
+		//position: absolute
+		//left: 0
+		//right: 0
+		//top: 0
+		//bottom: 0
+		//background-color: #434e66
+		//opacity: 0.1
+
+.b-news__photo
+	background-repeat: no-repeat
+	background-size: contain
+	height: 197px
+	background-position: center center
+	position: relative
+	&:after
+		content: ''
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+		background-color: #434e66
+		opacity: 0.1
+
+.b-news__title
+	margin-top: 20px
+	margin-bottom: 10px
+	color: #0BACDB
+	font-size: 14pt
+	font-family: exo2bold
+	display: block
+	text-decoration: none
+	min-height: 45px
+
+.b-news__description
+	color: #333
+	font-size: 12pt
+	font-family: exo2light
+
+.b-news__date
+	color: #888
+	font-size: 11pt
+	font-family: exo2light
+	margin-top: 0
+	margin-bottom: 10px
+
+.b-slider__items_news
+	display: flex
+	justify-content: space-between
+	align-items: flex-start
+	flex-wrap: wrap
+	
+.b-slider__item_news
+	border-bottom: none !important
+	margin-top: 30px
+	margin-bottom: 10px
+	width: calc(100% / 3 - 20px)
+
+.show-form-price
+	width: 180px
+	margin-top: 25px
+	box-shadow: 0px 2px 5px 1px rgba(54, 63, 82, 0.2) !important
+
+.btn-price-list
+	width: 276px
+
+.privacy-policy-prompt
+	font-size: 10pt
+	color: #434E66
+	padding-top: 20px
+	a
+		color: #434E66
+		&:hover
+			text-decoration: none
+
+.get-price-advantages
+	margin-top: 20px
+	&__item
+		font-size: 12pt
+		color: #333
+		font-family: exo2light
+		line-height: 1.5

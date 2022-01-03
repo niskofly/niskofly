@@ -1,0 +1,26 @@
+RewriteEngine On
+RewriteBase /
+
+RewriteCond %{SERVER_PORT} ^443$ [OR]
+RewriteCond %{HTTPS} =on
+RewriteRule ^(.*)$ http://www.headin.pro/$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} ^(.+)/$
+RewriteRule ^(.+)/$ /$1 [R=301,L]
+
+RewriteCond %{THE_REQUEST} ^.*/index\.php
+RewriteRule ^(.*)index.php$ /$1 [R=301,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)\?*$ index.php/$1 [L,QSA]
+
+#RewriteRule ^index.php$ / [QSA,R]
+#в случае index.php:
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.php\ HTTP/
+RewriteRule ^(.*)/index\.php$ http://headin.pro/$1 [R=301,L]
+
+#в случае index.html:
+RewriteCond %{THE_REQUEST} ^[A-Z]{3,9}\ /index\.html\ HTTP/
+RewriteRule ^index\.html$ http://headin.pro/ [R=301,L]

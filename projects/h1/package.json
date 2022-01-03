@@ -1,0 +1,23 @@
+{
+  "name": "headin",
+  "version": "1.0.0",
+  "description": "headin.pro",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/headin-pro/headin.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/headin-pro/headin#readme",
+  "devDependencies": {
+    "bootstrap": "^3.3.5",
+    "gulp": "^3.9.0",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-sourcemaps": "^1.6.0"
+  }
+}

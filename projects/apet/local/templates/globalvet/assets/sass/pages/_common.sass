@@ -1,0 +1,187 @@
+.page--whishlist
+	padding-bottom: 130px
+
+.page--info,
+.page--news,
+.page--instructions,
+.page--brands
+	padding-bottom: 150px
+
+
+.page--instructions
+
+	.section-sort
+		margin-bottom: 30px
+
+
+.page--brands .section-brand
+	margin-bottom: 40px
+
+	&__header
+		margin-bottom: 10px
+
+
+.page--404
+	padding: 70px 0 150px
+
+
+.page--info
+
+	.section-content
+
+		&--contacts
+
+			.section-content
+
+				&__wrapper
+					max-width: 100%
+
+				&__main
+					max-width: 1060px
+					width: 100%
+					flex: initial
+					padding-right: 0
+
+				&__sidebar
+					max-width: 340px
+					width: 100%
+
+		&__wrapper
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+			max-width: 1300px
+
+		.text-typography
+			max-width: 800px
+			width: 100%
+
+		&__main
+			flex: 1
+			padding-right: 40px
+
+		&__map
+			width: 100%
+			height: 490px
+			overflow: hidden
+			border-radius: 15px
+
+		&__contact
+			display: flex
+			flex-direction: column
+			align-items: center
+			max-width: 340px
+			text-align: center
+			padding: 48px 40px 40px
+			border-radius: 15px
+			background-color: #ffffff
+
+			&--address
+				margin-top: 20px
+				padding: 30px
+				align-items: flex-start
+
+			&-title
+				font-family: $ffm
+				font-size: 20px
+				line-height: 26px
+				color: #00A6DC
+				margin-bottom: 20px
+
+			&-item
+				display: flex
+				align-items: flex-start
+				font-family: $ffm
+				font-size: 18px
+				line-height: 23px
+				color: #4A4A4A
+				text-align: left
+				margin-bottom: 16px
+
+				a
+					text-decoration: none
+					color: inherit
+
+				.icon
+					position: relative
+					top: 4px
+					min-width: 20px
+					max-width: 20px
+					max-height: 20px
+					margin-right: 20px
+
+			&-phone
+				font-family: $ffb
+				font-size: 20px
+				color: #4A4A4A
+				text-decoration: none
+				margin-bottom: 10px
+
+			&-text
+				font-family: $ffm
+				font-size: 20px
+				line-height: 26px
+				color: #4A4A4A
+				margin-bottom: 20px
+
+			&-button
+				padding: 0 26px
+
+
+.section-brand.hide,
+.section-brands.hide
+	display: none
+
+
+.section-404
+	display: flex
+	justify-content: center
+
+	&__content
+		max-width: 850px
+		width: 100%
+		text-align: center
+
+	&__image
+		object-fit: contain
+		margin-bottom: 30px
+
+	&__title,
+	&__text
+		margin-bottom: 20px
+
+	&__text
+		font-family: $ffm
+		font-size: 25px
+		line-height: 32px
+		color: #608488
+
+		a
+			color: inherit
+			text-decoration: none
+
+	&__search
+		max-width: 700px
+		margin: auto
+
+
+.fixed-section
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 100
+
+.fixed-wrapper
+	transition: all .3s
+
+	&--hide
+		opacity: 0
+		pointer-events: none
+
+
+.tab
+	display: none
+
+	&.active
+		display: block

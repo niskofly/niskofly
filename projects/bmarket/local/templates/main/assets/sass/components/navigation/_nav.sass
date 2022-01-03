@@ -1,0 +1,351 @@
+.nav
+	display: flex
+	align-items: center
+	margin: 0 -15px
+
+	&__item
+		position: relative
+		margin: 0 15px
+
+		&:hover .nav--user-menu
+			width: initial
+			opacity: 1
+			transform: translateY(0px)
+			pointer-events: initial
+
+	&__link
+		display: flex
+		align-items: center
+		font-size: 16px
+		line-height: 1.25
+		color: #FFFFFF
+		text-decoration: none
+
+		.icon
+			font-size: 12px
+			color: #fff
+			margin-right: 5px
+
+		&-counter
+			padding: 2px 6px
+			background-color: #D118A3
+			font-size: 10px
+			line-height: 12px
+			color: #fff
+			margin-left: 5px
+			border-radius: 100%
+
+			&:empty
+				margin-left: 0
+				padding: 0
+
+		&--stocks
+			font-family: $ffb
+
+		&--user-menu
+			font-family: $ffb
+			font-size: 18px
+			line-height: 1.1
+			color: #FFFFFF
+			padding: 12px 0
+
+			.icon
+				font-size: 18px
+
+		&--footer
+			font-family: $ffb
+			font-size: 16px
+			line-height: 36px
+
+			.icon
+				font-size: 15px
+				margin-right: 10px
+
+	&--footer
+		flex-direction: column
+		align-items: flex-start
+		margin-right: 60px
+
+		&:last-child
+			margin-right: 0
+
+	&--lk
+		margin: 0
+		border-bottom: 1px solid #DFD1F3
+
+		.nav__item
+			margin: 0 64px 0 0
+
+			&:last-child
+				margin: 0
+
+		.nav__link
+			font-family: $ffb
+			font-size: 24px
+			line-height: 30px
+			color: #563494
+			padding-bottom: 20px
+			border-bottom: 4px solid transparent
+			transition: border .3s
+
+			&:hover,
+			&.active
+				border-bottom: 4px solid #D118A3
+
+		+max-screen(650px)
+			justify-content: space-between
+
+			.nav__link
+				font-size: 18px
+
+			.nav__item
+				margin: 0
+
+		+max-screen(424px)
+			overflow: auto
+
+			.nav__link
+				width: max-content
+				padding-bottom: 10px
+
+			.nav__item
+				margin-right: 15px
+
+	&--sidebar
+		flex-direction: column
+		align-items: stretch
+		padding: 12px 30px
+		box-shadow: 0px 24px 42px rgba(86, 52, 148, 0.1)
+		border-radius: 10px
+		background-color: #fff
+		margin: 0
+
+		.nav__item
+			margin: 0
+			border-bottom: 1px solid #DFD1F3
+
+			&:last-child
+				border: 0
+
+		.nav__link
+			padding: 18px 0
+			color: #563494
+
+	&--user-menu
+		position: absolute
+		top: 100%
+		left: 0
+		width: 0
+		opacity: 0
+		transform: translateY(-20px)
+		min-width: 160px
+		padding: 24px
+		background-color: #fff
+		box-shadow: 0px 24px 42px rgba(86, 52, 148, 0.1)
+		border-radius: 10px
+		pointer-events: none
+		margin: 0
+		flex-direction: column
+		align-items: stretch
+		transition: transform .3s, opacity .3s, width .3s
+		z-index: 2
+
+		.nav__item
+			margin: 0 0 12px
+
+			&:last-child
+				margin: 0
+
+		.nav__link
+			color: #563494
+
+			&--logout
+				color: #B7A9D0
+
+			&:hover
+				color: #FF1AC6
+
+	&--header-catalog,
+	&--header-subcatalog
+		flex-direction: column
+		width: 100%
+		margin: 0
+
+		.nav__item
+			margin: 0
+
+		.nav__link
+			font-family: $ffb
+			color: #563494
+
+	&--header-catalog
+		align-items: stretch
+		padding: 30px 0
+
+		.nav__link
+			width: 100%
+			font-size: 18px
+			padding: 10px 20px
+			background-color: transparent
+			transition: background-color .3s
+
+			&.active,
+			&:hover
+				background-color: #fff
+
+	&--header-catalog-mobile
+		align-items: stretch
+		padding: 10px 0
+
+		.nav
+
+			&__item
+				width: 100%
+				margin: 0
+
+			&__link
+				display: flex
+				justify-content: space-between
+				align-items: center
+				font-family: $ffb
+				font-size: 18px
+				padding: 5px 10px
+				background-color: transparent
+				transition: background-color .3s, color .3s
+				margin: 0 -10px
+				cursor: pointer
+				width: calc(100% + 20px)
+				text-align: start
+
+				&.active,
+				&:hover
+					background-color: #fff
+					color: #FF1AC6
+
+				.icon
+					font-size: 10px
+					min-width: 10px
+					margin-left: 5px
+
+	&--header-subcatalog
+		display: none
+		align-items: flex-start
+		padding: 0 20px
+
+		&.active
+			display: flex
+
+		.nav__link
+			padding: 6px 20px
+			color: #563494
+			transition: color .3s
+
+			&.active,
+			&:hover
+				color: #FF1AC6
+
+		.nav__item:first-child .nav__link
+			padding-top: 16px
+
+	&--header-subcatalog-mobile
+		display: none
+		padding: 20px 10px
+		background: #fff
+		border: none !important
+		margin: 0 -10px -10px !important
+		height: 100%
+
+		&.active
+			display: flex
+
+		.nav
+			&__item
+				font-family: $ffb
+				margin: 0 0 10px
+				width: 100%
+
+			&__link
+				transition: color .3s
+
+				&:hover
+					color: #FF1AC6
+
+	&--header-collections
+		padding: 30px 0
+		flex-wrap: wrap
+
+		.nav__item
+			max-width: calc(100% / 5 - 10px)
+			width: 100%
+			margin: 0 5px 10px
+
+		.nav__link
+			border-radius: 10px
+			font-family: $ffb
+			font-size: 18px
+			color: #563494
+			padding: 10px
+			background-color: transparent
+			transition: background-color .3s
+
+			&.active,
+			&:hover
+				background-color: #fff
+
+	+max-screen(1440px)
+		margin: 0
+
+		&__item
+			margin: 0 5px
+
+	+max-screen(1200px)
+
+		&__link
+			font-size: 14px
+
+			&--user-menu
+				font-size: 15px
+
+	+max-screen(1023px)
+
+		&__item
+			width: 100%
+			margin: 0
+
+		&__link
+			width: 100%
+
+		&--header-collections
+			flex-direction: column
+			align-items: flex-start
+			padding: 0
+			margin: 0 -10px
+
+			.nav
+
+				&__item
+					max-width: 100%
+					margin: 0
+
+				&__link
+					padding: 5px 10px
+
+
+	+max-screen(450px)
+
+		&--header-catalog
+			max-width: 100%
+
+			.nav__link
+				font-size: 16px
+				padding: 7px 10px
+
+
+
+.counter
+	padding: 2px 6px
+	background-color: #D118A3
+	font-size: 10px
+	line-height: 12px
+	color: #fff
+	border-radius: 100%

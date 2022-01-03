@@ -1,0 +1,146 @@
+.form--order
+	padding: 30px 40px 40px
+	background-color: #ffffff
+	border-radius: 15px
+
+	.input-group
+		margin-bottom: 0
+
+	.form
+
+		&__label
+			margin-bottom: 12px
+
+		&__location,
+		&__pay
+			padding-left: 45px
+
+		&__delivery
+			display: flex
+			align-items: flex-start
+			justify-content: space-between
+
+		&__delivery,
+		&__pay
+
+			&-groups
+				display: flex
+
+				.input-group
+					margin-right: 20px
+
+					&:last-child
+						margin-right: 0
+
+		&__map
+			width: 100%
+			height: 400px
+			margin-top: 20px
+			overflow: hidden
+			border-radius: 15px
+
+		&__personal-groups
+			display: flex
+			flex-wrap: wrap
+			margin: -5px
+
+			.input-group
+				width: 100%
+				margin: 0px 5px 10px
+
+				&--half
+					max-width: calc(100% / 2 - 10px)
+
+				&--third
+					max-width: calc(100% / 3 - 10px)
+
+		&__footer
+			display: flex
+			justify-content: space-between
+			align-items: center
+
+			&-total,
+			&-action
+				display: flex
+
+			&-action
+				align-items: center
+
+			&-total
+				align-items: baseline
+
+			&-label
+				font-family: $ffm
+				margin-right: 24px
+
+			&-sum
+				font-family: $ffb
+				font-size: 28px
+
+		&__term
+			margin-right: 12px
+
+
+.order-step
+	margin-bottom: 40px
+
+	&__header
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+
+	&__number
+		display: flex
+		align-items: center
+		justify-content: center
+		font-family: $ffb
+		font-size: 17px
+		color: #4A4A4A
+		min-width: 35px
+		max-width: 35px
+		height: 35px
+		border-radius: 50px
+		background-color: #E7F3F8
+		margin-right: 10px
+
+
+.order-delivery
+	padding: 12px 30px
+	max-width: 330px
+	width: 100%
+	box-shadow: 0px 0px 34px rgba(0, 92, 124, 0.15)
+	border-radius: 15px
+
+	&__alert
+		line-height: 20px
+		color: #00A6DC
+
+	&__note
+		display: flex
+		align-items: flex-start
+		margin-bottom: 12px
+
+		&-icon
+			max-width: 16px
+			min-width: 16px
+			height: 16px
+			margin-right: 8px
+
+		&-text
+			font-size: 14px
+			line-height: 18px
+			color: #333333
+
+	&__content
+		padding-left: 24px
+
+	&__list
+		margin-bottom: 16px
+
+		&-item
+			font-size: 14px
+			line-height: 18px
+			color: #003595
+
+	&__choose
+		padding: 9px 20px

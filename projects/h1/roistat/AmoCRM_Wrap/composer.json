@@ -1,0 +1,31 @@
+{
+  "name": "drillcoder/amocrm_wrap",
+  "description": "Обёртка для простого взаимодействия с Api AmoCRM",
+  "version": "7.0.5",
+  "keywords": [
+    "drillcoder",
+    "amo",
+    "amocrm",
+    "crm",
+    "wrap"
+  ],
+  "homepage": "https://github.com/drillcoder/AmoCRM_Wrap",
+  "authors": [
+    {
+      "name": "Dmitry Drill",
+      "email": "nitrodrill@ya.ru"
+    }
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=5.3",
+    "ext-curl": "*",
+    "ext-json": "*",
+    "ext-mbstring": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "DrillCoder\\AmoCRM_Wrap\\": "src/"
+    }
+  }
+}

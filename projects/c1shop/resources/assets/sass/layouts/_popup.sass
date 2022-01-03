@@ -1,0 +1,293 @@
+.mfp-bg
+	background-color: #496480
+	opacity: 0.9
+
+.mfp-close-btn-in .mfp-close
+	color: #999
+
+
+.submit-popup
+	border: none
+	color: #fff
+	font-size: 12pt
+	padding-left: 20px
+	padding-right: 20px
+	display: inline-block
+	padding-top: 16px
+	padding-bottom: 16px
+	line-height: 1
+	background-color: #0E93C8
+	cursor: pointer
+
+.popup__icon
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: center
+	.icon
+		color: #0E93C8
+		font-size: 83px
+
+.popup__title
+	font-size: 16pt !important
+	margin-top: 30px
+	margin-bottom: 30px
+	color: #434E66
+	font-family: exo2bold
+	line-height: 1.2
+	text-align: center
+	span
+		color: #333
+		font-family: exo2
+		font-size: 12pt
+		display: block
+.mfp-content
+	.popup
+		display: block
+.popup
+	box-sizing: border-box
+	border-radius: 3px
+	display: none
+	padding-left: 20px
+	padding-right: 20px
+	.input
+		border-color: #ABAEBA
+
+.mfp-ready
+	z-index: 100050 
+.wrap-inputs_popup
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: center
+	.input
+		width: 49%
+
+.textarea_popup
+	margin-top: 10px
+	height: 78px !important
+	width: 100%
+	padding-top: 16px
+	margin-bottom: 20px
+
+// окно благодарности
+.thanks-popup
+	+bgi()
+	display: none
+	background-image: url("/img/tancks-bgi.png")
+	padding: 60px 50px
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+	border-radius: 3px 
+	position: relative
+	box-sizing: border-box
+	background-size: cover
+	&__wrap
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: flex-start
+
+.thanks-popup__icon
+	padding-right: 24px
+	.icon
+		color: #0E93C8
+		font-size: 83px
+.thanks-popup__title
+	color: #434E66
+	font-size: 16pt
+	font-family: exo2light
+
+
+
+// заказать звонок
+.request-callback
+	+bgi()
+	background-size: auto
+	background-position: bottom right
+	background-color: #fff
+	background-image: url("/img/callback-bgi.png")
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+	padding-top: 40px
+	padding-bottom: 40px
+	position: relative
+	.wrap
+		max-width: 355px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+	&__form
+
+	.input
+		width: 100%
+		margin-bottom: 10px
+
+	.submit-popup
+		margin-top: 10px
+
+
+// подбор комплекта
+.get-price-from-kit.popup
+	+bgi()
+	background-size: auto
+	background-position: bottom right
+	background-color: #fff
+	background-image: url("/img/callback-bgi.png")
+	max-width: 545px !important
+	margin-left: auto
+	margin-right: auto
+	padding-top: 40px
+	padding-bottom: 40px
+	position: relative
+	padding-right: 65px
+	padding-left: 65px
+
+.form-price-from-kit
+	text-align: center
+
+
+.request-from-product,.request-from-part
+	+bgi()
+	background-size: auto
+	background-position: bottom right
+	background-color: #fff
+	background-image: url("/img/callback-bgi.png")
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+	padding-top: 40px
+	padding-bottom: 40px
+	position: relative
+	padding-right: 65px
+	padding-left: 65px
+
+
+.clients-popup
+	max-width: 820px
+	margin-left: auto
+	margin-right: auto
+	background-color: #fff
+	position: relative
+	margin-bottom: 25px
+	.popup__title
+		padding-top: 30px
+		padding-bottom: 30pxs
+	.clients-popup__tabs
+		max-height: 600px
+		overflow-y: auto
+		border-top: 1px solid #ABAEBA
+
+.clients-tab
+	font-size: 12pt	
+	color: #333
+	&__city
+	&__header
+		border-top: 1px solid #ABAEBA
+		cursor: pointer
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+		padding-left: 25px
+		padding-right: 25px
+		padding-top: 10px
+		padding-bottom: 10px
+		margin-top: -1px
+		border-bottom: 1px solid #ABAEBA
+	.icon
+		transform: scale(0)
+	&__toggle
+		&.status-tab_close
+			.icon-33
+				transform: scale(1) !important
+			.icon-34
+				transform: scale(0) !important
+	.wrap-icon
+		position: relative
+		.icon
+			color: #0BACDB
+			font-size: 7px
+			position: absolute
+			transition: transform ease .3s
+		.icon-34
+			transform: scale(1)
+	&__content
+		display: none
+	&__client
+		background-color: #E4E8F0
+		padding-right: 44px
+		padding-left: 44px
+		padding-top: 10px
+		padding-bottom: 10px
+		border-bottom: 1px solid #ABAEBA
+	.close
+		transform: scale(0)
+	.open
+		transform: scale(1)
+
+
+// окно заказа готового комплекта
+.request-ready-made-projects
+	+bgi()
+	background-size: auto
+	background-position: bottom right
+	background-color: #fff
+	background-image: url("/img/callback-bgi.png")
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+	padding-top: 40px
+	padding-bottom: 40px
+	position: relative
+	padding-right: 65px
+	padding-left: 65px
+	text-align: center
+
+// окно заявки на акцию
+.request-share
+	+bgi()
+	background-size: auto
+	background-position: bottom right
+	background-color: #fff
+	background-image: url("/img/callback-bgi.png")
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+	padding-top: 40px
+	padding-bottom: 40px
+	position: relative
+	padding-right: 65px
+	padding-left: 65px
+	text-align: center
+
+.popup--narrow
+	max-width: 450px !important
+
+.city-select__popup
+	+bgi()
+	background-size: auto
+	background-position: bottom right
+	background-color: #fff
+	background-image: url("/img/select-city-bgc.png")
+	max-width: 600px
+	margin-left: auto
+	margin-right: auto
+	padding: 40px 65px
+	position: relative
+	.popup__title
+		margin-top: 20px
+		font-size: 16pt

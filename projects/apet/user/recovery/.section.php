@@ -1,0 +1,6 @@
+<?
+$sSectionName = "Восстановление";
+$arDirProperties = array(
+
+);
+?>

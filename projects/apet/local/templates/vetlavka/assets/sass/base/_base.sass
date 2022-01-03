@@ -1,0 +1,433 @@
+body
+	font-family: $ff
+	line-height: 1.3
+	font-size: 16px
+	color: $brown
+	overflow-x: hidden
+	font-weight: normal !important
+
+	*
+		box-sizing: border-box
+		font-family: $ff
+
+
+
+.body--fix
+	position: fixed
+	left: 0
+	right: 0
+
+
+
+.counter
+	display: flex
+	align-items: center
+
+	&__button
+		+reset-btn()
+		width: 40px
+		height: 40px
+		background-color: $white
+		position: relative
+		transition: background-color ease .3s
+		border-radius: 5px
+		cursor: pointer
+
+		&:not(:disabled):hover
+			background-color: $green
+
+		&:disabled
+			opacity: .5
+
+		&-minus::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 12px
+			height: 2px
+			background-color: $greyd
+			transition: background-color ease .3s
+
+		&:hover
+			&::before
+				background-color: $white
+
+		&-plus::before
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 12px
+			height: 2px
+			background-color: $greyd
+			transition: background-color ease .3s
+
+		&-plus::after
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			transform: translate(-50%, -50%)
+			width: 2px
+			height: 12px
+			background-color: $greyd
+			transition: background-color ease .3s
+
+		&:hover
+			&::before,
+			&::after
+				background-color: $white
+
+	&__label
+		font-size: 15px
+		font-family: $ffm
+		color: $brown
+		padding: 0 10px
+
+	&--rounded
+		.counter__button
+			border-radius: 50%
+			background-color: $grey
+
+			&-minus::before,
+			&-plus::before,
+			&-plus::after
+				background-color: $green
+
+			&:not(:disabled):hover
+				background-color: $green
+
+			&-minus:not(:disabled):hover
+				&::before
+					background-color: $white
+
+			&-plus:not(:disabled):hover
+				&::before, &::after
+					background-color: $white
+
+
+
+.page__title
+	margin-bottom: 40px
+
+
+
+.page-sides
+	display: flex
+	align-items: flex-start
+
+	&__left
+		width: calc(75% - 20px)
+		margin-right: 20px
+
+	&__right
+		width: 25%
+		display: flex
+		flex-direction: column
+		justify-content: flex-end
+
+	+max-screen(1280px)
+
+		&__left
+			width: calc(70% - 20px)
+
+		&__right
+			width: 30%
+
+	+max-screen(1023px)
+		flex-direction: column-reverse
+
+		&__left
+			width: 100%
+			margin: 0
+
+		&__right
+			width: 100%
+			margin-bottom: 20px
+
+	+screen(550px, 1023px)
+
+		&__right
+			flex-direction: row
+			grid-gap: 20px
+
+			.contacts-aside
+				margin: 0
+
+
+.help-collapses
+	margin-bottom: 50px
+
+
+
+.help-collapse
+	margin-bottom: 10px
+
+	&:last-child
+		margin-bottom: 0
+
+
+
+.help-aside
+	width: 100%
+	padding: 60px 22px 35px
+	display: flex
+	flex-direction: column
+	align-items: center
+	text-align: center
+	background-color: $grey
+	border-radius: 10px
+
+	&__title
+		text-decoration: none
+		color: $brown
+		font-family: $ffb
+		font-size: 25px
+		margin-bottom: 15px
+
+	&__description
+		font-family: $ffm
+		font-size: 20px
+		margin-bottom: 20px
+
+	&__button
+		width: 100%
+
+		.btn
+			display: block
+			width: 100%
+
+
+
+.search
+	width: 100%
+	position: relative
+
+	&__icon
+		position: absolute
+		top: 50%
+		left: 20px
+		transform: translateY(-50%)
+		display: flex
+
+		.icon
+			font-size: 22px
+			color: $green
+
+	&__input
+		padding-left: 55px !important
+
+	&-results__wrapper
+		margin-bottom: 40px
+
+
+
+.drug-selection
+	background-color: $grey
+	padding: 50px 40px
+	display: flex
+	align-items: center
+	margin-bottom: 40px
+
+	&__left
+		width: calc(45% - 20px)
+		margin-right: 20px
+
+		img
+			width: 100%
+
+	&__right
+		width: 55%
+
+	&__title
+		max-width: 530px
+		margin-bottom: 20px
+
+	&__description
+		max-width: 310px
+		line-height: 1.4
+		margin-bottom: 40px
+
+	&__row
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+		width: 100%
+		margin-left: -10px
+
+	&__column
+		width: 50%
+		min-width: 50%
+		margin-left: 10px
+
+		&--double
+			display: flex
+
+	&__age
+		display: flex
+		align-items: center
+		flex: 1
+		margin-right: 10px
+
+		&-span
+			padding: 20px
+			border: 1px solid $greyl
+			border-top-left-radius: 10px
+			border-bottom-left-radius: 10px
+			border-right: none
+			background-color: $grey
+			max-height: 60px
+
+		&-input
+			flex: 1
+			width: 100%
+			padding: 20px
+			border: 1px solid $greyl
+			background-color: $grey
+			height: 100%
+			max-height: 60px
+			border-top-right-radius: 10px
+			border-bottom-right-radius: 10px
+			outline: none
+
+
+
+.checkout-map
+	height: 540px
+	border-radius: 10px
+	overflow: hidden
+	margin-bottom: 50px
+
+
+
+.contacts-aside
+	padding: 30px
+	background-color: $grey
+	margin-top: 30px
+	border-radius: 10px
+
+	&__title
+		font-family: $ffm
+		font-size: 20px
+		margin-bottom: 20px
+
+	&__element
+		display: flex
+		align-items: center
+		margin-bottom: 10px
+
+		&-icon
+			width: 30px
+			min-width: 30px
+			height: 30px
+			min-height: 30px
+			border-radius: 50%
+			background-color: $green
+			display: flex
+			align-items: center
+			justify-content: center
+			margin-right: 10px
+
+			.icon
+				font-size: 15px
+				color: $white
+
+		&-description
+			font-family: $ffm
+			font-size: 16px
+			color: $brown
+			text-decoration: none
+
+
+
+.title-row
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+
+
+.swiper-button-next,
+.swiper-button-prev
+	width: 50px
+	height: 50px
+	min-width: 50px
+	background-image: none
+	display: flex
+	align-items: center
+	justify-content: center
+	border-radius: 50%
+	outline: none
+	transition: background-color ease .3s
+
+	&:hover
+		background-color: $green
+
+		.icon
+			color: $white
+
+	.icon
+		font-size: 12px
+		transition: color ease .3s
+
+
+
+.swiper-button-next
+
+	+min-screen(1530px)
+		right: -70px
+
+.swiper-button-prev
+
+	+min-screen(1530px)
+		left: -70px
+
+
+
+.swiper-slide
+	height: unset
+
+	&--grey
+		background-color: $grey
+
+
+
+.swiper-pagination-bullet
+	background-color: $green
+
+
+
+.product-stock
+	position: absolute
+	top: 15px
+	right: 15px
+	background-color: rgba(255, 255, 255, .6)
+	z-index: 2
+	display: flex
+	align-items: center
+	padding-left: 13px
+	border-radius: 20px
+
+	&__timing
+		margin-right: 30px
+
+	&__desc
+		font-size: 12px
+		font-family: $ffb
+
+	&__time
+		font-size: 20px
+		color: $red
+		font-family: $ffb
+
+	&__percent
+		padding: 15px 9px
+		font-family: $ffb
+		color: $white
+		font-size: 25px
+		background-color: $red
+		border-radius: 20px 20px 20px 0
+		height: 100%

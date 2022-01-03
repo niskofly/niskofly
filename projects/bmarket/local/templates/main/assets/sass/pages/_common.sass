@@ -1,0 +1,299 @@
+.page--404
+	padding-top: 98px
+	background: radial-gradient(50% 7771.97% at 50% 50%, #7149B7 20.31%, #563494 100%)
+
+
+.page--stocks
+	padding: 0 30px 80px
+
+	.section-stocks__more
+		width: 100%
+
+	+max-screen(768px)
+		padding: 0 20px 80px
+
+	+max-screen(425px)
+		padding: 0 10px 80px
+
+.page--auth
+	padding: 65px 0 100px
+
+	.section-auth
+		display: flex
+		align-items: center
+		justify-content: center
+
+
+.page--about,
+.page--privacy-policy,
+.page--delivery-payment,
+.page--public-offer,
+.page--refund-exchange
+	padding: 0 30px 80px
+
+	+max-screen(768px)
+		padding: 0 20px 80px
+
+	+max-screen(425px)
+		padding: 0 10px 80px
+
+
+
+.section-header
+	margin-bottom: 32px
+
+	+max-screen(768px)
+		margin-bottom: 20px
+
+
+.section-intro
+	position: relative
+
+	&__pagination
+		display: flex
+		position: relative
+		height: 10px
+		transform: translateY(-20px)
+		z-index: 1
+
+	+max-screen(768px)
+
+		&__pagination
+			transform: translateY(10px)
+
+
+
+.section-notes
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	padding: 30px 25px
+	background-color: #FFF
+	border-radius: 10px
+
+	&__item
+		display: flex
+		align-items: center
+		max-width: calc(100% / 4 - 90px)
+		width: 100%
+		margin: 0 45px
+		padding-right: 12px
+
+		&-logo
+			max-width: 50px
+			width: 100%
+			height: 50px
+			object-fit: contain
+			margin-right: 20px
+
+		&-text
+			font-family: $ffb
+			font-size: 16px
+			line-height: 20px
+
+	+max-screen(1415px)
+
+		&__item
+			max-width: calc(100% / 4 - 40px)
+			margin: 0 20px
+
+	+max-screen(1220px)
+
+		&__item
+			max-width: calc(100% / 4 - 10px)
+			padding-right: 0
+			margin: 0 5px
+
+	+max-screen(1050px)
+
+		&__item
+			margin: 10px
+			max-width: calc(100% / 2 - 20px)
+
+	+max-screen(600px)
+		padding: 30px 20px
+
+		&__item
+			margin: 10px
+			max-width: calc(100% / 1 - 20px)
+
+
+.collections
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+	margin: 0 -15px
+
+	&__item
+		width: 100%
+		height: 100%
+		overflow: hidden
+		border-radius: 10px
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+		margin: 0 15px 30px
+
+		&--half
+			max-width: calc(100% / 2 - 30px)
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	+max-screen(1200px)
+		&__item
+			margin: 0 15px 20px
+
+	+max-screen(768px)
+		&__item
+			margin: 0 15px 15px
+
+			&--half
+				max-width: calc(100% / 1 - 30px)
+
+	+max-screen(500px)
+		&__item
+			margin: 0 15px 10px
+
+
+
+
+
+
+
+
+
+.payment-icons
+	display: flex
+	align-items: stretch
+
+	&__icon
+		padding: 8px 4px
+		border: 1px solid #DFD1F3
+		border-radius: 5px
+		margin-right: 10px
+
+		&:last-child
+			margin-right: 0
+
+
+
+.alert
+	margin-bottom: 10px
+
+
+
+.alert-message
+	display: flex
+	flex-direction: column
+	align-items: center
+	justify-content: center
+	padding: 64px
+	background-color: #fff
+	border-radius: 10px
+
+	&__logo
+		max-width: 90px
+		width: 100%
+		height: 90px
+		object-fit: contain
+		margin-bottom: 24px
+
+	.title,
+	&__text
+		text-align: center
+		max-width: 630px
+		width: 100%
+
+	.title
+		justify-content: center
+		margin-bottom: 12px
+
+	&__title-404
+		font-family: $ffb
+		font-size: 144px
+		line-height: 144px
+		color: #FFFFFF
+		margin-bottom: 20px
+
+	&__text
+		text-align: center
+		line-height: 22px
+
+	&__actions
+		margin-top: 24px
+
+		.btn
+			min-width: 200px
+			margin: 0 30px 0 0
+
+			&:last-child
+				margin: 0
+
+	&--404
+		background-color: transparent
+		color: #fff
+
+		.title
+			color: inherit
+
+		.alert-message__actions .btn
+			min-width: 145px
+
+	+max-screen(595px)
+
+		&__actions
+
+			.btn
+				width: 100%
+				margin: 0 0 10px
+
+	+max-screen(550px)
+		padding: 30px 10px
+
+
+
+.article
+	display: flex
+	align-items: flex-start
+	justify-content: space-between
+
+	&__title
+		margin-bottom: 20px
+
+	&__main
+		max-width: 930px
+		width: 100%
+
+	&__sidebar
+		max-width: 450px
+		width: 100%
+
+	+max-screen(1023px)
+		flex-direction: column-reverse
+
+		&__sidebar
+			margin-bottom: 20px
+
+			.nav--sidebar
+				flex-direction: row
+				width: max-content
+				padding: 10px 0
+
+				.nav__item
+					border-bottom: none
+					padding: 0 10px
+
+				.nav__item:not(:last-child)
+					border-right: 1px solid #DFD1F3
+
+				.nav__link
+					padding: 5px 0
+
+	+max-screen(350px)
+		&__sidebar
+			.nav--sidebar
+				.nav__item
+					padding: 0 5px

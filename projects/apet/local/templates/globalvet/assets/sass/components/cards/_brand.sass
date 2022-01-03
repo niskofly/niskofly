@@ -1,0 +1,33 @@
+.card-brands
+	display: flex
+	flex-wrap: wrap
+	margin: 0 -10px
+
+
+.card-brand
+	display: flex
+	flex-direction: column
+	align-items: center
+	max-width: 220px
+	width: 100%
+	padding: 20px
+	border-radius: 15px
+	background-color: #FFFFFF
+	text-decoration: none
+	text-align: center
+	margin: 0 10px 30px
+
+	&__image
+		max-width: 180px
+		width: 100%
+		height: 70px
+		margin-bottom: 5px
+		object-fit: contain
+
+	&__title
+		line-height: 15px
+		color: #608488
+		transition: color .3s
+
+	&:hover .card-brand__title
+		color: #00A6DC

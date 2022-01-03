@@ -1,0 +1,38 @@
+<?php
+
+use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
+
+class CreateSolventColumn extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+    public function up()
+    {
+       /* Schema::table('products', function (Blueprint $table) {
+            $table->text('solvent')->nullable();
+        });
+        Schema::table('seo_filters', function (Blueprint $table) {
+            $table->string('solvent')->nullable();
+        });*/
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        /*Schema::table('products', function (Blueprint $table) {
+            $table->dropColumn('solvent');
+        });
+        Schema::table('seo_filter', function (Blueprint $table) {
+            $table->dropColumn('solvent');
+        });*/
+    }
+}

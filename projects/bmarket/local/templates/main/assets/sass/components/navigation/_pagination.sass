@@ -1,0 +1,54 @@
+.pagination
+	display: flex
+	align-items: stretch
+	justify-content: center
+	margin-top: 30px
+
+	&__control,
+	&__page
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 50px
+		max-width: 50px
+		height: 50px
+		margin: 0 10px
+		font-family: $ffb
+		font-size: 18px
+		line-height: 22px
+		color: #563494
+		text-decoration: none
+		border: 1px solid #DFD1F3
+		border-radius: 100%
+		background-color: transparent
+		transition: border .3s, background-color .3s
+
+		.icon
+			font-size: 12px
+
+		&:hover
+			border: 1px solid #DFD1F3
+			background-color: #DFD1F3
+
+		&--active
+			border: 1px solid #7149B7
+
+			&:hover
+				border: 1px solid #7149B7
+				background-color: transparent
+
+		&--dots
+			border: 0
+			background-color: transparent
+
+			&:hover
+				border: 0
+				background-color: transparent
+
+	+max-screen(500px)
+		&__control,
+		&__page
+			margin: 0 5px
+			min-width: 32px
+			max-width: 32px
+			height: 32px

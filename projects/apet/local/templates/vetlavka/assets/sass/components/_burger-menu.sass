@@ -1,0 +1,52 @@
+.menu-toggle
+	display: none
+
+	&:checked
+		~
+			.menu-btn__content
+				transform: rotate(45deg)
+
+				&::before
+					top: 0
+					transform: rotate(0)
+
+				&::after
+					top: 0
+					transform: rotate(90deg)
+
+			.menu-btn__text
+				display: block
+
+
+
+.menu-btn
+	display: flex
+	align-items: center
+	width: 24px
+	height: 24px
+	cursor: pointer
+	z-index: 1
+
+	&__text
+		display: none
+		padding-left: 36px
+
+	&__content,
+	&__content::before,
+	&__content::after
+		display: block
+		position: absolute
+		width: 100%
+		height: 2px
+		background-color: $brown
+		transition-duration: .25s
+
+	&__content
+
+		&::before
+			content: ''
+			top: -8px
+
+		&::after
+			content: ''
+			top: 8px

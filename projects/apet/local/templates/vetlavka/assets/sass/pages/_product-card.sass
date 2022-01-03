@@ -1,0 +1,641 @@
+.product
+	display: grid
+	grid-template-columns: 30% 1fr 1fr
+	grid-gap: 20px
+	margin-bottom: 100px
+
+	+max-screen(1280px)
+		grid-template-columns: 50% 50%
+
+		.product-suggestions
+			grid-column: 2/3
+
+	+max-screen(1023px)
+		grid-template-columns: 100%
+		margin-bottom: 80px
+
+		.product-suggestions
+			grid-column: 1
+
+	+max-screen(767px)
+		margin-bottom: 60px
+
+
+
+.product-slider
+	width: 100%
+
+	.gallery-top
+		width: 100%
+		margin-bottom: 10px
+		border: 1px solid $greyl
+		border-radius: 10px
+
+		.swiper-slide
+			width: 100%
+			max-height: 490px
+
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+
+		.swiper-controls
+			position: absolute
+			bottom: 20px
+			right: 20px
+			display: flex
+
+		.swiper-button-next,
+		.swiper-button-prev
+			width: 50px
+			height: 50px
+			display: flex
+			align-items: center
+			justify-content: center
+			background-image: none
+			border-radius: 50%
+			background-color: $white
+			position: static
+			margin-left: 20px
+			transition: background-color ease .3s, color ease .3s
+
+			&:hover
+				background-color: $green
+
+				.icon
+					color: $white
+
+			.icon
+				font-size: 12px
+
+
+	.gallery-thumbs
+		width: 100%
+
+		.swiper-slide
+			max-width: calc(100% / 5)
+			height: 80px
+			max-width: 80px
+			border: 2px solid $greyl
+			border-radius: 10px
+			overflow: hidden
+
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+
+		.swiper-slide-thumb-active
+			border-color: $green !important
+
+	// +screen(768px, 1023px)
+	// 	max-width: 767px
+
+	// +max-screen(500px)
+	// 	max-width: 320px
+
+
+
+
+.product-info
+	display: flex
+	flex-direction: column
+
+	&__action
+		padding: 20px
+		border-radius: 10px
+		border: 1px solid $greyl
+		width: 100%
+		margin-bottom: 30px
+
+
+
+
+.product-action
+
+	&__head
+		display: flex
+		justify-content: space-between
+		padding-bottom: 20px
+		margin-bottom: 20px
+		border-bottom: 1px solid $greyl
+
+	&__links
+		display: flex
+		align-items: center
+
+		&-item
+			+reset-btn()
+			padding: 0
+			margin-left: 25px
+			display: flex
+			align-items: center
+			justify-content: center
+
+			&:hover
+				.icon
+					color: $green
+
+			.icon
+				font-size: 25px
+				color: $greyd
+				transition: color ease .3s
+
+
+
+.product-characteristic
+	display: flex
+	flex-direction: column
+	padding-bottom: 55px
+	border-bottom: 1px solid $greyl
+
+	&__item
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		line-height: 1
+		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
+
+		&-key
+			margin-right: 5px
+
+		&-value
+			max-width: 191px
+			margin-left: 5px
+			text-align: end
+
+		&-divider
+			flex: 1
+			border-bottom: 1px dashed $greyl
+
+	&__more
+		margin-top: 25px
+
+
+
+.product-lowprice
+	+reset-btn()
+	padding: 0
+	display: flex
+	align-items: center
+	font-family: $ffm
+	color: $greyd
+	margin-top: 30px
+	transition: ease color .3s
+
+	&:hover
+		color: $green
+
+		.icon
+			color: $green
+
+	.icon
+		font-size: 19px
+		margin-right: 10px
+		color: $greyd
+		transition: ease color .3s
+
+
+
+.product-similar
+	padding: 7px 15px
+	margin-top: 40px
+	color: $greyd
+	border: 1px solid $greyd
+	border-radius: 10px
+	display: flex
+	align-items: center
+	justify-content: center
+	align-self: flex-start
+	text-decoration: none
+	transition: color ease .3s, background-color ease .3s
+
+	&:hover
+		color: $white
+		background-color: $greyd
+
+
+
+
+.product-suggestions
+	display: flex
+	flex-direction: column
+
+
+
+.suggestion-cards-cards
+	display: flex
+	flex-direction: column
+	width: 100%
+
+
+
+.suggestion-card
+	padding: 30px
+	background-color: $grey
+	width: 100%
+	border-radius: 10px
+	border: 1px solid $grey
+	margin-bottom: 20px
+	transition: border-color ease .3s
+
+	&:hover
+		border-color: $greyl
+
+	&__head
+		display: flex
+		align-items: flex-start
+		margin-bottom: 10px
+
+	&__title
+		width: calc(40% - 20px)
+		margin-right: 20px
+		font-family: $ffm
+
+	&__price
+		font-family: $ffm
+		font-size: 22px
+		color: $brown
+		width: calc(30% - 20px)
+		margin-right: 20px
+
+	&__link.link
+		width: 30%
+		text-align: right
+		color: $yellow
+
+	&__body
+		display: grid
+		grid-template-columns: repeat(2, 1fr)
+		grid-gap: 10px
+
+	&__status
+		display: flex
+		align-items: center
+		grid-column: 1/3
+
+		&-span
+			width: 16px
+			height: 16px
+			display: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			background-color: $green
+			margin-right: 5px
+
+			.icon
+				color: $white
+				font-size: 7.5px
+
+	&__btn
+		display: flex
+		justify-content: flex-end
+
+	&--stock
+
+		.suggestion-card__price
+			display: flex
+			flex-direction: column
+			color: $red
+
+			&-old
+				font-size: 16px
+				text-decoration: line-through
+				color: $black
+
+	+max-screen(545px)
+
+		&__head
+			flex-direction: column
+
+		&__title
+			width: 100%
+			margin: 0 0 10px
+
+		&__link.link
+			width: 100%
+			text-align: left
+
+		&__price
+			width: max-content
+
+	+max-screen(374px)
+
+		&__body
+			grid-template-columns: 1fr
+
+		&__status
+			grid-column: 1
+
+		&__btn
+			form,
+			.btn
+				width: 100%
+
+.suggestion-bullets
+	display: grid
+	align-items: center
+	grid-gap: 20px
+
+
+
+.suggestion-bullet
+	width: 100%
+	display: flex
+	align-items: center
+
+	&__icon
+		margin-right: 10px
+		display: flex
+		align-items: center
+		justify-content: center
+
+		.icon
+			font-size: 25px
+			color: $green
+
+		&--delivery
+
+			.icon
+				font-size: 20px
+
+	&__description
+		font-family: $ffm
+		color: $brown
+
+
+
+
+.tabs-wrapper
+	overflow: auto
+	margin-bottom: 40px
+
+	+max-screen(1023px)
+	  margin: 0 -25px 40px 0
+
+	+max-screen(767px)
+		  margin: 0 -10px 40px 0
+
+
+.product-tabs
+	padding: 80px 40px
+	background-color: $grey
+	border-radius: 10px
+	margin-bottom: 100px
+
+	&__action
+		display: flex
+		align-items: center
+		padding-bottom: 10px
+
+		.tab-action
+			display: block
+			min-width: max-content
+
+	&__tab
+		width: 100%
+		display: none
+
+		&_characteristic
+			max-width: 80%
+
+		&_description
+			max-width: 60%
+
+			p, div
+				font-family: $ff
+				line-height: 1.4
+
+		&_composition
+			max-width: 60%
+
+	+max-screen(1023px)
+		margin: 0 -25px 60px
+		border-radius: 0
+
+		&__tab
+
+			&_characteristic,
+			&_description,
+			&_composition
+				max-width: 100%
+
+
+
+.tab-characteristic__elements
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-row-gap: 15px
+	grid-column-gap: 100px
+
+	+max-screen(767px)
+		grid-template-columns: 1fr
+
+
+.tab-characteristic__element
+	width: 100%
+
+
+.tab
+	display: none
+
+	&--show
+		display: block
+
+
+
+.product-composition,
+.product-instruction
+
+	&__item
+		margin-bottom: 30px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__title
+		font-size: 18px
+		font-family: $ffm
+		margin-bottom: 10px
+
+	&__description
+		line-height: 1.4
+
+
+
+.product-sides
+	display: flex
+	align-items: flex-start
+
+	&__left
+		width: calc(60% - 50px)
+		margin-right: 50px
+
+	&__right
+		width: 40%
+		display: flex
+		justify-content: flex-end
+
+
+
+.tab-aside
+	display: flex
+	flex-direction: column
+	align-items: center
+	padding: 30px 20px
+	background-color: $white
+	border-radius: 10px
+	min-width: 260px
+
+	&__head
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+
+		&_span
+			font-size: 18px
+			font-family: $ffm
+
+		.icon
+			font-size: 32px
+			margin-right: 20px
+
+	&__body
+		width: 100%
+
+		.btn
+			width: 100%
+
+	&--reviews
+
+		.tab-aside__head
+			display: flex
+			flex-direction: column
+			margin-bottom: 20px
+
+			.icon
+				color: $green
+				font-size: 50px
+				margin-bottom: 12px
+				margin-right: 0
+
+		.tab-aside__rating
+			margin-bottom: 25px
+
+
+
+.reviews-items
+	display: flex
+	flex-flow: column nowrap
+
+
+
+.review
+
+	&-item
+		display: flex
+		align-items: flex-start
+		margin-bottom: 45px
+
+		&:last-child
+			margin-bottom: 0
+
+	&__avatar
+		min-width: 60px
+		min-height: 60px
+		border-radius: 50%
+		background-color: $white
+		display: flex
+		align-items: center
+		justify-content: center
+		color: $green
+		margin-right: 20px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+
+	&__content
+		display: flex
+		flex-direction: column
+
+	&-head
+		display: flex
+		align-items: flex-end
+		margin-bottom: 12px
+
+		&__name
+			font-family: $ffm
+			margin-right: 20px
+
+		&__date
+			margin-right: 20px
+			color: $green
+			font-family: $ffm
+
+
+
+.rating-stars
+	display: flex
+	align-items: center
+
+	&__icon
+		margin-right: 6px
+
+		.icon
+			font-size: 13px
+			color: $greyl
+
+		&--marked
+
+			.icon
+				color: $yellow
+
+
+
+.product-faqs
+
+	.collapse
+		margin-bottom: 10px
+		border: 1px solid $greyl
+
+
+
+
+.product-offer
+	margin-bottom: 100px
+	position: relative
+
+	&:last-child
+		margin-bottom: 0
+
+	&__title
+		margin-bottom: 30px
+
+	// .swiper-button-prev,
+	// .swiper-button-next
+	// 	width: 50px
+	// 	height: 50px
+	// 	border-radius: 50%
+	// 	background-image: unset
+	// 	background-color: $white
+	// 	display: flex
+	// 	align-items: center
+	// 	justify-content: center
+	// 	transition: background-color ease .3s
+
+	// 	.icon
+	// 		font-size: 12px
+	// 		transition: color ease .3s
+
+	// 	&:hover
+	// 		background-color: $green
+
+	// 		.icon
+	// 			color: $white

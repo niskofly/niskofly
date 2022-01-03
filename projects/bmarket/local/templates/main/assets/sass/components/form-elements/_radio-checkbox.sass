@@ -1,0 +1,265 @@
+.radiobutton,
+.checkbox
+	display: flex
+	align-items: center
+	cursor: pointer
+
+	input
+		display: none
+
+	&__card .payment-icons__icon
+		max-width: 38px
+
+	&__view
+		min-width: 16px
+		max-width: 16px
+		height: 16px
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		border: 1px solid #563494
+		background-color: #fff
+		margin-right: 8px
+		transition: border .3s
+
+		.icon
+			position: relative
+			opacity: 0
+			pointer-events: none
+			user-select: none
+			transition: opacity .3s
+
+	&__card
+		width: 100%
+		height: inherit
+		display: flex
+		align-items: flex-start
+		padding: 24px 20px
+		border: 1px solid #DFD1F3
+		border-radius: 10px
+		transition: border .3s
+
+	&__text
+		font-family: $ff
+		font-size: 18px
+		line-height: 20px
+		pointer-events: none
+		user-select: none
+
+		a
+			pointer-events: initial
+			color: #2A5CAA
+
+		.user-points
+			font-size: 15px
+			line-height: 18px
+
+
+.radiobutton
+
+	&__view
+		border-radius: 50px
+		margin-right: 10px
+		border: 1px solid #563494
+
+		.icon
+			width: 10px
+			height: 10px
+			border-radius: 100%
+			background-color: #563494
+
+	&__card .radiobutton__text
+		position: relative
+		margin-top: -2px
+		display: flex
+		flex-direction: column
+		align-items: flex-start
+		width: 100%
+		height: inherit
+
+		&-label,
+		&-detail,
+		&-price
+			font-size: 16px
+			line-height: 22px
+
+		&-label
+			min-height: 65px
+			font-family: $ffb
+			color: #563494
+			margin-bottom: 8px
+
+		&-detail
+			color: #B7A9D0
+
+		&-price
+			font-family: $ffb
+			color: #563494
+			margin-top: 8px
+
+	&__card
+		background: transparent
+		transition: background-color .3s
+
+	&:hover
+
+		.radiobutton__input + .radiobutton__text
+			color: #FF1AC6
+
+		.radiobutton__card
+			border: 1px solid #7149B7
+
+	input
+
+		&:checked + .radiobutton__view
+
+			.icon
+				opacity: 1
+
+		&:checked + .radiobutton__card
+			border: 1px solid #563494
+
+			.radiobutton__view .icon
+				opacity: 1
+
+		&:checked + .radiobutton__text
+			color: #FF1AC6
+
+		&:disabled
+
+			& ~ span
+				cursor: initial
+				pointer-events: initial
+
+			& ~ .radiobutton__view
+				border-color: #DFD1F3
+				background-color: #F7F4FD
+
+			& ~ .radiobutton__text
+				color: #B7A9D0
+
+	&.bx-selected
+
+		.radiobutton__view
+
+			.icon
+				opacity: 1
+
+		.radiobutton__card
+			border: 1px solid #563494
+
+			.radiobutton__view .icon
+				opacity: 1
+
+
+
+.checkbox
+
+	&__wrapper
+		display: flex
+
+	&__view
+		border-radius: 3px
+		transition: background-color .3s
+
+		.icon
+			font-size: 10px
+			color: #FFF
+
+	&__card
+		width: 100%
+		height: inherit
+		display: flex
+		align-items: flex-start
+		padding: 24px 20px
+		border: 1px solid #DFD1F3
+		border-radius: 10px
+		transition: border .3s
+
+		.checkbox__text
+			position: relative
+			margin-top: -2px
+			display: flex
+			flex-direction: column
+			align-items: flex-start
+			width: 100%
+			height: inherit
+
+			&-label,
+			&-detail
+				font-size: 16px
+				line-height: 22px
+
+			&-label
+				font-family: $ffb
+				color: #563494
+				margin-bottom: 4px
+
+			&-detail
+				max-width: 160px
+				color: #B7A9D0
+
+	input
+
+		&:checked + .checkbox__view
+			background-color: #563494
+			box-shadow: none
+
+			.icon
+				opacity: 1
+
+		&:checked + .checkbox__card
+			border: 1px solid #563494
+
+			.checkbox__view
+				background-color: #563494
+				box-shadow: none
+
+				.icon
+					opacity: 1
+
+		&:checked + .checkbox__text
+			color: #FF1AC6
+
+		&:disabled
+
+			& ~ span
+				cursor: initial
+				pointer-events: initial
+
+			& ~ .checkbox__view
+				border-color: #DFD1F3
+				background-color: #F7F4FD
+
+			& ~ .checkbox__text
+				color: #B7A9D0
+
+	&:hover
+
+		.checkbox__card
+			border: 1px solid #7149B7
+
+		.checkbox__input + .checkbox__text
+			color: #FF1AC6
+
+	&--privacy
+		align-items: flex-start
+
+		.checkbox__text
+			margin-top: -2px
+			font-size: 16px
+			line-height: 22px
+
+	&--bonus
+		flex-direction: column
+		margin-bottom: 20px
+		width: calc(100% / 1.5 - 10px)
+
+		.checkbox__text
+			flex-direction: column
+
+	+max-screen(768px)
+
+		&--bonus
+			width: 100%

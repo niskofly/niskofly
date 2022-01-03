@@ -1,0 +1,40 @@
+.stock-cards
+	display: flex
+	align-items: stretch
+	flex-wrap: wrap
+	margin: 0 -15px
+
+.stock-card
+	display: flex
+	flex-direction: column
+	align-items: stretch
+	text-decoration: none
+	border-radius: 10px
+	overflow: hidden
+	margin: 0 15px 30px
+	max-width: calc(100%/2 - 30px)
+	width: 100%
+
+	&__preview
+		width: 100%
+		height: 100%
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__title
+		font-family: $ffb
+		font-size: 18px
+		line-height: 24px
+		color: #563494
+		padding: 20px 30px
+		background-color: #fff
+		height: 100%
+
+	+max-screen(767px)
+		max-width: calc(100%/1 - 30px)
+
+		&:last-child
+			margin-bottom: 0

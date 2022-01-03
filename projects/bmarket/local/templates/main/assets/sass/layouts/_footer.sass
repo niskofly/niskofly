@@ -1,0 +1,150 @@
+.footer
+
+	&__logo
+		max-width: 215px
+
+	&__container
+		display: flex
+		justify-content: space-between
+
+	&__top
+		padding: 40px 90px 40px 0
+		background-color: #563494
+
+		.footer__container
+			align-items: flex-start
+
+	&__bottom
+		padding: 20px 90px 20px 10px
+		background-color: #4A278A
+
+	&__contacts
+
+		&-title
+			font-family: $ffb
+			font-size: 18px
+			line-height: 24px
+			color: #FFFFFF
+			margin-bottom: 20px
+
+		&-section
+			margin-bottom: 20px
+			font-size: 16px
+			line-height: 24px
+			color: rgba(255, 255, 255, 0.6)
+
+			&:last-child
+				margin-bottom: 0
+
+	&__navigation
+		display: flex
+		align-items: flex-start
+
+	&__feedback
+
+		&-contact
+			display: flex
+			color: #fff
+			font-family: $ffb
+			margin-bottom: 12px
+			text-decoration: none
+
+		&-section
+			padding: 28px 40px
+			border-bottom: 1px solid rgba(255, 255, 255, .15)
+
+			&:first-child
+				padding: 0 40px 28px
+
+			&:last-child
+				border-bottom: 0
+
+	&__info
+
+		&-text
+			font-size: 16px
+			line-height: 22px
+			color: rgba(255, 255, 255, .6)
+			text-decoration: none
+
+		&--bottom
+			display: flex
+			align-items: center
+
+			.footer__info-text
+				margin-right: 20px
+
+				&:last-child
+					margin-right: 0
+
+	&__dev
+		display: flex
+		font-size: 16px
+		line-height: 22px
+		color: rgba(255, 255, 255, .6)
+		text-decoration: none
+
+		&-label
+			margin-right: 8px
+
+		&-logo
+			max-width: 90px
+			width: 100%
+			object-fit: contain
+
+	+max-screen(1100px)
+
+		&__top
+			padding: 20px 10px 20px 10px
+
+		&__bottom
+			padding: 20px 10px
+
+		&__navigation
+			flex-direction: column
+
+		&__feedback-section
+			padding: 28px 5px
+
+			&:first-child
+				padding: 0 5px 28px
+
+		&__logo
+			display: none
+
+	+max-screen(730px)
+
+		&__top
+			padding: 0
+
+			.footer__container
+				padding: 20px 10px
+				width: 100%
+
+		&__info--bottom
+			flex-direction: column
+
+			.footer__info-text
+				margin: 0 0 10px
+
+		&__container
+			flex-direction: column
+			width: max-content
+
+		&__feedback
+			margin: auto
+
+		&__contacts
+			margin-bottom: 30px
+
+			&-title,
+			&-section
+				margin-bottom: 10px
+
+		&__navigation
+
+			.nav--footer
+				margin-bottom: 10px
+
+		&__dev
+			margin: auto

@@ -1,0 +1,109 @@
+.page-contact
+	.title_bold
+	.title_blue
+		margin-top: 30px
+
+.b-head-office
+	border: 1px solid #B3B3B3
+	box-sizing: border-box
+	padding: 30px 35px
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	justify-content: space-between
+	align-items: stretch
+	margin-top: 25px
+	margin-bottom: 40px
+
+.head-office__col
+	width: 48%
+	&:last-child
+		padding-top: 20px
+
+.head-office__title
+	color: #434E66
+	font-size: 14pt
+	font-family: exo2medium
+	margin-bottom: 25px
+
+.head-office__info
+	color: #333
+	font-family: exo2light
+	font-size: 11pt
+	margin-bottom: 23px
+	&:last-child
+		margin-bottom: 0
+	span
+		display: block
+		margin-bottom: 10px
+	button
+		background: none
+		border: none
+		color: #0BACDB
+		font-size: 11pt
+		padding: 0
+		cursor: pointer
+		font-family: exo2light
+	a
+		color: #0BACDB
+		text-decoration: none
+
+.js-show-map-contacts
+	text-decoration: underline
+	&:hover
+		text-decoration: none
+.b-filial
+	margin-top: 30px
+	margin-bottom: 60px
+
+.filial
+	&__container
+		margin-top: 30px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		justify-content: flex-start
+		align-items: stretch
+	&__item
+		width: calc(100% / 3)
+		border: 1px solid #B3B3B3
+		padding: 30px 40px
+		box-sizing: border-box
+		margin-top: -1px
+		margin-right: -1px
+		&.fold
+			display: none
+	&__title
+		@extend .head-office__title
+	&__map-info
+		@extend .head-office__info
+	&__contact
+		@extend .head-office__info
+	&__hidemore,
+	&__readmore
+		width: 100%
+		flex-basis: 100%
+		color: #0BACDB
+		text-decoration: underline
+		cursor: pointer
+		margin: 30px 0 0
+		text-align: center
+		&:hover
+			text-decoration: none
+	&__hidemore
+		display: none
+
+.b-filial-map
+	height: 501px
+	width: 100%
+	background-repeat: no-repeat
+	background-size: contain
+	background-position: center center
+
+.span-block span
+	display: block

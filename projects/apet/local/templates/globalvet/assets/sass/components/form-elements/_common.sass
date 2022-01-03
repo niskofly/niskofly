@@ -1,0 +1,35 @@
+.input-age
+	display: flex
+	overflow: hidden
+	border: 1px solid #00A6DC
+	border-radius: 15px
+
+	&__label
+		font-size: 18px
+		color: #4A4A4A
+		display: flex
+		align-items: center
+		padding: 0 16px
+		border-right: 1px solid #00A6DC
+
+	input
+		font-family: $ff
+		font-size: 18px
+		color: #4A4A4A
+		flex: 1
+		padding: 0 20px
+		background-color: #E7F3F8
+
+
+.input-sort
+	cursor: pointer
+
+	input
+		display: none
+
+		&:checked + .input-sort__view
+			background-color: #00A6DC
+			color: #ffffff
+
+	&__view
+		padding: 0 20px

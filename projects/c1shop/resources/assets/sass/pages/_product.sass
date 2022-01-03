@@ -1,0 +1,527 @@
+.b-product-page__header
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flex
+	display: -o-flex
+	display: flex
+	align-items: stretch
+	justify-content: space-between
+
+.wrap-product-page
+	&__photo
+		width: 50%
+		padding-right: 65px
+		box-sizing: border-box
+		&--more
+			padding-bottom: 80px
+.wrap-product-card
+	&__info
+		margin-top: 40px
+		margin-bottom: 35px
+		width: 100%
+
+.product-page
+	&__photo
+		width: 100%
+		height: 100%
+		background-repeat: no-repeat
+		background-position: center center
+		background-size: contain
+		display: flex
+		justify-content: center
+		outline: none !important
+		img
+				max-width: 100%
+				object-fit: contain
+				object-position: center
+
+	&__title
+		color: #434E66
+		font-size: 20pt
+		font-family: exo2medium, serif
+		margin-bottom: 30px
+		width: 100%
+		&--mobile
+			display: none
+
+	&__info
+		width: 50%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		flex-wrap: wrap
+		align-items: center
+	
+	&__price
+		font-size: 24pt
+		span
+			display: block
+			line-height: 1
+	
+	&__old-price
+			font-size: 18px
+			color: #434e66
+			text-decoration: line-through
+
+	&__stok
+		font-size: 13pt
+		display: flex
+		align-items: baseline
+		&.disabled
+			.icon
+				color: #999
+		.icon
+			font-size: 10px
+			width: 20px
+			min-width: 20px
+
+
+	&__info
+		margin-bottom: 5px
+		font-size: 13pt
+	&__button
+		width: 100%
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		justify-content: space-between
+		flex-wrap: wrap
+		button
+			height: 50px
+			padding: 0
+			width: 48%
+			font-size: 12pt
+			font-family: exo2medium, sans-serif
+			border: none
+			cursor: pointer
+			margin-bottom: 25px
+
+	.add-list
+		color: #4D4D4D
+		background-color: #DFE2E8
+		.icon
+			color: #0BACDB
+			font-size: 10px
+			margin-right: 13px
+	.send-request
+		background-color: #0E93C8
+		color: #FFF	
+
+	.download-advertising
+		border: none
+		background: none
+		font-size: 12pt
+		color: #666
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		cursor: pointer
+		text-align: left
+		text-decoration: none
+		.icon
+			color: #B8BAC2
+			font-size: 30px
+			margin-right: 15px
+
+.product-page__photos
+	display: flex
+	justify-content: center
+	align-items: center
+	margin-top: 15px
+
+.product-small
+	width: 60px
+	height: 60px
+	cursor: pointer
+	margin-left: 10px
+	margin-right: 10px
+	outline: none !important
+	display: flex
+	justify-content: center
+	+bgi()
+	img
+		max-width: 100%
+		object-fit: contain
+		object-position: center
+
+.specifications-product
+	&__table
+		font-size: 12pt
+		color: #333
+		margin-top: 5px
+
+	&__row
+		border: 1px solid #B8BAC2
+		margin-top: -1px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+		transition: background-color ease .3s
+		&:hover
+			background-color: #e3e4e8
+
+	&__description
+		padding: 15px
+		text-align: left
+		width: 40%
+		min-width: 40%
+		flex-basis: 50%
+		flex-grow: 1
+
+	&__value
+		padding: 15px
+		white-space: nowrap
+		border-left: 1px solid #B8BAC2
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: flex-end
+		width: 50%
+		flex-basis: 50%
+		flex-grow: 1
+.specifications-product-categories
+	&__table
+		font-size: 16px
+		color: #808080
+
+	&__title
+		font-size: 18px
+		padding: 30px 0 10px 0
+		border-bottom: 1px solid #DFE3E9
+
+	&__row
+		//border: 1px solid #B8BAC2
+		margin-top: -1px
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+		transition: background-color ease .3s
+
+	&__description
+		padding: 15px 0 15px 0
+		white-space: normal
+		text-align: left
+		width: 40%
+		min-width: 40%
+		flex-basis: 50%
+		flex-grow: 1
+		&:first-child
+			padding: 10px 0 7px 0
+	&__value
+		padding: 7px 0 7px 0
+		white-space: normal
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		width: 50%
+		flex-basis: 50%
+		flex-grow: 1
+		color: #424242
+		&:first-child
+			padding: 10px 0 7px 0
+	
+.product-additional-materials
+	width: 100%
+	display: flex
+	flex-wrap: wrap
+	justify-content: flex-start
+	padding-top: 5px
+
+.product-additional-material
+	margin-bottom: 35px
+	display: flex
+	justify-content: flex-start
+	margin-left: 1%
+	margin-right: 1%
+	width: calc(100% / 2 - 2%)
+
+	a
+		display: inline-flex
+		width: auto
+		align-items: center
+
+		.icon
+			font-size: 32px
+			margin-right: 15px
+			color: #b9b8bd
+
+	&--excel
+		a
+			.icon
+				color: #77b97e !important
+
+
+
+.product-kits
+	display: flex
+	align-items: center
+	padding-bottom: 20px
+
+	&__title
+		font-family: exo2medium, sans-serif
+		font-size: 16px
+		margin-bottom: 10px
+		padding-right: 15px
+
+	&__links
+		display: flex
+		align-items: center
+		justify-content: flex-start
+		margin-bottom: 10px
+ 
+
+
+.product-kit-link
+	padding: 0 15px 0
+	position: relative
+
+	a
+		font-size: 16px
+		color: #505050
+		text-decoration: none
+		border-bottom: 1px solid transparent
+		transition: border-bottom ease .3s
+
+		&:hover
+			border-bottom: 1px solid #bfc1c9
+
+	&:after
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 0
+		width: 1px
+		background-color: #505050
+		content: ''
+
+	&:last-child
+		&:after
+			display: none
+
+	&:first-child
+		padding-left: 0
+
+
+
+.product-consultation
+	display: flex
+	justify-content: space-between
+	background-image: url("/img/product-consultation.png")
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: top center
+	align-items: flex-start
+	padding: 35px 40px 20px
+	margin-top: 50px
+
+	&__info
+		margin-right: 50px
+		color: #808080
+
+	&__title
+		font-size: 30px
+		padding-bottom: 10px
+		line-height: 1
+		white-space: nowrap
+
+	&__desc
+		font-size: 16px
+
+	&__sender
+		flex: 1
+
+		.privacy-policy-prompt
+			padding-top: 0
+			text-align: right
+
+	&__form
+		display: flex
+		align-items: center
+		width: 100%
+		.input
+			margin-right: 25px
+			height: 50px
+			margin-bottom: 10px
+			flex: 1
+		.btn
+			padding: 16px 19px
+			box-shadow: none
+			margin-bottom: 10px
+			white-space: nowrap
+
+.product-delivery
+	color: #333
+	a
+		color: #048ab3
+		&:hover
+			text-decoration: none
+			color: #333
+	&__info
+		background-image: url("/img/product-delivery.png")
+		background-position: top left
+		background-repeat: no-repeat
+		background-size: cover
+		padding: 35px 60px
+	&__title
+		font-size: 30px
+		padding-bottom: 10px
+		line-height: 1
+		white-space: nowrap
+	&__desc
+		margin-top: 25px
+		font-size: 16px
+	&__phone
+		margin-top: 15px
+		a
+			white-space: nowrap
+			font-size: 26px
+			text-decoration: none
+			&:hover
+				text-decoration: underline
+				color: #048ab3
+
+.product-tabs
+	padding-top: 60px
+	padding-bottom: 24px
+
+	&__nav
+		max-width: 100%
+		overflow: hidden
+		overflow-x: auto
+		display: flex
+		align-items: center
+		border-bottom: 1px solid #B8BAC2
+
+	&__btn
+		font-size: 24px
+		border: none
+		cursor: pointer
+		background-color: transparent
+		padding: 24px 0
+		margin: 0 25px
+		position: relative
+		color: #424242
+		transition: color ease .3s
+		white-space: nowrap
+
+		&--select
+			color: #66d4ff
+			box-shadow: inset 0px -4px 0px 0px #0E93C8
+
+		&:first-child
+			margin-left: 0
+
+		&:last-child
+			margin-right: 0
+			&:after
+				display: none
+		&:hover
+			color: #66d4ff
+
+	&__section
+		display: none
+		padding-top: 15px
+
+		&--show
+			display: block
+
+
+
+.product-certificates
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin-left: -25px
+	margin-right: -25px
+
+	&__item
+		height: 228px
+		width: calc(100% / 5 - 50px)
+		margin: 0 25px 25px
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		display: block
+		
+
+
+.product-videos
+	display: flex
+	align-items: flex-start
+	justify-content: flex-start
+	flex-wrap: wrap
+	margin-left: -9px
+	margin-right: -9px
+
+	&__item
+		height: 140px
+		width: calc(100% / 4 - 18px)
+		margin: 0 9px 18px
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center center
+		display: flex
+		align-items: center
+		justify-content: center
+		position: relative
+		background-color: #496480
+
+		button
+			border: none
+			cursor: pointer
+			background-color: transparent
+			padding: 20px
+			position: relative
+			z-index: 2
+
+		&:after
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			background-color: rgba(#496480, 0.6)
+			content: ""
+
+.buy_whith
+	min-height: 355px
+
+.product-page__services
+	display: flex
+	margin-top: 30px
+	margin-bottom: 35px
+	flex-wrap: wrap
+	width: 100%
+	&-item
+		display: flex
+		align-items: center
+		flex-basis: 50%
+		&__image
+			margin-right: 15px
+		&__text
+			color: #666
+			padding-right: 15px

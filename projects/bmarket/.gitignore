@@ -1,0 +1,32 @@
+/.idea
+/.vscode
+/.vagrant
+*.log
+log.txt
+pathLog.txt
+.DS_Store
+Thumbs.db
+/cgi-bin/
+
+# игнорируем файлы nodejs
+node_modules
+
+# игнорируем папку битрикс
+/bitrix/*
+
+# игнорируем загруженные файлы и логи
+/upload/
+/logs/
+
+# игнорируем другие файлы
+google*.html
+yandex*.html
+cmsmagazine*.*
+.htaccess.zip
+
+# игнорируем выйлы seo
+sitemap-*
+sitemap.xml
+sitemap.php
+robots.php
+robots.txt

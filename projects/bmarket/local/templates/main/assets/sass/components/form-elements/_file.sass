@@ -1,0 +1,171 @@
+.input-photo,
+.input-file
+	display: inline-flex
+	cursor: pointer
+
+	input
+		display: none
+
+.input-photo
+
+	&__view
+		position: relative
+		display: flex
+		justify-content: center
+		align-items: center
+		text-align: center
+		width: 100px
+		height: 100px
+		border-radius: 100%
+		padding: 16px
+		background-color: #E7F3F8
+		background-size: contain
+		background-repeat: no-repeat
+		background-position: center center
+		overflow: hidden
+
+		&:before
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(0, 0, 0, 0.5)
+			z-index: 1
+
+	&__text
+		font-family: $ff
+		font-size: 16px
+		line-height: 1
+		color: #4A4A4A
+
+	&__icon
+		display: flex
+		align-items: center
+		justify-content: center
+		min-width: 50px
+		max-width: 50px
+		height: 50px
+		border-radius: 100%
+		background-color: #E7F3F8
+		margin-right: 10px
+
+		.icon
+			font-size: 13px
+			color: #00A6DC
+
+	&--loaded
+
+		.input-photo
+
+			&__text
+				color: #FFFFFF
+				z-index: 1
+
+			&__view:before
+				content: ''
+
+	&--modal
+		display: flex
+		align-items: center
+
+		.input-photo__text
+			font-family: $ff
+			font-size: 18px
+
+
+.input-file
+	max-width: 280px
+	width: 100%
+	min-height: 140px
+	height: 100%
+
+	&__view
+		display: flex
+		flex-direction: column
+		width: inherit
+		padding: 15px 10px 10px
+		border-radius: 15px
+		box-shadow: 0 0 0 1px #E0E0E0
+
+	&__title
+		display: flex
+		align-items: baseline
+		font-family: $ff
+		font-size: 18px
+		line-height: 1
+		color: #4A4A4A
+		padding-left: 10px
+
+		.tooltip
+			margin-right: 10px
+
+	&__icon
+		position: relative
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 50px
+		height: 50px
+		border-radius: 100%
+		background-color: #E7F3F8
+		margin-top: auto
+		align-self: flex-end
+		overflow: hidden
+
+		.icon
+			font-size: 13px
+			color: #00A6DC
+
+		&-layer
+			display: flex
+			align-items: center
+			justify-content: center
+			position: absolute
+			top: 0
+			right: 0
+			bottom: 0
+			left: 0
+			background-color: rgba(0, 166, 220, .5)
+			opacity: 0
+			pointer-events: none
+			transition: opacity .3s
+
+			.icon
+				font-size: 18px
+				color: #FFFFFF
+
+	&--download
+		text-decoration-color: #00A6DC
+
+		.input-file__view
+			font-family: $ff
+			font-size: 18px
+			line-height: 23px
+			color: #00A6DC
+			justify-content: center
+			align-items: center
+			text-align: center
+
+	&--loaded
+
+		.input-file__icon
+			width: 66px
+			height: 66px
+			margin-top: 12px
+			align-self: center
+			background-color: transparent
+
+			img
+				max-width: 38px
+				width: 100%
+				object-fit: contain
+
+		&:hover .input-file__icon-layer
+			opacity: 1
+
+a.input-file
+	text-decoration: none
+
+div.input-file
+	cursor: initial

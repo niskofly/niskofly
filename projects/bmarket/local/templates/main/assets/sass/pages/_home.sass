@@ -1,0 +1,43 @@
+.page--home
+	padding: 24px 30px 78px
+
+	.section-intro,
+	.section-notes
+		margin-bottom: 24px
+
+	.section-collections
+		margin-bottom: 45px
+
+		&:empty
+			display: none
+
+	+max-screen(768px)
+		padding: 24px 20px 78px
+
+		.section-intro,
+		.section-notes
+			margin-bottom: 20px
+
+		.section-collections
+			margin-bottom: 35px
+
+	+max-screen(425px)
+		padding: 24px 10px 78px
+
+		.title
+			font-size: 24px
+
+			&__icon
+				max-width: 22px
+
+
+.grid-container
+	display: grid
+	grid-template-columns: repeat(2, 1fr)
+	grid-gap: 40px
+
+	.widget-review
+		width: 100%
+
+	+max-screen(1023px)
+		grid-template-columns: 100%

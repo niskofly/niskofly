@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /login/
+Disallow: /admin/
+Disallow: /*search?query=
+Disallow: /catalog/series-sks
+Host: https://www.laundrypro.ru/
+Sitemap: https://www.laundrypro.ru/sitemap.xml

@@ -1,0 +1,647 @@
+.cart-columns
+	display: flex
+	align-items: flex-start
+
+	+max-screen(1024px)
+		flex-direction: column-reverse
+
+	&__left
+		width: calc(65% - 20px)
+		margin-right: 20px
+
+		+max-screen(1024px)
+			width: 100%
+			margin-right: 0
+
+	&__right
+		width: 35%
+
+		+max-screen(1024px)
+			width: 100%
+			margin-bottom: 20px
+
+	&__wrapper
+		border: 1px solid $greyl
+		border-radius: 10px
+		padding: 20px 20px 30px
+
+		.cart-total
+			margin: -20px -20px -30px
+
+		&--order
+			padding: 20px 20px 30px
+
+
+
+.cart-order
+	display: flex
+	flex-direction: column
+
+	&__header
+		display: flex
+		align-items: center
+		margin-bottom: 30px
+
+	&__title
+		margin-right: 10px
+
+	&__span
+		width: 36px
+		height: 36px
+		display: flex
+		align-items: center
+		justify-content: center
+		border-radius: 50%
+		background-color: $grey
+		color: $green
+		font-size: 18px
+		font-family: $ffm
+		line-height: 1
+
+	&__body
+		margin-bottom: 15px
+
+	&__item
+		margin-bottom: 15px
+		padding-bottom: 15px
+		border-bottom: 1px solid $greyl
+
+		&:last-child
+			margin-bottom: 0
+
+	&__sum
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 15px
+
+		&:last-child
+			margin-bottom: 0
+
+		&-description,
+		&-price
+			font-size: 18px
+
+		&--total
+			margin-top: 25px
+
+			.cart-order__sum-description,
+			.cart-order__sum-price
+				font-family: $ffm
+
+
+
+$round-width: 35px
+$round-margin: 10px
+$text-color: #46382C
+
+.cart-main
+	width: 100%
+	display: flex
+	flex-direction: column
+
+	.row
+		margin-left: auto
+		margin-right: auto
+
+	&__head
+		margin-bottom: 30px
+
+	&__basket
+		display: none
+
+	&__region
+		border-bottom: 1px solid #E0E0E0
+		padding-bottom: 30px
+		margin-bottom: 30px
+		&-title
+			margin: 0
+			display: flex
+			align-items: center
+
+			&-round
+				width: $round-width
+				height: 35px
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: #F9F7F6
+				color: #56BA72
+				font-size: 15px
+				border-radius: 50%
+				font-family: $ffb
+				margin-right: $round-margin
+
+			&-text
+				text-transform: uppercase
+				font-size: 16px
+				color: $text-color
+				font-family: $ffb
+
+		&-content
+			display: flex
+			flex-direction: column
+
+			.bx_soa_location
+				margin-left: calc(#{$round-width} + #{$round-margin})
+
+				.form-cart__label
+					color: $text-color
+					margin-bottom: 16px
+					font-size: 15px
+					font-family: $ffb
+
+				.form-cart__location
+
+					.form-cart__label
+						margin-bottom: 10px
+
+					.bx-sls
+					.dropdown-block
+						padding: 20px
+						border-radius: 5px
+						border: 1px solid #E0E0E0
+						box-shadow: none !important
+
+						.dropdown-icon
+							display: none
+
+						.dropdown-field
+
+					.bx-ui-sls-container
+
+						.bx-ui-sls-route
+							height: 100%
+						.bx-ui-sls-fake
+							height: 100%
+					.bx-ui-sls-clear
+						top: 50%
+						transform: translateY(-50%)
+
+
+				.input-groups
+					margin-bottom: 30px
+
+				.radio-round
+
+					&__input
+						margin-right: 10px
+
+	&__delivery
+		border-bottom: 1px solid #E0E0E0
+		padding-bottom: 30px
+		margin-bottom: 30px
+
+		.input-groups
+			width: 100%
+
+		&-head
+			margin-bottom: 30px
+
+		&-title
+			margin: 0
+			display: flex
+			align-items: center
+
+			&-round
+				width: $round-width
+				height: 35px
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: #F9F7F6
+				color: #56BA72
+				font-size: 15px
+				border-radius: 50%
+				font-family: $ffb
+				margin-right: $round-margin
+
+			&-text
+				text-transform: uppercase
+				font-size: 16px
+				color: $text-color
+				font-family: $ffb
+
+
+		&-content
+			display: flex
+			flex-direction: column
+
+			.form-cart__delivery
+				margin-left: calc(#{$round-width} + #{$round-margin})
+				display: flex
+				grid-gap: 20px
+				justify-content: space-between
+				align-items: flex-start
+
+				+max-screen(767px)
+					flex-direction: column
+
+
+			.cart-note
+				background-color: #F9F7F6
+				border-radius: 10px
+				padding: 25px
+				top: 0
+				right: 0
+				color: $text-color
+				font-size: 16px
+				width: 100%
+
+				&__text
+					font-family: $ffb
+					margin-bottom: 10px
+
+				&__detail
+					padding-left: 0
+					list-style: none
+
+			.bx-pagination
+				margin-top: 10px
+
+				&-container
+					display: flex
+					align-items: center
+
+					ul
+						padding-left: 0
+						list-style: none
+						display: flex
+						align-items: center
+
+						li
+							margin: 10px
+
+							&:first-child
+								margin-left: 0
+
+							&:last-child
+								margin-right: 0
+
+							a
+								color: #56BA72
+
+							&.bx-active
+
+								a
+									border-bottom: 1px solid #56BA72
+
+		&--pickup
+			min-height: 240px
+			margin-left: 45px
+
+	&__paysystem
+		border-bottom: 1px solid #E0E0E0
+		padding-bottom: 30px
+		margin-bottom: 30px
+
+		&-head
+			margin-bottom: 30px
+
+		&-title
+			margin: 0
+			display: flex
+			align-items: center
+
+			&-round
+				width: $round-width
+				height: 35px
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: #F9F7F6
+				color: #56BA72
+				font-size: 15px
+				border-radius: 50%
+				font-family: $ffb
+				margin-right: $round-margin
+
+			&-text
+				text-transform: uppercase
+				font-size: 16px
+				color: $text-color
+				font-family: $ffb
+
+		&-content
+			display: flex
+			flex-direction: column
+
+			.form-cart__pay
+				margin-left: calc(#{$round-width} + #{$round-margin})
+				position: relative
+
+	&__properties
+		padding-bottom: 30px
+
+		&-head
+			margin-bottom: 30px
+
+		&-title
+			margin: 0
+			display: flex
+			align-items: center
+
+			&-round
+				width: $round-width
+				height: 35px
+				display: flex
+				align-items: center
+				justify-content: center
+				background-color: #F9F7F6
+				color: #56BA72
+				font-size: 15px
+				border-radius: 50%
+				font-family: $ffb
+				margin-right: $round-margin
+
+			&-text
+				text-transform: uppercase
+				font-size: 16px
+				color: $text-color
+				font-family: $ffb
+
+		&-content
+			display: flex
+			flex-direction: column
+
+			.row
+				margin-left: calc(#{$round-width} + #{$round-margin})
+
+				.input-groups
+					display: flex
+					flex-wrap: wrap
+					gap: 15px
+
+					[data-property-id-row='1']
+						width: 100%
+						margin: 0
+
+						input
+							width: 100%
+							padding: 20px
+							border: 1px solid #E0E0E0
+							border-radius: 10px
+							outline: none
+
+							&:focus
+								border-color: #56BA72
+
+					[data-property-id-row='2']
+						width: calc(50% - 15px)
+						margin: 0
+
+						input
+							width: 100%
+							padding: 20px
+							border: 1px solid #E0E0E0
+							border-radius: 10px
+							outline: none
+
+							&:focus
+								border-color: #56BA72
+
+					[data-property-id-row='3']
+						width: 50%
+						margin: 0
+
+						input
+							width: 100%
+							padding: 20px
+							border: 1px solid #E0E0E0
+							border-radius: 10px
+							outline: none
+
+							&:focus
+								border-color: #56BA72
+
+					[data-property-id-row='4']
+						width: 100%
+						margin: 0
+
+						input
+							width: 100%
+							padding: 20px
+							border: 1px solid #E0E0E0
+							border-radius: 10px
+							outline: none
+
+							&:focus
+								border-color: #56BA72
+
+					&--order-comment
+						.form-group
+							width: 100%
+							margin-top: 15px
+
+						textarea
+							width: 100%
+							padding: 20px
+							border: 1px solid #E0E0E0
+							border-radius: 10px
+							outline: none
+							max-height: 300px
+
+							&:focus
+								border-color: #56BA72
+
+	+max-screen(767px)
+
+		&__properties-content
+			.row
+				margin-left: 0
+
+		&__paysystem-content
+			.form-cart__pay
+				margin-left: 0
+
+		&__delivery-content
+			.form-cart__delivery
+				margin-left: 0
+
+		&__region-content
+			.bx_soa_location
+				margin-left: 0
+
+.cart-total
+	padding: 20px 30px
+	display: flex
+	align-items: center
+	justify-content: space-between
+	background-color: #F9F7F6
+	border-radius: 0 0 10px 10px
+	&__sum
+		&-text
+			font-family: $ffm
+			font-size: 16px
+			color: $brown
+			margin-right: 20px
+		&-value
+			font-family: $ffm
+			font-size: 28px
+			color: $brown
+	&__actions
+		display: flex
+		align-items: center
+
+	&__terms
+		margin-left: auto
+		margin-right: 65px
+	&__checkbox
+		&-input
+		&-indicator
+			margin-bottom: auto
+		&-description
+			display: flex
+			flex-direction: column
+			&-text
+			&-link
+				color: $green
+	&__order-save-btn
+		+reset-btn
+		white-space: nowrap
+		background-color: $green
+		color: $white
+		padding: 20px
+		font-family: $ffb
+		font-size: 16px
+		border-radius: 5px
+		transition: background-color .3s ease
+
+		&:not(:disabled):hover
+			background-color: $greend
+
+		&:disabled
+			opacity: .6
+			cursor: not-allowed
+
+	+max-screen(1023px)
+		flex-direction: column
+		align-items: flex-start
+		grid-gap: 15px
+
+		&__actions
+			width: 100%
+			justify-content: space-between
+
+		&__terms
+			margin: 0
+
+	+max-screen(500px)
+		&__actions
+			flex-direction: column
+			align-items: flex-start
+			grid-gap: 10px
+
+		&__order-save-btn
+			width: 100%
+
+.bx-sls
+	.quick-location-tag
+		color: $green
+
+.alert
+	padding: 15px
+	margin-bottom: 20px
+	border: 1px solid transparent
+	border-radius: 4px
+
+.alert-success
+	color: #3c763d
+	background-color: #dff0d8
+	border-color: #d6e9c6
+
+.form-group
+	margin-bottom: 15px
+
+.input-groups
+	display: grid
+	grid-gap: 20px
+
+.bx-soa-pickup-list
+	display: flex
+	flex-wrap: wrap
+	grid-gap: 20px
+
+	.bx-soa-pickup-list-item
+		display: grid
+		grid-gap: 10px
+		max-width: 240px
+		width: 100%
+
+.bx-soa-pickup-l-item-btn
+	.btn
+		display: flex
+		justify-content: center
+
+.bx-soa-section-title-container
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	.text-right
+		text-align: right
+
+.bx-soa-pickup-subTitle
+	font-family: $ffb
+	margin-bottom: 15px
+
+
+.cart-wrapper
+	display: grid
+	grid-gap: 10px
+	width: max-content
+
+
+
+.bx-sls
+	.bx-ui-sls-pane
+		top: 70px !important
+		border: 1px solid $greyl
+		box-shadow: none
+		border-radius: 5px
+
+	.bx-ui-sls-error
+		color: $red
+
+
+.bx-soa-reference
+	height: 0
+	opacity: 0
+
+
+.bx-sls .bx-ui-sls-variants .bx-ui-sls-variant:hover, .bx-sls .bx-ui-sls-variant-active
+	background-color: $grey
+
+
+.form-control
+	padding: 8px
+	background: $grey
+	color: $brown
+	border: 1px solid $grey
+	border-radius: 10px
+	box-shadow: none
+	outline: none
+	font-size: 15px
+	cursor: pointer
+
+	&:hover
+		border-color: $greyl
+
+	option
+		font-weight: normal
+		color: $brown
+		border-radius: 10px
+		font-size: 15px
+		box-shadow: none
+		outline: none
+
+.bx-soa-location-input-container
+	.bx-soa-custom-label
+		margin-right: 15px
+
+
+.bx-soa-section-title-container
+	pointer-events: none
+
+	.btn
+		pointer-events: all

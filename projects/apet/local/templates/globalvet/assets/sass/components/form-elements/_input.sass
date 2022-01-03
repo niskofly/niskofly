@@ -1,0 +1,111 @@
+.input-group
+
+	&__error
+		color: #FF1955
+		font-size: 13px
+		line-height: 17px
+
+	.input::placeholder
+		opacity: 0
+		transition: opacity .3s
+
+	&.input-group--not-empty
+
+		.input-group
+
+			&__label
+				top: 7px
+				transform: translate(0)
+				font-size: 14px
+				color: #608488
+
+		.input::placeholder
+			opacity: 1
+
+	&:not(.input-group--error):hover
+
+		.input
+			border: 1px solid #BDBDBD
+
+		.input-group__label
+			color: #608488
+
+	&--error
+
+		.input
+			border: 1px solid #FF1955
+			color: #FF1955
+
+		.input-group__error
+			padding-top: 10px
+
+	&__wrapper
+		position: relative
+
+	&__label
+		pointer-events: none
+		position: absolute
+		left: 20px
+		top: 50%
+		transform: translateY(-50%)
+		font-family: $ff
+		font-size: 18px
+		line-height: 1
+		color: #608488
+		transition: all .3s
+
+.input
+	width: 100%
+	min-height: 60px
+	padding: 20px 20px 12px
+	border: 1px solid #F2F2F2
+	border-radius: 15px
+	font-family: $ff
+	font-size: 18px
+	color: #4A4A4A
+	transition: border-color ease .3s
+
+	&:hover:not(:disabled)
+		border-color: #999
+
+		&::-webkit-input-placeholder
+			color: #8C8C8C
+
+		&:-ms-input-placeholder
+			color: #8C8C8C
+
+		&::-moz-placeholder
+			color: #8C8C8C
+
+		&:-moz-placeholder
+			color: #8C8C8C
+
+	&:focus:not(:disabled)
+		&::-webkit-input-placeholder
+			color: #8C8C8C
+
+		&:-ms-input-placeholder
+			color: #8C8C8C
+
+		&::-moz-placeholder
+			color: #8C8C8C
+
+		&:-moz-placeholder
+			color: #8C8C8C
+
+	&:disabled
+		cursor: not-allowed
+		background: #F6F7F9 !important
+		border: 1px solid rgba(0, 0, 0, 0.1)
+
+	&--white
+		background: white
+		border-color: #999l
+
+		&:hover:not(:disabled),
+		&:focus:not(:disabled)
+			border-color:#BDBDBD
+
+
+textarea
+	resize: none

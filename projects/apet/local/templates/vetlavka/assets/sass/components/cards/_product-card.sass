@@ -1,0 +1,241 @@
+.product-card
+	display: flex
+	flex-direction: column
+	width: 100%
+	height: 100%
+	border: 1px solid $tr
+	border-radius: 10px
+	transition: border-color ease .3s
+	padding-bottom: 20px
+
+	&:hover
+		border-color: $greyl
+
+
+
+.product-header
+	position: relative
+	margin-bottom: 10px
+
+	&__img
+		width: 100%
+		height: 280px
+		display: block
+		padding: 25px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__stock
+		position: absolute
+		top: 10px
+		right: 10px
+		background-color: $red
+		color: $white
+		border-radius: 20px 0 20px 20px
+		padding: 12px 7px
+		font-size: 20px
+		font-family: $ffb
+
+
+
+.product-body
+	margin-bottom: 20px
+	padding: 0 20px
+
+	&__tag
+		text-transform: uppercase
+		font-family: $ffb
+		color: $green
+		font-size: 12px
+		margin-bottom: 10px
+
+	&__title
+		font-family: $ffm
+		font-size: 18px
+		text-decoration: none
+		color: $brown
+
+
+
+.product-footer
+	padding: 0 20px
+	margin-top: auto
+
+
+
+.product-links
+	display: flex
+	align-items: center
+	justify-content: space-between
+	margin-bottom: 17px
+
+	&__manufacturer
+		color: $brown
+		font-size: 15px
+
+	&__icon
+		display: none
+		width: 25px
+		height: 25px
+
+	&__group
+		display: flex
+		align-items: center
+
+		&-form
+			display: inline-flex
+			margin-left: 20px
+
+		&-icon
+			+reset_btn()
+			padding: 0
+			display: inline-flex
+			align-items: center
+			justify-content: center
+			text-decoration: none
+
+			.icon
+				color: $green
+				transition: color ease .3s
+				font-size: 25px
+
+			.icon-heart-color
+				display: none
+
+			&--active
+
+				.icon-heart
+					display: none
+
+				.icon-heart-color
+					display: block
+
+			&.active
+
+				.product-links__icon
+					display: block
+
+				.icon-chart
+					display: none
+
+			&:hover
+				.icon
+					color: $greend
+
+
+
+.product-action
+	display: flex
+	align-items: center
+
+	&__form
+		margin-left: auto
+
+	&__price
+		font-family: $ffm
+		font-size: 22px
+
+	&__oldprice
+		font-family: $ff
+		font-size: 15px
+		text-decoration: line-through
+		margin-left: 14px
+
+	&__button
+		margin-left: auto
+
+		a
+			display: block
+
+
+
+.product-card--stock
+	.product-action__price
+		color: $yellow
+
+
+
+.product-card--not-available
+	button.product-links__group-icon:disabled
+		cursor: not-allowed
+		.icon
+			color: #5a5a5a
+
+	.product-action__price-span
+		display: block
+		font-size: 15px
+		color: #81878F
+
+
+
+.order-card
+	width: 100%
+	position: relative
+	display: flex
+	align-items: center
+
+	&__content
+		width: 100%
+
+	&__pic
+		min-width: 120px
+		width: 120px
+		min-height: 120px
+		height: 120px
+		border: 1px solid $greyl
+		border-radius: 10px
+		overflow: hidden
+		margin-right: 10px
+
+		img
+			width: 100%
+			height: 100%
+			object-fit: contain
+
+	&__title
+		max-width: 80%
+		margin-bottom: 5px
+
+	&__manufacturer
+		color: $green
+
+	&__row
+		display: flex
+		align-items: center
+		justify-content: space-between
+
+	&__price
+		font-family: $ffb
+		font-size: 18px
+
+	&__old-price
+		font-size: 18px
+		text-decoration: line-through
+		display: none
+
+	&__delete
+		+reset-btn()
+		padding: 0
+		position: absolute
+		top: 0
+		right: 0
+
+		.icon
+			font-size: 15px
+			color: #BDBDBD
+			transition: color ease .3s
+
+		&:hover
+			.icon
+				color: $green
+
+	&--discount
+
+		.order-card__price
+			color: $red
+
+		.order-card__old-price
+			display: block

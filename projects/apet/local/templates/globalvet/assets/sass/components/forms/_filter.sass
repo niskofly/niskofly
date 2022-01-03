@@ -1,0 +1,112 @@
+.form--filter
+	border-radius: 15px
+	background-color: #ffffff
+	overflow: hidden
+
+	.form
+
+		&__header
+			display: flex
+			justify-content: space-between
+			align-items: center
+			background-color: #E7F3F8
+			padding: 20px
+
+		&__title
+			display: flex
+			align-items: center
+
+			&-text
+				font-family: $ffm
+				font-size: 20px
+				line-height: 26px
+				color: #4A4A4A
+				margin-right: 5px
+
+			&-number
+				font-family: $ffm
+				font-size: 16px
+				line-height: 1
+				color: #FFFFFF
+				display: flex
+				align-items: center
+				justify-content: center
+				min-width: 25px
+				height: 25px
+				border-radius: 100%
+				background-color: #00A6DC
+
+		&__close
+			display: none
+
+		&__reset.btn
+			border: 1px solid #4A4A4A
+			padding: 0 20px
+			font-size: 15px
+			transition: color .3s, border .3s
+
+			&:hover
+				border: 1px solid #00A6DC
+				color: #00A6DC
+
+		&__section:not(:last-child)
+			border-bottom: 1px solid #E7F3F8
+
+		&__toggle
+			width: 100%
+			padding: 30px 20px 30px
+			display: flex
+			align-items: center
+			font-family: $ffm
+			font-size: 20px
+			color: #4A4A4A
+
+			&.active
+				padding: 30px 20px 15px
+
+			.icon
+				font-size: 13px
+				margin-right: 12px
+
+		&__inputs
+			padding: 10px 20px 15px
+
+			&-prices
+				display: flex
+				justify-content: space-between
+
+			&-price
+				position: relative
+				max-width: 110px
+
+				.input
+					min-height: 45px
+					padding: 12px 20px
+					font-size: 15px
+
+				.rubl
+					font-size: 14px
+					display: flex
+					align-items: center
+					position: absolute
+					top: 1px
+					right: 1px
+					bottom: 1px
+					padding: 0 15px 5px
+					border-top-right-radius: 15px
+					border-bottom-right-radius: 15px
+					background-color: #fff
+
+		&__group
+			display: none
+			margin-bottom: 15px
+
+			&-toggle
+				font-family: $ff
+				font-size: 18px
+				text-decoration: underline
+				color: #00A6DC
+				padding: 0 35px
+
+			&:nth-child(-n+6)
+				display: block

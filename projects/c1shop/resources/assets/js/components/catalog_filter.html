@@ -1,0 +1,310 @@
+<script type="text/x-template" id="greeter">
+    <div class="b-catalog-filter">
+
+        <div class="catalog-filter__item" v-if="json_AllParameterFilter.mark && json_ExistentFilter.mark">
+            <div class="filter-item__title">Марка</div>
+            <div class="filter-item__selects">
+
+                <div v-for="filter in json_AllParameterFilter.mark"
+                     class="wrap-checkbox filter-item__option"
+                    >
+                    <input name="mark"
+                           v-model="settingFilter.mark"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="filter.value"
+                           v-on:click="setThisFilterParam('mark')"
+                           class="checkbox">
+                    <label v-bind:for="filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="catalog-filter__item"  v-if="json_AllParameterFilter.type && json_ExistentFilter.type">
+            <div class="filter-item__title">Тип оборудования</div>
+
+            <div class="filter-item__selects">
+
+                <div v-for="filter in json_AllParameterFilter.type"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.type[filter.value] != filter.value && json_ActiveFilter.type != filter.value  }">
+                    <input name="type"
+                           v-model="settingFilter.type"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="filter.value"
+                           v-on:click="setThisFilterParam('type')"
+                           class="checkbox">
+                    <label v-bind:for="filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="catalog-filter__item" v-if="json_AllParameterFilter.series && json_ExistentFilter.series">
+            <div class="filter-item__title">Серия</div>
+            <div class="filter-item__selects two-column">
+
+                <div v-for="filter in json_AllParameterFilter.series"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.series[filter.value] != filter.value && json_ActiveFilter.series != filter.value  }"
+                >
+                    <input name="series"
+                           v-model="settingFilter.series"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="filter.value"
+                           v-on:click="setThisFilterParam('series')"
+
+                           class="checkbox">
+                    <label v-bind:for="filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="catalog-filter__item"  v-if="json_AllParameterFilter.loading && json_ExistentFilter.loading">
+            <div class="filter-item__title">Загрузка</div>
+            <div class="filter-item__selects two-column">
+
+                <div v-for="filter in json_AllParameterFilter.loading"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.loading[filter.value] != filter.value && json_ActiveFilter.loading != filter.value  }"
+                >
+                    <input name="loading"
+                           v-model="settingFilter.loading"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="'loading-'+filter.value"
+                           v-on:click="setThisFilterParam('loading')"
+                           class="checkbox">
+                    <label v-bind:for="'loading-'+filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="catalog-filter__item"  v-if="json_AllParameterFilter.width_area && json_ExistentFilter.width_area">
+            <div class="filter-item__title">Ширина зоны глажения</div>
+            <div class="filter-item__selects two-column">
+
+                <div v-for="filter in json_AllParameterFilter.width_area"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.width_area[filter.value] != filter.value && json_ActiveFilter.width_area != filter.value  }"
+                >
+                    <input name="width_area"
+                           v-model="settingFilter.width_area"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="'width_area-'+filter.value"
+                           v-on:click="setThisFilterParam('width_area')"
+                           class="checkbox">
+                    <label v-bind:for="'width_area-'+filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="catalog-filter__item"  v-if="json_AllParameterFilter.performance && json_ExistentFilter.performance">
+            <div class="filter-item__title">Производительность</div>
+            <div class="filter-item__selects two-column">
+
+                <div v-for="filter in json_AllParameterFilter.performance"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.performance[filter.value] != filter.value && json_ActiveFilter.performance != filter.value  }"
+                >
+                    <input name="performance"
+                           v-model="settingFilter.performance"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="'performance-'+filter.value"
+                           v-on:click="setThisFilterParam('performance')"
+                           class="checkbox">
+                    <label v-bind:for="'performance-'+filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="catalog-filter__item"  v-if="json_AllParameterFilter.revers && json_ExistentFilter.revers">
+            <div class="filter-item__title">Реверс барабана</div>
+            <div class="filter-item__selects two-column">
+
+                <div v-for="filter in json_AllParameterFilter.revers"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.revers[filter.value] != filter.value && json_ActiveFilter.revers != filter.value  }"
+                >
+                    <input name="revers"
+                           v-model="settingFilter.revers"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="filter.value"
+                           v-on:click="setThisFilterParam('revers')"
+                           class="checkbox">
+                    <label v-bind:for="filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="catalog-filter__item"  v-if="json_AllParameterFilter.action && json_ExistentFilter.action">
+            <div class="filter-item__title">Направление деятельности</div>
+            <div class="filter-item__selects ">
+
+                <div v-for="filter in json_AllParameterFilter.action"
+                     class="wrap-checkbox filter-item__option"
+                     v-bind:class="{ 'filter-item__option_disable' : json_ExistentFilter.action[filter.value] != filter.value && json_ActiveFilter.action != filter.value  }"
+                >
+                    <input name="action"
+                           v-model="settingFilter.action"
+                           v-bind:value="filter.value"
+                           type="radio"
+                           v-bind:id="filter.value"
+                           v-on:click="setThisFilterParam('action')"
+                           class="checkbox">
+                    <label v-bind:for="filter.value" class="checkbox-label">
+                        <div class="icon-wrap">
+                            <svg class="icon icon-35 ">
+                                <use xlink:href="#35"></use>
+                            </svg>
+                        </div>
+                        {{filter.name}}
+                    </label>
+                    <div class="b-tooltip" v-if="filter.help">
+                        <button class="b-tooltip__activation">
+                            <svg class="icon icon-28 ">
+                                <use xlink:href="#28"></use>
+                            </svg>
+                        </button>
+                        <div class="b-tooltip__text">
+                            {{filter.help}}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</script>

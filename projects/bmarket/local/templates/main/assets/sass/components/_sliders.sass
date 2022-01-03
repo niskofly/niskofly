@@ -1,0 +1,188 @@
+.slider-controls
+	position: absolute
+	top: 50%
+	left: -25px
+	right: -25px
+	transform: translateY(-50%)
+	width: calc(100% + 50px)
+	display: flex
+	justify-content: space-between
+	align-items: center
+	pointer-events: none
+	z-index: 1
+
+.slider-control
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 50px
+	max-width: 50px
+	height: 50px
+	border-radius: 100%
+	background-color: #FFF
+	pointer-events: initial
+	color: #563494
+	transition: color .3s
+
+	.icon
+		position: relative
+		font-size: 14px
+
+
+	&--prev .icon
+		left: -1px
+
+	&--next .icon
+		right: -1px
+
+	&:hover
+		color: #D118A3
+
+	+max-screen(768px)
+		display: none
+
+
+
+.slider-pagination
+	display: flex
+	align-items: baseline
+
+	&--intro
+		position: absolute
+		z-index: 2
+		left: 0
+		right: 0
+		bottom: 10px
+		justify-content: center
+
+		.swiper-pagination-bullet
+			background: rgba(255, 255, 255, 0.3)
+
+			&-active
+				background: #fff
+
+	+max-screen(768px)
+
+		&--intro
+
+			.swiper-pagination-bullet
+				background: rgba(86, 52, 148, 0.5)
+
+				&-active
+					background: #563494
+
+
+
+
+.swiper-pagination-bullet
+	width: 5px
+	height: 5px
+	background: rgba(86, 52, 148, 0.3)
+	opacity: 1
+	border-radius: 3px
+	margin-right: 5px
+	transition: width .3s, background .3s
+
+	&:last-child
+		margin-right: 0
+
+	&-active
+		width: 24px
+
+		background: #563494
+
+
+.slider-intro
+	height: 100%
+	border-radius: 10px
+
+	&__slide
+		background-size: cover
+		background-position: center
+		background-repeat: no-repeat
+
+
+.slider-products
+	overflow: initial
+	margin-bottom: 32px
+
+	&__header
+		display: flex
+		align-items: baseline
+		justify-content: space-between
+		margin-bottom: 36px
+
+		&-info
+			display: flex
+			align-items: baseline
+
+	&__link
+		font-family: $ffb
+		font-size: 16px
+		line-height: 18px
+		color: #FF1AC6
+		margin-left: 20px
+		text-decoration: none
+
+	&__slide
+		max-width: 330px
+		width: 100%
+
+	+max-screen(700px)
+
+		&__header
+			margin-bottom: 24px
+
+			&-info
+				width: 100%
+				justify-content: space-between
+
+	+max-screen(425px)
+
+		&__header-info
+			.title
+				font-size: 32px
+				line-height: 36px
+
+
+
+[data-slider-id="default"]
+	.slider-products__slide
+		opacity: 0.3
+
+		+max-screen(700px)
+			max-width: 250px
+
+		+max-screen(430px)
+			max-width: 145px
+
+	.swiper-slide-visible
+		opacity: 1
+
+	.swiper-slide
+		margin-right: 30px
+
+		+max-screen(1470px)
+			margin-right: 20px
+
+		+max-screen(700px)
+			margin-right: 10px
+
+	.slider-controls
+		+max-screen(1470px)
+			display: none
+
+	.slider-pagination
+		+max-screen(700px)
+			display: none
+
+	.product-card
+		width: 100%
+
+
+
+.swiper-slide
+	img
+		height: 100%
+		width: 100%
+		object-fit: cover

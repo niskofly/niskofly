@@ -1,0 +1,674 @@
+.header
+	display: flex
+	flex-direction: column
+	position: relative
+
+	&-about
+		border-bottom: 1px solid $greyl
+		padding: 15px 0
+
+		&__burger
+			display: none
+			position: relative
+
+		&__container
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&__city
+			display: flex
+			align-items: center
+
+			&-icon
+				margin-right: 5px
+				display: flex
+				align-items: center
+				justify-content: center
+
+				.icon
+					font-size: 19px
+					color: $green
+
+			&-name
+				font-family: $ffm
+				font-size: 15px
+				line-height: 1
+				cursor: pointer
+
+				&:hover
+					text-decoration: underline
+
+			&-working-hours
+				line-height: 1
+				font-size: 15px
+				font-family: $ffm
+				margin-left: 40px
+				color: $greyd
+
+		&__links
+			display: flex
+
+			&-item
+				margin-left: 30px
+				text-decoration: none
+				font-size: 15px
+				color: $brown
+				transition: color ease .3s
+
+				&:hover
+					color: $green
+
+		+max-screen(1023px)
+
+			&__links
+				display: none
+
+			&__burger
+				display: block
+
+		+max-screen(767px)
+			&__city-working-hours
+				display: none
+
+	&-actions
+
+		&__container
+			display: flex
+			align-items: center
+			justify-content: space-between
+
+		&__links
+			display: flex
+			align-items: center
+
+			&-logo
+
+			&-call
+				margin-left: 60px
+				margin-right: 40px
+
+				&_phone
+					font-family: $ffb
+					font-size: 18px
+					margin-bottom: 10px
+					line-height: 1
+					text-decoration: none
+					color: $brown
+					display: inline-block
+
+				&_link
+					font-size: 15px
+					color: $greyd
+					line-height: 1
+					cursor: pointer
+
+					&:hover
+						text-decoration: underline
+
+		&__search
+			flex: 1
+			position: relative
+			border-left: 1px solid $greyl
+
+			&-icon
+				position: absolute
+				left: 30px
+				top: 50%
+				transform: translateY(-50%)
+				display: flex
+				align-items: center
+				pointer-events: none
+
+				.icon
+					color: $green
+					font-size: 24px
+
+			&-input
+				width: 100%
+				height: auto
+				padding: 40px 30px 40px 70px
+				border: none
+				outline: none
+				line-height: 1
+
+		&__controls
+			display: flex
+			align-items: center
+			border-left: 1px solid $greyl
+
+			&-item
+				position: relative
+				padding: 34px
+				border-right: 1px solid $greyl
+				display: flex
+				align-items: center
+				justify-content: center
+				text-decoration: none
+				transition: background ease .3s
+
+				.icon
+					font-size: 30px
+					width: 30px
+					height: 30px
+					color: $green
+					transition: color ease .3s
+
+				&:hover
+					background: $grey
+
+					.icon
+						color: $greend
+
+				&--mobile
+					display: none
+
+			&-count
+
+				&--active
+					font-family: $ffm
+					position: absolute
+					top: 25px
+					right: 20px
+					background: $green
+					color: $white
+					border: 2px solid $green
+					border-radius: 77px
+					width: 23px
+					height: 23px
+					display: flex
+					justify-content: center
+
+		+max-screen(1200px)
+
+			&__search
+				display: none
+
+			&__controls-item--mobile
+				display: flex
+
+			&__links-call
+				margin: 0 30px 0 10px
+
+			#title-search
+				display: none
+
+		+max-screen(1023px)
+			border-bottom: 1px solid $greyl
+
+			&__links-call
+				display: none
+
+		+max-screen(767px)
+
+			&__container
+				justify-content: center
+
+			&__links
+				display: none
+
+			&__search
+				margin: 0
+
+		+max-screen(500px)
+
+			&__controls
+
+				&-item
+					padding: 20px
+
+					.icon
+						font-size: 18px
+						width: 18px
+						height: 18px
+
+				&-count--active
+					top: 11px
+					right: 8px
+					width: 16px
+					height: 16px
+					border: 1px solid $green
+					font-size: 10px
+
+	&-navigation
+		background-color: $green
+		position: relative
+
+		&__container
+			display: flex
+			align-items: center
+
+		&__list
+			display: flex
+			align-items: center
+			width: 100%
+
+			&-item
+				display: flex
+				align-items: center
+				background-color: $greend
+				padding: 20px
+				text-decoration: none
+				cursor: pointer
+
+				&_span
+					color: $white
+					text-transform: uppercase
+					text-decoration: none
+					font-size: 15px
+					font-family: $ffb
+					transition: opacity ease .3s
+
+
+				.icon
+					font-size: 22px
+					color: $white
+					margin-right: 10px
+					transition: opacity ease .3s
+
+				&:hover
+					.header-navigation__list-item_span,
+					.icon
+						opacity: .6
+
+				&--hoverable
+
+					&:hover .header-subnav
+						transform: translateY(0px)
+						opacity: 1
+						pointer-events: initial
+
+		&__group
+			flex: 1
+			display: flex
+			justify-content: space-evenly
+
+			&-item
+				font-family: $ffb
+				color: $white
+				text-transform: uppercase
+				text-decoration: none
+				cursor: pointer
+				padding: 20px 0
+				transition: opacity ease .3s
+
+				&:hover
+					.header-navigation__list-item_span
+						opacity: .6
+
+		+max-screen(1023px)
+
+			&__container
+				display: none
+
+	&-subnav
+		position: absolute
+		z-index: 5
+		top: 60px
+		left: 0
+		width: 100%
+		min-height: 610px
+		background-color: $white
+		box-shadow: 0px 4px 54px rgba(0, 0, 0, 0.1)
+		padding: 40px 0
+		opacity: 0
+		transform: translateY(25px)
+		pointer-events: none
+		transition: transform .3s .3s, opacity .3s .3s, -webkit-transform .3s .3s
+
+		&__wrapper
+			display: flex
+			justify-content: space-between
+
+		&__slider
+			height: 530px
+
+			.swiper-button-prev,
+			.swiper-button-next
+				position: relative
+				top: initial
+				right: initial
+				left: initial
+				border: 0
+				margin: auto
+				background-color: transparent
+
+				.icon
+					font-size: 9px
+
+				&:hover
+					background-color: #56BA72
+
+			&-container
+				margin: 5px 0
+				height: 395px
+
+			&-image
+				width: 100%
+				height: 100%
+				object-fit: contain
+
+		+max-screen(1280px)
+
+			&__wrapper
+				flex-direction: column
+
+			&__slider
+				display: flex
+				height: 140px
+
+				&-container
+					margin: 0 5px
+					height: 140px
+
+				.swiper-button-prev
+					.icon
+						transform: rotate(-90deg)
+
+				.swiper-button-next
+					.icon
+						transform: rotate(-90deg)
+
+
+	&-tabs
+		display: flex
+		align-items: stretch
+		justify-content: space-between
+
+		&__actions
+			display: flex
+			flex-direction: column
+			padding-right: 100px
+			margin-right: 20px
+			border-right: 1px solid $greyl
+
+
+	&__tab
+		+reset-btn()
+		width: 100%
+		text-align: left
+		padding: 10px 0
+		margin-bottom: 20px
+		text-transform: uppercase
+		color: $brown
+		font-family: $ffb
+		transition: color ease .3s
+
+		&:last-child
+			margin-bottom: 0
+
+		&:hover
+			color: $green
+
+		&.active
+			color: $green
+
+	&-slider
+		margin-left: auto
+
+		.manufacturers-slider
+			flex-direction: column
+
+			.swiper-container
+				width: auto
+				max-height: 400px
+
+			.swiper-button-prev-unique,
+			.swiper-button-next-unique
+				display: flex
+				align-items: center
+				justify-content: center
+
+				.icon
+					transform: rotate(90deg)
+					margin: 0
+
+
+
+
+.subnav
+
+	&-links
+		display: flex
+		flex-direction: column
+		max-width: 230px
+		margin-right: 60px
+
+		&:last-child
+			margin-right: 0
+
+
+	&-link
+		display: block
+		margin-bottom: 20px
+		font-size: 15px
+		color: $brown
+		text-decoration: none
+
+		&:last-child
+			margin-bottom: 0
+
+		&:hover
+			color: $green
+
+	&__tab
+		display: flex
+
+	&-categories
+		display: grid
+		grid-template-columns: repeat(7, 1fr)
+		grid-gap: 30px
+
+		+max-screen(1150px)
+			grid-gap: 15px
+
+	&-category
+		display: flex
+		flex-direction: column
+		max-width: 230px
+
+		&__img
+			width: 100px
+			height: 90px
+			border-radius: 10px
+			overflow: hidden
+			margin-bottom: 20px
+
+			img
+				width: 100%
+				height: 100%
+				object-fit: cover
+
+		&__content
+			margin-bottom: 40px
+
+		&__title
+			font-family: $ffb
+			font-size: 15px
+			color: $brown
+			margin-bottom: 20px
+
+		&__link
+			display: block
+			margin-bottom: 20px
+			text-transform: none
+			color: $brown
+			transition: color ease .3s
+			text-decoration: none
+			font-family: $ffm
+
+			&:hover
+				color: $green
+
+		&__more
+			text-transform: none
+			color: $green
+
+
+
+
+.header__slider
+	.manufacturers-slider
+		flex-direction: column
+		max-height: 500px
+		margin-bottom: 0
+
+		.swiper-container
+			width: auto
+			align-items: flex-start
+			height: 100%
+
+		.swiper-button-prev-unique,
+		.swiper-button-next-unique
+			transform: rotate(90deg)
+
+			.icon
+				margin: 0
+
+
+
+.header-mobile
+	display: none
+	position: fixed
+	top: 55px
+	left: 0
+	right: 0
+	bottom: 0
+	overflow: hidden
+	overflow-y: auto
+	opacity: 0
+	width: 100%
+	height: 100vh
+	padding: 50px 80px
+	background: $white
+	pointer-events: none
+	transition: opacity ease .3s
+	z-index: 9999
+
+	&.active
+		opacity: 1
+		pointer-events: initial
+
+		&-subcatalog
+
+			.header-mobile
+				&__links,
+				&__footer
+					display: none
+
+	&__links
+		padding: 50px 30px
+		border-top: 1px solid $greyl
+		border-bottom: 1px solid $greyl
+
+		&-item
+			display: flex
+			padding: 15px 0
+			font-size: 15px
+			line-height: 18px
+			text-decoration: none
+			color: $brown
+			transition: color ease .3s
+
+			&:hover
+				color: $green
+
+			&:first-child
+				padding-top: 0
+
+			&:last-child
+				padding-bottom: 0
+
+	&__footer
+		padding: 50px 30px
+
+	+max-screen(1023px)
+		display: block
+
+	+max-screen(500px)
+		padding: 50px 20px 100px
+
+		&__links,
+		&__footer
+			padding: 30px
+
+
+
+.nav
+	padding: 0 30px
+	margin: -15px 0 0
+
+	&--subcatalog
+		padding: 35px 20px
+		margin: 0
+
+		.nav__item:not(.nav__item--back)
+			padding: 15px 30px
+
+	&__item
+		display: flex
+		align-items: center
+		grid-gap: 10px
+		padding: 15px 0
+		font-family: $ffb
+		font-size: 15px
+		line-height: 18px
+		text-transform: uppercase
+		color: $brown
+		cursor: pointer
+		text-decoration: none
+		transition: color ease .3s
+
+		&--back
+			margin-bottom: 30px
+
+		path
+			transition: fill ease .3s
+
+		&:hover
+			color: $green
+
+			path
+				fill: $green
+
+		&--plus
+			position: relative
+
+			&::after
+				content: ""
+				position: absolute
+				top: 50%
+				left: -32px
+				transform: translateY(-50%)
+				background: url(/img/icons/plus-green.svg)
+				width: 22px
+				height: 22px
+
+
+.header-menu-subcatalog
+	width: 0
+	transition: transform ease .3s
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	transform: translateX(100%)
+	opacity: 0
+	background: $white
+
+	.nav
+		display: none
+
+	&.active
+		transform: translateX(0)
+		width: 100%
+		height: max-content
+		min-height: 100vh
+		z-index: 2
+		opacity: 1
+		pointer-events: all
+		padding-bottom: 50px
+
+		.nav
+			display: block
